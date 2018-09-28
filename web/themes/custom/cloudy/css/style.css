@@ -8210,16 +8210,6 @@ ol.steps dl, ol.steps ol, ol.steps ul {
 ol.steps ol ol, ol.steps ol ul, ol.steps ul ol, ol.steps ul ul {
   margin-bottom: 0; }
 
-.btn {
-  margin-bottom: 1rem; }
-
-.btn-secondary {
-  background: #046A38;
-  border: none; }
-
-.btn-secondary:hover {
-  background: #034E29; }
-
 *[class*="btn--"]:before {
   display: inline-block;
   padding-right: 0.5rem;
