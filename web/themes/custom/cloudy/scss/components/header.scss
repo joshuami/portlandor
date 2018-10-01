@@ -39,10 +39,7 @@
 }
 
 .header {
-    background-image: linear-gradient(to bottom right, $primary-accent, $primary-shade);
-    background-color: $primary-shade;
-    border-top: 5px $yellow solid;
-    border-bottom: 5px $accent-shade solid;
+  background: $white;
 }
 
 .banner {
@@ -69,6 +66,7 @@
 .navbar {
   padding: 0;
   min-height: 80px;
+  border-bottom: 1px solid $default;
   .navbar-brand {
     height: 80px;
     img {
@@ -78,12 +76,19 @@
   .navbar-toggler {
     padding: 26.5px 1rem;
     line-height: 27px;
-    color: $white;
+    color: $primary;
+    font-weight: 700;
   }
-  .navbar-nav .nav-link {
-    padding: 1rem;
-    color: $white;
-    @include links($white, $white, $white, $white);
+  .navbar-nav {
+    background: $primary;
+    .nav-link {
+      padding: 1rem;
+      @include links($white, $white, $white, $white);
+    }
+    .badge-light {
+      background: $primary;
+      color: $white;
+    }
   }
 }
 
@@ -92,18 +97,28 @@
     .navbar-brand img {
       max-height: 50px;
     }
-    .navbar-nav .nav-link {
-      padding: 26.5px 1rem;
-      line-height: 27px;
-      transition: background-color 0.25s ease, font-size 0.25s ease;
-      &:hover {
-        background-color: rgba($black, 0.15);
+    .navbar-nav {
+      background: $white;
+      .nav-link {
+        border-radius: 0.15rem;
+        line-height: 27px;
+        margin: 0.3rem;
+        padding: 0.75rem 0.5rem;
+        transition: all 0.25s ease;
+        @include links($primary, $white, $white, $white);
+        &:hover {
+          background: $primary;
+          .badge-light {
+            background: $white;
+            color: $primary;
+          }
+        }
       }
     }
   }
 }
 
 .featured-top {
-  background-image: linear-gradient(to bottom right, $accent-shade, $accent-dark);
-  background-color: $primary-shade;
+  margin-top: $spacer * 6;
+  margin-bottom: $spacer * 6;
 }

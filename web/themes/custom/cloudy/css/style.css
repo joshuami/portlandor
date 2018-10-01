@@ -70,7 +70,7 @@ h6, .h6 {
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --blue: #007bff;
+  --blue: #0096D7;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
@@ -7362,10 +7362,7 @@ div.paragraph--type--video figure.figure, div.paragraph--type--audio figure.figu
     float: none; } }
 
 .header {
-  background-image: linear-gradient(to bottom right, #069b52, #046a38);
-  background-color: #046a38;
-  border-top: 5px #ffb81c solid;
-  border-bottom: 5px #418fde solid; }
+  background: #fff; }
 
 .banner {
   background-image: linear-gradient(to bottom right, #505050, #000000);
@@ -7386,7 +7383,8 @@ div.paragraph--type--video figure.figure, div.paragraph--type--audio figure.figu
 
 .navbar {
   padding: 0;
-  min-height: 80px; }
+  min-height: 80px;
+  border-bottom: 1px solid #f2f2f2; }
   .navbar .navbar-brand {
     height: 80px; }
     .navbar .navbar-brand img {
@@ -7394,32 +7392,52 @@ div.paragraph--type--video figure.figure, div.paragraph--type--audio figure.figu
   .navbar .navbar-toggler {
     padding: 26.5px 1rem;
     line-height: 27px;
-    color: #fff; }
-  .navbar .navbar-nav .nav-link {
-    padding: 1rem;
-    color: #fff; }
+    color: #2e333a;
+    font-weight: 700; }
+  .navbar .navbar-nav {
+    background: #2e333a; }
     .navbar .navbar-nav .nav-link {
+      padding: 1rem; }
+      .navbar .navbar-nav .nav-link {
+        color: #fff; }
+        .navbar .navbar-nav .nav-link:visited {
+          color: #fff; }
+        .navbar .navbar-nav .nav-link:hover {
+          color: #fff; }
+        .navbar .navbar-nav .nav-link:active, .navbar .navbar-nav .nav-link:focus {
+          color: #fff; }
+    .navbar .navbar-nav .badge-light {
+      background: #2e333a;
       color: #fff; }
-      .navbar .navbar-nav .nav-link:visited {
-        color: #fff; }
-      .navbar .navbar-nav .nav-link:hover {
-        color: #fff; }
-      .navbar .navbar-nav .nav-link:active, .navbar .navbar-nav .nav-link:focus {
-        color: #fff; }
 
 @media (min-width: 992px) {
   .navbar .navbar-brand img {
     max-height: 50px; }
-  .navbar .navbar-nav .nav-link {
-    padding: 26.5px 1rem;
-    line-height: 27px;
-    transition: background-color 0.25s ease, font-size 0.25s ease; }
-    .navbar .navbar-nav .nav-link:hover {
-      background-color: rgba(0, 0, 0, 0.15); } }
+  .navbar .navbar-nav {
+    background: #fff; }
+    .navbar .navbar-nav .nav-link {
+      border-radius: 0.15rem;
+      line-height: 27px;
+      margin: 0.3rem;
+      padding: 0.75rem 0.5rem;
+      transition: all 0.25s ease; }
+      .navbar .navbar-nav .nav-link {
+        color: #2e333a; }
+        .navbar .navbar-nav .nav-link:visited {
+          color: #fff; }
+        .navbar .navbar-nav .nav-link:hover {
+          color: #fff; }
+        .navbar .navbar-nav .nav-link:active, .navbar .navbar-nav .nav-link:focus {
+          color: #fff; }
+      .navbar .navbar-nav .nav-link:hover {
+        background: #2e333a; }
+        .navbar .navbar-nav .nav-link:hover .badge-light {
+          background: #fff;
+          color: #2e333a; } }
 
 .featured-top {
-  background-image: linear-gradient(to bottom right, #418fde, #1b5a99);
-  background-color: #046a38; }
+  margin-top: 6rem;
+  margin-bottom: 6rem; }
 
 /**
  * @file
@@ -7681,10 +7699,28 @@ input[type="search"] {
 .region-featured-top #search-api-page-block-form {
   width: 100%; }
 
-#search-api-page-block-form input.btn-primary {
-  color: #505050;
-  background: #f8f9fa;
-  border: 1px solid #ced4da; }
+#search-api-page-block-form .input-group-append {
+  margin-left: 0; }
+  #search-api-page-block-form .input-group-append .form-submit {
+    color: #fff;
+    background: #2e333a;
+    border-top: 1px solid #2e333a;
+    border-bottom: 1px solid #2e333a;
+    border-right: 1px solid #2e333a;
+    border-left: 1px solid #2e333a; }
+
+#search-api-page-block-form input {
+  background: #f2f2f2;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
+  border-right: none; }
+  #search-api-page-block-form input:focus {
+    border-top: 1px solid #171a1e;
+    border-bottom: 1px solid #171a1e;
+    border-left: 1px solid #171a1e;
+    border-right: none;
+    box-shadow: none; }
 
 /**
  * @file

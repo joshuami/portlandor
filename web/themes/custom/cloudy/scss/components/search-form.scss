@@ -21,8 +21,30 @@ input[type="search"] {
     width: 100%;
 }
 
-#search-api-page-block-form input.btn-primary {
-  color: #505050;
-  background: $light;
-  border: 1px solid #ced4da;
+#search-api-page-block-form {
+  .input-group-append {
+    margin-left: 0;
+    .form-submit {
+      color: $white;
+      background: $primary;
+      border-top: 1px solid $primary;
+      border-bottom: 1px solid $primary;
+      border-right: 1px solid $primary;
+      border-left: 1px solid $primary;
+    }
+  }
+  input {
+    background: $default;
+    border-top: 1px solid darken($default, 10%);
+    border-bottom: 1px solid darken($default, 10%);
+    border-left: 1px solid darken($default, 10%);
+    border-right: none;
+    &:focus {
+      border-top: 1px solid darken($primary, 10%);
+      border-bottom: 1px solid darken($primary, 10%);
+      border-left: 1px solid darken($primary, 10%);
+      border-right: none;
+      box-shadow: none;
+    }
+  }
 }
