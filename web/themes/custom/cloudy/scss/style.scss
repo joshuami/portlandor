@@ -158,6 +158,69 @@ ol.steps ol ol, ol.steps ol ul, ol.steps ul ol, ol.steps ul ul {
 //   background: #034E29;
 // }
 
+.btn-primary {
+  color: $white;
+  background: $primary;
+  border: none;
+  &:hover {
+    color: $white;
+    background: $primary;
+    border: none;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &:not(:disabled):not(.disabled):active {
+    color: $white;
+    background: $primary;
+    border: none;
+  }
+  &-outline {
+    color: $primary;
+    background: none;
+    border-color: $primary;
+    &:hover {
+      color: $primary;
+      background: none;
+      border-color: $primary;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.btn-secondary {
+  color: $primary;
+  background: $default;
+  border: none;
+  &:hover {
+    color: $primary;
+    background: $default;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &:not(:disabled):not(.disabled):active {
+    color: $primary;
+    background: $default;
+    border: none;
+  }
+  &-outline {
+    color: $primary;
+    background: none;
+    border-color: $default;
+    &:hover {
+      color: $primary;
+      background: none;
+      border-color: $default;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
 *[class*="btn--"]:before {
   display: inline-block;
   padding-right: 0.5rem;

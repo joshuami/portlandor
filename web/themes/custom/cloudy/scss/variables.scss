@@ -32,11 +32,14 @@ $brand-primary: $primary-shade;
 //$brand-warning: $orange;
 //$brand-danger: $red;
 $brand-inverse: $primary-shade;
+// Headings
+//
+$headings-color: $primary;
 // Body
 //
 // Settings for the `<body>` element.
 //$body-bg: $white;
-//$body-color: $gray-dark;
+$body-color: $primary;
 $inverse-bg: $primary-shade;
 //$inverse-color: $gray-lighter;
 // Links

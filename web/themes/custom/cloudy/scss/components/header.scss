@@ -105,7 +105,7 @@
         margin: 0.3rem;
         padding: 0.75rem 0.5rem;
         transition: all 0.25s ease;
-        @include links($primary, $white, $white, $white);
+        @include links($primary, $primary, $white, $white);
         &:hover {
           background: $primary;
           .badge-light {
