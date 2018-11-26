@@ -31,14 +31,14 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_all_day:
-    weight: 6
+    weight: 5
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_body:
-    weight: 12
+    weight: 11
     settings:
       title: paragraph
       title_plural: paragraphs
@@ -52,18 +52,21 @@ content:
         duplicate: duplicate
         collapse_edit_all: collapse_edit_all
         add_above: '0'
+      closed_mode_threshold: 0
     third_party_settings: {  }
     type: paragraphs
     region: content
   field_end_date:
-    weight: 9
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_end_time:
-    weight: 10
-    settings: {  }
+    weight: 9
+    settings:
+      enabled: false
+      step: 5
     third_party_settings:
       conditional_fields:
         199340d9-1e64-4676-be98-142450179a38:
@@ -86,7 +89,7 @@ content:
     region: content
   field_event_location:
     type: entity_reference_paragraphs
-    weight: 11
+    weight: 10
     settings:
       title: location
       title_plural: locations
@@ -97,7 +100,7 @@ content:
     third_party_settings: {  }
     region: content
   field_legacy_path:
-    weight: 26
+    weight: 13
     settings:
       size: 60
       placeholder: ''
@@ -105,14 +108,16 @@ content:
     type: string_textfield
     region: content
   field_start_date:
-    weight: 7
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_start_time:
-    weight: 8
-    settings: {  }
+    weight: 7
+    settings:
+      enabled: false
+      step: 5
     third_party_settings:
       conditional_fields:
         0e2a458c-ff52-4f8c-bf7a-6ef4359d1868:
@@ -134,7 +139,7 @@ content:
     type: time_widget
     region: content
   field_summary:
-    weight: 5
+    weight: 4
     settings:
       rows: 2
       placeholder: ''
@@ -148,22 +153,29 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 13
+    weight: 12
     settings: {  }
     region: content
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 3
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 15
     region: content
     third_party_settings: {  }
   title:
@@ -185,5 +197,4 @@ content:
     third_party_settings: {  }
 hidden:
   path: true
-  promote: true
   url_redirects: true
