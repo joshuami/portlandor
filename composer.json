@@ -122,8 +122,7 @@
         "symfony/css-selector": "~2.8|~3.0"
     },
     "conflict": {
-        "drupal/drupal": "*",
-        "doctrine/common": ">2.8"
+        "drupal/drupal": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -180,9 +179,6 @@
             },
             "drupal/clamav": {
                 "2915237 - allowUncheckedFiles() not working as expected": "https://www.drupal.org/files/issues/2915237-2.patch"
-            },
-            "drupal/search_api_pantheon": {
-                "2996001 - Use Lando client cert": "https://www.drupal.org/files/issues/2018-08-29/use_lando_cert.patch"
             },
             "drupal/menu_token": {
                 "2948260 - Tokens not substituted in query string": "https://www.drupal.org/files/issues/2018-09-21/2988939-allow-query-parameters-12.diff"
