@@ -5,21 +5,21 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = (env, argv) => ({
   entry: {
-    main: globby.sync(['./js/src/**/*.js', './scss/style.scss'])
+    main: globby.sync(['./source/js/main.js', './source/scss/style.scss'])
   },
   devtool: 'source-map',
   mode: process.env.NODE_ENV,
   output: {
     path: path.resolve(__dirname),
-    filename: 'js/[name].bundle.js'
+    filename: 'public/js/[name].bundle.js'
   },
   watchOptions: {
     ignored: ['images/**/*.*', 'css/**/*.*', 'templates/**/*.*', 'node_modules']
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/style.bundle.css',
-      chunkFilename: 'css/[id].bundle.css'
+      filename: 'public/css/style.bundle.css',
+      chunkFilename: 'public/css/[id].bundle.css'
     }),
     new BrowserSyncPlugin(
       // BrowserSync options

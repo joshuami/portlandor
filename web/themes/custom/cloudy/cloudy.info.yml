@@ -12,7 +12,7 @@ stylesheets-remove:
   - '@extlink/extlink.css'
 
 ckeditor_stylesheets:
-  - css/style.bundle.css
+  - public/css/style.bundle.css
   - https://use.fontawesome.com/releases/v5.2.0/css/all.css
 
 regions:
