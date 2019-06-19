@@ -1,0 +1,17 @@
+uuid: 35fac432-b550-4d0c-8a36-ce5b67c6fddc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Resource set'
+type: resource_set
+description: 'A resource set can be used to organize content in a group''s resource library.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

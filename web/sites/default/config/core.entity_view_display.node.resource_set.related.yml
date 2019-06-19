@@ -1,0 +1,53 @@
+uuid: 881c04e1-8e90-479a-88c6-e3597d8cf08d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.related
+    - field.field.node.resource_set.field_media
+    - field.field.node.resource_set.field_notes
+    - field.field.node.resource_set.field_sort_weight
+    - node.type.resource_set
+  module:
+    - ds
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.resource_set.related
+targetEntityType: node
+bundle: resource_set
+mode: related
+content:
+  field_media:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: embedded
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+  field_notes:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_sort_weight: true
+  links: true

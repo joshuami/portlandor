@@ -1,0 +1,34 @@
+uuid: 40035f6b-dbdf-4172-bb29-bf1b93aa1795
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notes
+    - node.type.resource_set
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    simplified_editor_with_media_embed: simplified_editor_with_media_embed
+    basic_style_editor: '0'
+    full_html: '0'
+    simple_editor: '0'
+    rich_text: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.resource_set.field_notes
+field_name: field_notes
+entity_type: node
+bundle: resource_set
+label: Notes
+description: 'Add notes if your resource set needs more context than just a title.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
