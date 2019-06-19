@@ -1,0 +1,17 @@
+uuid: d5263bd1-436d-43b2-b67d-1267c7441990
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.group
+  enforced:
+    config:
+      - user.role.council_clerk
+id: group-e16aabc66
+label: 'Council clerk'
+weight: 5
+internal: true
+audience: outsider
+group_type: group
+permissions_ui: false
+permissions: {  }
