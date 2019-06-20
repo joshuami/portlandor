@@ -1,0 +1,36 @@
+uuid: 2f947bc8-eb2d-4810-b8ed-b5a2dd467158
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_group
+    - group.type.group
+    - group.type.project
+    - node.type.resource_set
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.resource_set.field_group
+field_name: field_group
+entity_type: node
+bundle: resource_set
+label: Group
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      group: group
+      project: project
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: group
+field_type: entity_reference

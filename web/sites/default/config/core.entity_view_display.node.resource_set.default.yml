@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.resource_set.field_group
     - field.field.node.resource_set.field_media
     - field.field.node.resource_set.field_notes
     - field.field.node.resource_set.field_sort_weight
@@ -48,5 +49,7 @@ content:
     type: text_default
     region: content
 hidden:
+  content_moderation_control: true
+  field_group: true
   field_sort_weight: true
   links: true

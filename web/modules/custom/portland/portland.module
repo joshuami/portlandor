@@ -30,6 +30,7 @@ const GROUP_CONTENT_TYPE_PLURAL = [
     "notification" => ["notifications"],
     "page" => ["pages"],
     "development_permit" => ["permits"],
+    "resource_set" => ["resources"],
 ];
 
 const ALERTS_COUNTER_CACHE_KEY = 'portland.active.alerts';
@@ -403,7 +404,8 @@ function portland_form_alter(&$form, &$form_state, $form_id) {
         'media_image_edit_form', 'media_image_add_form',
         'media_audio_edit_form', 'media_audio_add_form',
         'media_video_edit_form', 'media_video_add_form',
-        'media_document_edit_form', 'media_document_add_form'
+        'media_document_edit_form', 'media_document_add_form',
+        'node_resource_set_edit_form', 'node_resource_set_add_form'
     ];
 
     if( in_array($form_id, $form_array_with_group_field) ) {
@@ -461,7 +463,7 @@ function portland_handle_group_update($form, $form_state) {
     $entity = $form_state->getFormObject()->getEntity();
 
     $bundle_array = ['event', 'notification', 'news', 'city_service', 'page', 
-                    'image', 'audio', 'video', 'document'];
+                    'image', 'audio', 'video', 'document', 'resource_set'];
 
     if( in_array($entity->bundle(), $bundle_array) && $entity->hasField('field_group') ) {
         $old_entity = ($entity->isNew()) ? NULL : \Drupal::entityTypeManager()->getStorage('node')->loadUnchanged($entity->id());

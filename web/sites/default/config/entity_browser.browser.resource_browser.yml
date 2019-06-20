@@ -1,0 +1,42 @@
+uuid: 2fc36e59-4ea3-4c94-9037-1de5c098582f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media
+  module:
+    - entity_browser_entity_form
+    - views
+name: resource_browser
+label: 'Resource browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select media'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  e1e60c82-d793-45ed-8b44-e4647bacc2b7:
+    settings:
+      view: media
+      view_display: document_browser
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: e1e60c82-d793-45ed-8b44-e4647bacc2b7
+    weight: 1
+    label: Library
+    id: view
+  ef04a70d-3159-430f-a8bf-85821e658fdb:
+    settings:
+      entity_type: media
+      bundle: document
+      form_mode: media_library
+      submit_text: 'Save entity'
+    uuid: ef04a70d-3159-430f-a8bf-85821e658fdb
+    weight: 2
+    label: 'Add document'
+    id: entity_form

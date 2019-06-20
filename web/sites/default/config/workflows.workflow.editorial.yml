@@ -20,6 +20,7 @@ dependencies:
     - node.type.notification
     - node.type.page
     - node.type.policy
+    - node.type.resource_set
     - node.type.service_location
   module:
     - content_moderation
@@ -110,5 +111,6 @@ type_settings:
       - notification
       - page
       - policy
+      - resource_set
       - service_location
   default_moderation_state: draft

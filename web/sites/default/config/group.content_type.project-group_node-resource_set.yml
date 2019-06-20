@@ -1,0 +1,19 @@
+uuid: 4d350509-0db2-44f0-87a5-e090ec3f0bf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.project
+    - node.type.resource_set
+  module:
+    - gnode
+    - node
+id: project-group_node-resource_set
+label: 'Project: Add Resource set'
+description: 'Adds <em class="placeholder">Resource set</em> content to groups both publicly and privately.'
+group_type: project
+content_plugin: 'group_node:resource_set'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false
