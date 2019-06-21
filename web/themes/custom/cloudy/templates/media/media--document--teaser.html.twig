@@ -24,7 +24,6 @@
       {% set icon = file_icon_markup(media.field_mime_type.0.value) %}
       {% set fileSize = file_size_string(media.field_file_size.0.value) %}
       <h2><a href="{{ fileURL }}">{{ icon|raw }}{{ name }}</a> {{ fileSize }}</h2>
-      {% if media.field_document_type %}<p>{{ media.field_document_type.entity.name.value }}</p>{% endif %}
       {% if media.field_summary %}<p>{{ media.field_summary.0.value }}</p>{% endif %}
     {% endblock %}
   {% endspaceless %}
