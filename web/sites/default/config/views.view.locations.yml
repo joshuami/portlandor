@@ -64,8 +64,8 @@ display:
           name_field: title
           description_field: ''
           view_mode: full
-          leaflet_map: esri-world_street_map
-          height: '400'
+          leaflet_map: '~Portland Park and Color'
+          height: '600'
           hide_empty_map: 0
           disable_wheel: 0
           fullscreen_control: 0
@@ -77,13 +77,13 @@ display:
             center:
               lat: '45.52345'
               lon: '-122.67621'
-            zoom: '10'
+            zoom: '15'
             minZoom: '7'
-            maxZoom: '14'
+            maxZoom: '22'
             zoomFiner: '0'
           icon:
-            iconUrl: ''
-            shadowUrl: ''
+            iconUrl: modules/contrib/leaflet/js/leaflet/dist/images/marker-icon.png
+            shadowUrl: modules/contrib/leaflet/js/leaflet/dist/images/marker-shadow.png
             iconSize:
               x: ''
               'y': ''
@@ -100,7 +100,7 @@ display:
               x: ''
               'y': ''
           leaflet_markercluster:
-            control: 0
+            control: 1
             options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds":false}'
           path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2"}'
       row:

@@ -18,8 +18,9 @@ third_party_settings:
     hidden: true
     disabled: false
     plugins:
-      - googlemaps
-      - googlemaps_business
+      - arcgisonline
+      - bingmaps
+      - openstreetmap
     dumper: wkt
     delta_handling: default
     failure:

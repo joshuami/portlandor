@@ -1,0 +1,15 @@
+leaflet_more_maps_custom_maps:
+  1:
+    map-key: 'Portland Park and Color'
+    layer-keys:
+      'portlandmaps_park layer': 'portlandmaps_park layer'
+      'portlandmaps_color layer': 'portlandmaps_color layer'
+    reverse-order: 0
+  2:
+    map-key: ''
+    layer-keys: {  }
+    reverse-order: 0
+  3:
+    map-key: ''
+    layer-keys: {  }
+    reverse-order: 0
