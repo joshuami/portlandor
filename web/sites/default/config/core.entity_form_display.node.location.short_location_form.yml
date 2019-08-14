@@ -10,11 +10,11 @@ dependencies:
     - field.field.node.location.field_legacy_path
     - field.field.node.location.field_summary
     - node.type.location
-    - workflows.workflow.editorial
+    - workflows.workflow.editorial_default_published
   module:
     - address
     - content_moderation
-    - geofield
+    - leaflet_widget
     - maxlength
     - path
 id: node.location.short_location_form
@@ -29,11 +29,34 @@ content:
     type: address_default
     region: content
   field_geolocation:
-    type: geofield_latlon
+    type: leaflet_widget
     weight: 2
     region: content
     settings:
-      html5_geolocation: false
+      map:
+        leaflet_map: '~Portland Park and Color'
+        height: '300'
+        center:
+          lat: '45.52345'
+          lng: '-122.67621'
+        auto_center: '1'
+        zoom: '15'
+        locate: '1'
+        scroll_zoom_enabled: '1'
+      input:
+        show: '1'
+        readonly: 0
+      toolbar:
+        position: topright
+        drawMarker: '1'
+        drawPolyline: '1'
+        drawRectangle: '1'
+        drawPolygon: '1'
+        drawCircle: '1'
+        editMode: '1'
+        dragMode: '1'
+        removalMode: '1'
+        cutPolygon: 0
     third_party_settings: {  }
   field_summary:
     weight: 3

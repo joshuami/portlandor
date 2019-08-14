@@ -1,0 +1,196 @@
+[
+    {
+        "function": "portland_entity_delete"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/Extension\/ModuleHandler.php",
+        "line": 403,
+        "function": "call_user_func_array"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/Entity\/EntityStorageBase.php",
+        "line": 206,
+        "function": "invokeAll",
+        "class": "Drupal\\Core\\Extension\\ModuleHandler",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/Entity\/ContentEntityStorageBase.php",
+        "line": 835,
+        "function": "invokeHook",
+        "class": "Drupal\\Core\\Entity\\EntityStorageBase",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/Entity\/EntityStorageBase.php",
+        "line": 426,
+        "function": "invokeHook",
+        "class": "Drupal\\Core\\Entity\\ContentEntityStorageBase",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/Entity\/Sql\/SqlContentEntityStorage.php",
+        "line": 787,
+        "function": "delete",
+        "class": "Drupal\\Core\\Entity\\EntityStorageBase",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/Entity\/EntityBase.php",
+        "line": 402,
+        "function": "delete",
+        "class": "Drupal\\Core\\Entity\\Sql\\SqlContentEntityStorage",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/modules\/custom\/portland\/portland.module",
+        "line": 524,
+        "function": "delete",
+        "class": "Drupal\\Core\\Entity\\EntityBase",
+        "type": "->"
+    },
+    {
+        "function": "portland_handle_group_update"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/Form\/FormSubmitter.php",
+        "line": 111,
+        "function": "call_user_func_array"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/Form\/FormSubmitter.php",
+        "line": 51,
+        "function": "executeSubmitHandlers",
+        "class": "Drupal\\Core\\Form\\FormSubmitter",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/Form\/FormBuilder.php",
+        "line": 590,
+        "function": "doSubmitForm",
+        "class": "Drupal\\Core\\Form\\FormSubmitter",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/Form\/FormBuilder.php",
+        "line": 319,
+        "function": "processForm",
+        "class": "Drupal\\Core\\Form\\FormBuilder",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/Controller\/FormController.php",
+        "line": 93,
+        "function": "buildForm",
+        "class": "Drupal\\Core\\Form\\FormBuilder",
+        "type": "->"
+    },
+    {
+        "function": "getContentResult",
+        "class": "Drupal\\Core\\Controller\\FormController",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/EventSubscriber\/EarlyRenderingControllerWrapperSubscriber.php",
+        "line": 123,
+        "function": "call_user_func_array"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/Render\/Renderer.php",
+        "line": 582,
+        "function": "Drupal\\Core\\EventSubscriber\\@closure",
+        "class": "Drupal\\Core\\EventSubscriber\\EarlyRenderingControllerWrapperSubscriber",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/EventSubscriber\/EarlyRenderingControllerWrapperSubscriber.php",
+        "line": 124,
+        "function": "executeInRenderContext",
+        "class": "Drupal\\Core\\Render\\Renderer",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/EventSubscriber\/EarlyRenderingControllerWrapperSubscriber.php",
+        "line": 97,
+        "function": "wrapControllerExecutionInRenderContext",
+        "class": "Drupal\\Core\\EventSubscriber\\EarlyRenderingControllerWrapperSubscriber",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/vendor\/symfony\/http-kernel\/HttpKernel.php",
+        "line": 151,
+        "function": "Drupal\\Core\\EventSubscriber\\@closure",
+        "class": "Drupal\\Core\\EventSubscriber\\EarlyRenderingControllerWrapperSubscriber",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/vendor\/symfony\/http-kernel\/HttpKernel.php",
+        "line": 68,
+        "function": "handleRaw",
+        "class": "Symfony\\Component\\HttpKernel\\HttpKernel",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/StackMiddleware\/Session.php",
+        "line": 57,
+        "function": "handle",
+        "class": "Symfony\\Component\\HttpKernel\\HttpKernel",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/StackMiddleware\/KernelPreHandle.php",
+        "line": 47,
+        "function": "handle",
+        "class": "Drupal\\Core\\StackMiddleware\\Session",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/modules\/page_cache\/src\/StackMiddleware\/PageCache.php",
+        "line": 106,
+        "function": "handle",
+        "class": "Drupal\\Core\\StackMiddleware\\KernelPreHandle",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/modules\/page_cache\/src\/StackMiddleware\/PageCache.php",
+        "line": 85,
+        "function": "pass",
+        "class": "Drupal\\page_cache\\StackMiddleware\\PageCache",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/StackMiddleware\/ReverseProxyMiddleware.php",
+        "line": 47,
+        "function": "handle",
+        "class": "Drupal\\page_cache\\StackMiddleware\\PageCache",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/StackMiddleware\/NegotiationMiddleware.php",
+        "line": 52,
+        "function": "handle",
+        "class": "Drupal\\Core\\StackMiddleware\\ReverseProxyMiddleware",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/modules\/contrib\/remove_http_headers\/src\/StackMiddleware\/RemoveHttpHeadersMiddleware.php",
+        "line": 60,
+        "function": "handle",
+        "class": "Drupal\\Core\\StackMiddleware\\NegotiationMiddleware",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/vendor\/stack\/builder\/src\/Stack\/StackedHttpKernel.php",
+        "line": 23,
+        "function": "handle",
+        "class": "Drupal\\remove_http_headers\\StackMiddleware\\RemoveHttpHeadersMiddleware",
+        "type": "->"
+    },
+    {
+        "file": "\/srv\/bindings\/f6e21f0fda484d37b5580b346408a25f\/code\/web\/core\/lib\/Drupal\/Core\/DrupalKernel.php",
+        "line": 693,
+        "function": "handle",
+        "class": "Stack\\StackedHttpKernel",
+        "type": "->"
+    }
+]

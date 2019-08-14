@@ -85,6 +85,7 @@ module:
   leaflet_markercluster: 0
   leaflet_more_maps: 0
   leaflet_views: 0
+  leaflet_widget: 0
   lightning_contact_form: 0
   lightning_core: 0
   lightning_landing_page: 0

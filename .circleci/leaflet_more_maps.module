@@ -442,6 +442,30 @@ function _leaflet_more_maps_assemble_default_map_info(&$map_info, $default_setti
     ),
   );
 
+
+  $map_info['metro_firestation'] = array(
+    'label' => 'Metro Fire stations (zoom 0..22)',
+    'description' => t('gis.oregonmetro.gov Fire stations'),
+    'settings' =>  $default_settings + array('maxZoom' => 22),
+    'layers' => array(
+      'layer' => array(
+        'urlTemplate' => $prot . "www.portlandmaps.com/arcgis/rest/services/Public/Basemap_Color_Complete/MapServer/tile/$zyx_only",
+      ),
+      'overlay' => array(
+        // 'type' => 'metro',
+        'layer_type' => 'overlay',
+        // Note 'lyrs=h' for transparent overlay.
+        'urlTemplate' => $prot . 'gis.oregonmetro.gov/arcgis/rest/services/OpenData/PlacesDataWebMerc/MapServer/2',
+        // 'options' => array(
+        //   'attribution' => $attr_google,
+        //   'detectRetina' => TRUE,
+        //   'subdomains' => array(0, 1, 2, 3),
+        // ),
+      ),
+    ),
+  );
+
+
   // Stamen http://stamen.com
   $attr_stamen = 'Tiles by <a href="http://stamen.com">Stamen Design</a> under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. ' . $attr_osm;
   $stamen_names = array('Toner', 'Watercolor'/* , 'Terrain'*/);

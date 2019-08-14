@@ -96,6 +96,7 @@ leaflet_demo: 1.0.0-alpha3
 leaflet_markercluster: 1.18.0
 leaflet_more_maps: 1.0.0-alpha3
 leaflet_views: 1.18.0
+leaflet_widget: 2.0.0-alpha1
 lightning: 3.2.0
 lightning_api: 0.0.0
 lightning_contact_form: 0.0.0

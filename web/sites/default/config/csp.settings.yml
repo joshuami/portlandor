@@ -1,17 +1,43 @@
+_core:
+  default_config_hash: Qa0Wwo59NSFGS3lPsFxj55zyk3uJXxPqLJuQ4soNCaQ
 report-only:
+  enable: false
+enforce:
   enable: true
   directives:
-    script-src:
-      base: self
+    default-src:
+      sources:
+        - '*.oregonmetro.gov'
       flags:
         - unsafe-inline
+      base: self
+    script-src:
+      sources:
+        - portlandmaps.com
+        - '*.oregonmetro.gov'
+      flags:
+        - unsafe-inline
+      base: self
     script-src-elem:
+      sources:
+        - portlandmaps.com
+        - '*.oregonmetro.gov'
+      flags:
+        - unsafe-inline
       base: self
     style-src:
+      sources:
+        - portlandmaps.com
+        - '*.oregonmetro.gov'
+      flags:
+        - unsafe-inline
+      base: self
+    style-src-elem:
+      sources:
+        - portlandmaps.com
+        - '*.oregonmetro.gov'
+      flags:
+        - unsafe-inline
       base: self
   reporting:
     plugin: none
-enforce:
-  enable: false
-_core:
-  default_config_hash: Qa0Wwo59NSFGS3lPsFxj55zyk3uJXxPqLJuQ4soNCaQ
