@@ -29,6 +29,8 @@ dependencies:
     - text
     - user
     - views
+  theme:
+    - cloudy
 third_party_settings:
   panelizer:
     enable: false
@@ -90,38 +92,44 @@ third_party_settings:
             weight: 0
         third_party_settings: {  }
       -
-        layout_id: layout_twocol_section
-        layout_settings:
-          column_widths: 75-25
+        layout_id: cloudy_main_with_menu
+        layout_settings: {  }
         components:
-          95d9aeda-b8a9-4c09-9c56-c4725c8b2c8a:
-            uuid: 95d9aeda-b8a9-4c09-9c56-c4725c8b2c8a
-            region: first
+          e996cff2-c119-46bb-aaab-8d78deb26638:
+            uuid: e996cff2-c119-46bb-aaab-8d78deb26638
+            region: secondary
             configuration:
-              id: 'field_block:node:page:field_summary'
+              id: 'views_block:group_menu_view-block_1'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          c4ccea50-041d-4e0e-b721-db2d65d50f19:
+            uuid: c4ccea50-041d-4e0e-b721-db2d65d50f19
+            region: primary
+            configuration:
+              id: 'entity_field:node:field_summary'
               label: Summary
-              provider: layout_builder
+              provider: ctools_block
               label_display: '0'
               formatter:
                 label: hidden
                 type: string
                 settings:
                   link_to_entity: false
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: default
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
+                third_party_settings: {  }
+                weight: 0
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          c2d5bb9e-43e2-46bb-a175-a55ac4508507:
-            uuid: c2d5bb9e-43e2-46bb-a175-a55ac4508507
-            region: first
+          3d6e672b-65a8-4ef5-9e45-d3f2d567bad1:
+            uuid: 3d6e672b-65a8-4ef5-9e45-d3f2d567bad1
+            region: primary
             configuration:
               id: 'entity_field:node:field_body_content'
               label: 'Body content'
@@ -137,24 +145,6 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
-          30e8ca6f-2ae8-46b9-8c5a-f86577718c4b:
-            uuid: 30e8ca6f-2ae8-46b9-8c5a-f86577718c4b
-            region: second
-            configuration:
-              id: 'views_block:group_menu_view-block_1'
-              label: ''
-              provider: views
-              label_display: '0'
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components: {  }
         third_party_settings: {  }
   layout_library:
     enable: true
