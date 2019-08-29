@@ -50,7 +50,7 @@ cloudy_main_with_sidebar:
     secondary:
       label: Secondary
 
-# Main with sidebar is used for content that needs a sidebar layout
+# Main with menu is used for content that needs a menu layout
 cloudy_main_with_menu:
   label: Cloudy main with menu
   category: Cloudy
@@ -60,3 +60,23 @@ cloudy_main_with_menu:
       label: Primary
     secondary:
       label: Secondary
+
+## Only used with Elected Officials
+elected_official_homepage_pattern:
+  label: Elected official homepage
+  category: Cloudy
+  class: '\Drupal\ds\Plugin\DsLayout'
+  template: templates/layout/elected-official-homepage
+  regions:
+    top_left:
+      label: Top left
+    top_right:
+      label: Top right
+    center_left:
+      label: Center left
+    center_center:
+      label: Center center
+    center_right:
+      label: Center right
+    bottom_center:
+      label: Bottom

@@ -9438,6 +9438,9 @@
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "3060274 - Tokens as redirect": "https://www.drupal.org/files/issues/2019-08-22/rabbit_hole-tokens_as_redirect-3060274-7.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
