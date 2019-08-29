@@ -13,15 +13,8 @@ dependencies:
     - node.type.policy
   module:
     - ds
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.policy.default
 targetEntityType: node
 bundle: policy
@@ -58,4 +51,5 @@ hidden:
   field_policy_number: true
   field_policy_type: true
   field_reviewer: true
+  group_content: true
   links: true

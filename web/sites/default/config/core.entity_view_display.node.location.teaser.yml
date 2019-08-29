@@ -14,15 +14,8 @@ dependencies:
     - address
     - address_map_link
     - ds
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.location.teaser
 targetEntityType: node
 bundle: location
@@ -67,4 +60,5 @@ hidden:
   content_moderation_control: true
   field_geolocation: true
   field_legacy_path: true
+  group_content: true
   links: true

@@ -24,7 +24,6 @@ dependencies:
     - datetime
     - ds
     - field_group
-    - panelizer
     - time_field
     - user
 third_party_settings:
@@ -72,11 +71,6 @@ third_party_settings:
             lb: ''
             lb-col: false
             classes: {  }
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
   field_group:
     group_event_date:
       children:

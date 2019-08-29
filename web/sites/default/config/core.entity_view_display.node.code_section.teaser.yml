@@ -13,15 +13,8 @@ dependencies:
     - field.field.node.code_section.field_section_body
     - node.type.code_section
   module:
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.code_section.teaser
 targetEntityType: node
 bundle: code_section
@@ -42,4 +35,5 @@ hidden:
   field_numeric_order: true
   field_reviewer: true
   field_section_body: true
+  group_content: true
   links: true

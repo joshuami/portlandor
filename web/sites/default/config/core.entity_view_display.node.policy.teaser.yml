@@ -13,14 +13,7 @@ dependencies:
     - field.field.node.policy.field_reviewer
     - node.type.policy
   module:
-    - panelizer
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.policy.teaser
 targetEntityType: node
 bundle: policy
@@ -35,4 +28,5 @@ hidden:
   field_policy_number: true
   field_policy_type: true
   field_reviewer: true
+  group_content: true
   links: true

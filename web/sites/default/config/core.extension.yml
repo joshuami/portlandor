@@ -32,6 +32,7 @@ module:
   contextual: 0
   copyright_block: 0
   crop: 0
+  cshs: 0
   csv_serialization: 0
   ctools: 0
   ctools_block: 0
@@ -110,6 +111,7 @@ module:
   media_entity_instagram: 0
   media_entity_twitter: 0
   media_library: 0
+  menu_block: 0
   menu_breadcrumb: 0
   menu_link: 0
   menu_ui: 0
@@ -132,8 +134,6 @@ module:
   page_cache: 0
   page_manager: 0
   page_manager_ui: 0
-  panelizer: 0
-  panelizer_quickedit: 0
   panels: 0
   panels_ipe: 0
   pantheon_advanced_page_cache: 0
@@ -198,6 +198,7 @@ module:
   pathauto: 1
   portland_taxonomy_create: 1
   ds_extras: 2
+  menu_link_weight: 10
   views: 10
   paragraphs: 11
   lightning: 1000

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.field_audience
     - field.field.node.page.field_body_content
     - field.field.node.page.field_featured_media
+    - field.field.node.page.field_group
     - field.field.node.page.field_legacy_path
     - field.field.node.page.field_page_type
     - field.field.node.page.field_popular
@@ -15,17 +16,12 @@ dependencies:
     - field.field.node.page.field_search_keywords
     - field.field.node.page.field_summary
     - field.field.node.page.field_topics
+    - field.field.node.page.layout_selection
     - node.type.page
   module:
     - ds
-    - panelizer
     - user
 third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
   ds:
     layout:
       id: cloudy_card
@@ -125,4 +121,5 @@ hidden:
   field_search_keywords: true
   field_topics: true
   group_content: true
+  layout_selection: true
   links: true

@@ -22,16 +22,10 @@ dependencies:
   module:
     - ds
     - link
-    - panelizer
     - telephone
     - text
     - user
 third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
   ds:
     layout:
       id: cloudy_main_with_sidebar
@@ -201,4 +195,5 @@ hidden:
   field_related_content: true
   field_reviewer: true
   field_topics: true
+  group_content: true
   links: true

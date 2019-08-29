@@ -9,15 +9,8 @@ dependencies:
     - field.field.node.charter_chapter.field_reviewer
     - node.type.charter_chapter
   module:
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.charter_chapter.default
 targetEntityType: node
 bundle: charter_chapter
@@ -35,4 +28,5 @@ hidden:
   field_legacy_path: true
   field_numeric_order: true
   field_reviewer: true
+  group_content: true
   links: true

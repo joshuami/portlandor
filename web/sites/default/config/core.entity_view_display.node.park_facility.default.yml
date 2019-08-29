@@ -22,15 +22,8 @@ dependencies:
     - field.field.node.park_facility.field_year_acquired
     - node.type.park_facility
   module:
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.park_facility.default
 targetEntityType: node
 bundle: park_facility
@@ -163,4 +156,5 @@ hidden:
   field_portlandmaps_id: true
   field_reviewer: true
   field_search_keywords: true
+  group_content: true
   links: true

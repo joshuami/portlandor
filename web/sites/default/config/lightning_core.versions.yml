@@ -35,6 +35,7 @@ content_moderation: 0.0.0
 contextual: 0.0.0
 copyright_block: 1.0.0-rc2
 crop: 0.0.0
+cshs: 1.0.0-beta4
 csv_serialization: 1.4.0
 ctools: 0.0.0
 ctools_block: 0.0.0
@@ -122,8 +123,10 @@ media: 0.0.0
 media_entity_instagram: 0.0.0
 media_entity_twitter: 0.0.0
 media_library: 8.6.1
+menu_block: 1.5.0
 menu_breadcrumb: 1.8.0
 menu_link_content: 0.0.0
+menu_link_weight: 1.0.0-beta3
 menu_ui: 0.0.0
 metatag: 0.0.0
 metatag_open_graph: 0.0.0

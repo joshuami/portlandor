@@ -11,15 +11,8 @@ dependencies:
     - node.type.location
   module:
     - address
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.location.default
 targetEntityType: node
 bundle: location
@@ -51,4 +44,5 @@ hidden:
   content_moderation_control: true
   field_geolocation: true
   field_legacy_path: true
+  group_content: true
   links: true

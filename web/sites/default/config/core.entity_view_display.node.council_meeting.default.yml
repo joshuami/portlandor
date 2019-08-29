@@ -14,16 +14,9 @@ dependencies:
     - datetime
     - ds
     - entity_reference_revisions
-    - panelizer
     - text
     - time_field
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.council_meeting.default
 targetEntityType: node
 bundle: council_meeting
@@ -116,4 +109,5 @@ content:
     region: content
 hidden:
   content_moderation_control: true
+  group_content: true
   links: true

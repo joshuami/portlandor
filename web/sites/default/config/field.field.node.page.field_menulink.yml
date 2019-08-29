@@ -1,0 +1,35 @@
+uuid: d5279296-acba-468f-9172-23f27dc73ed3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_menulink
+    - node.type.page
+  module:
+    - custom_add_another
+    - menu_link
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.page.field_menulink
+field_name: field_menulink
+entity_type: node
+bundle: page
+label: 'Menu link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_menus:
+    site-map: site-map
+    admin: '0'
+    editor-toolbar: '0'
+    footer: '0'
+    main: '0'
+    tools: '0'
+    account: '0'
+  default_menu_parent: 'main:'
+field_type: menu_link

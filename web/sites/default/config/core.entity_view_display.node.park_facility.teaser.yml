@@ -17,19 +17,13 @@ dependencies:
     - field.field.node.park_facility.field_park_location_type
     - field.field.node.park_facility.field_portlandmaps_id
     - field.field.node.park_facility.field_property_id
+    - field.field.node.park_facility.field_reviewer
     - field.field.node.park_facility.field_search_keywords
     - field.field.node.park_facility.field_size_in_acres
     - field.field.node.park_facility.field_year_acquired
     - node.type.park_facility
   module:
-    - panelizer
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.park_facility.teaser
 targetEntityType: node
 bundle: park_facility
@@ -68,4 +62,5 @@ hidden:
   field_search_keywords: true
   field_size_in_acres: true
   field_year_acquired: true
+  group_content: true
   links: true

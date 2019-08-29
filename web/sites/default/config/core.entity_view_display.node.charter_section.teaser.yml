@@ -12,15 +12,8 @@ dependencies:
     - field.field.node.charter_section.field_section_body
     - node.type.charter_section
   module:
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.charter_section.teaser
 targetEntityType: node
 bundle: charter_section
@@ -40,4 +33,5 @@ hidden:
   field_numeric_order: true
   field_reviewer: true
   field_section_body: true
+  group_content: true
   links: true

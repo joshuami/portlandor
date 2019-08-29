@@ -9,15 +9,8 @@ dependencies:
     - field.field.node.code_title.field_reviewer
     - node.type.code_title
   module:
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.code_title.default
 targetEntityType: node
 bundle: code_title
@@ -35,4 +28,5 @@ hidden:
   field_legacy_path: true
   field_numeric_order: true
   field_reviewer: true
+  group_content: true
   links: true
