@@ -8,7 +8,9 @@ dependencies:
     - field.field.node.page.field_body_content
     - field.field.node.page.field_featured_media
     - field.field.node.page.field_group
+    - field.field.node.page.field_include_in_group_menu
     - field.field.node.page.field_legacy_path
+    - field.field.node.page.field_menu_text
     - field.field.node.page.field_menulink
     - field.field.node.page.field_page_type
     - field.field.node.page.field_popular
@@ -19,7 +21,6 @@ dependencies:
     - field.field.node.page.field_topics
     - field.field.node.page.layout_selection
     - node.type.page
-    - system.menu.site-map
   module:
     - ctools_block
     - ds
@@ -27,73 +28,22 @@ dependencies:
     - layout_builder_restrictions
     - layout_discovery
     - layout_library
-    - menu_block
+    - panelizer
     - text
     - user
-  theme:
-    - cloudy
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: true
     sections:
       -
-        layout_id: layout_onecol
-        layout_settings: {  }
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 50-50
         components:
-          d4807eaa-18d6-42db-b9c2-3992154a43c5:
-            uuid: d4807eaa-18d6-42db-b9c2-3992154a43c5
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:page:field_featured_media'
-              formatter:
-                label: hidden
-                settings:
-                  view_mode: banner
-                  link: false
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: expert
-                      settings:
-                        lb: ''
-                        prefix: ''
-                        lbw-el: ''
-                        lbw-cl: ''
-                        lbw-at: ''
-                        ow: true
-                        ow-el: ''
-                        ow-cl: mb-3
-                        ow-at: ''
-                        fis-el: ''
-                        fis-cl: ''
-                        fis-at: ''
-                        fi-el: ''
-                        fi-cl: ''
-                        fi-at: ''
-                        suffix: ''
-                        lbw: false
-                        lb-col: false
-                        ow-def-at: false
-                        ow-def-cl: false
-                        fis: false
-                        fis-def-at: false
-                        fi: false
-                        fi-def-at: false
-                type: entity_reference_entity_view
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
-      -
-        layout_id: cloudy_main_with_menu
-        layout_settings: {  }
-        components:
-          8b6b4f28-8139-4266-a488-dccb2cae4447:
-            uuid: 8b6b4f28-8139-4266-a488-dccb2cae4447
-            region: primary
+          1a01410f-d794-49fe-81bc-a23951b1075a:
+            uuid: 1a01410f-d794-49fe-81bc-a23951b1075a
+            region: first
             configuration:
               id: 'entity_field:node:field_summary'
               label: Summary
@@ -110,9 +60,33 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          005280ea-f287-4b8e-b2f7-60bd7b4487cb:
-            uuid: 005280ea-f287-4b8e-b2f7-60bd7b4487cb
-            region: primary
+          00395ef9-d8f3-42be-9170-17ce25185b13:
+            uuid: 00395ef9-d8f3-42be-9170-17ce25185b13
+            region: second
+            configuration:
+              id: 'entity_field:node:field_featured_media'
+              label: 'Featured media'
+              provider: ctools_block
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: banner
+                third_party_settings: {  }
+                weight: 0
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          172040df-b9e6-4c5f-8fb5-d611c5151504:
+            uuid: 172040df-b9e6-4c5f-8fb5-d611c5151504
+            region: content
             configuration:
               id: 'entity_field:node:field_body_content'
               label: 'Body content'
@@ -127,22 +101,6 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 1
-          ba96c8a4-de58-440a-ba75-61573ae62e9b:
-            uuid: ba96c8a4-de58-440a-ba75-61573ae62e9b
-            region: secondary
-            configuration:
-              id: 'menu_block:site-map'
-              label: 'Bureaus, offices, and programs'
-              provider: menu_block
-              label_display: '0'
-              level: 1
-              depth: 1
-              expand: 0
-              parent: 'site-map:'
-              suggestion: site_map
-              context_mapping: {  }
-            additional: {  }
             weight: 0
         third_party_settings: {  }
   layout_library:
@@ -150,6 +108,11 @@ third_party_settings:
   layout_builder_restrictions:
     allowed_blocks: {  }
     allowed_layouts: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.page.full
 targetEntityType: node
 bundle: page
@@ -239,7 +202,9 @@ hidden:
   content_moderation_control: true
   field_audience: true
   field_group: true
+  field_include_in_group_menu: true
   field_legacy_path: true
+  field_menu_text: true
   field_menulink: true
   field_page_type: true
   field_popular: true

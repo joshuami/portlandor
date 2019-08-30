@@ -23,6 +23,7 @@ dependencies:
     - field.field.group.project.field_start_date
     - field.field.group.project.field_summary
     - field.field.group.project.field_topics
+    - field.field.group.project.layout_selection
     - group.type.project
   module:
     - bootstrap_datepicker
@@ -312,6 +313,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  layout_selection:
+    type: options_select
+    region: content
+    weight: 16
+    settings: {  }
     third_party_settings: {  }
 hidden:
   path: true

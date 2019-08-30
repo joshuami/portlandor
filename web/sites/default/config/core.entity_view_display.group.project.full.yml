@@ -1,0 +1,431 @@
+uuid: c4bca320-1480-47f5-a28d-94235ac0f551
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.group.full
+    - field.field.group.project.field_audience
+    - field.field.group.project.field_enable_documents_menu_item
+    - field.field.group.project.field_enable_events_menu_item
+    - field.field.group.project.field_enable_guides_and_informat
+    - field.field.group.project.field_enable_news_and_notices_me
+    - field.field.group.project.field_enable_projects_menu_item
+    - field.field.group.project.field_end_date
+    - field.field.group.project.field_featured_content
+    - field.field.group.project.field_featured_groups
+    - field.field.group.project.field_featured_media
+    - field.field.group.project.field_legacy_path
+    - field.field.group.project.field_parent_group
+    - field.field.group.project.field_project_status
+    - field.field.group.project.field_project_type
+    - field.field.group.project.field_search_keywords
+    - field.field.group.project.field_shortname_or_acronym
+    - field.field.group.project.field_start_date
+    - field.field.group.project.field_summary
+    - field.field.group.project.field_topics
+    - field.field.group.project.layout_selection
+    - group.type.project
+    - views.view.group_events
+    - views.view.group_news
+  module:
+    - ctools_block
+    - datetime
+    - ds
+    - field_group
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - layout_library
+    - views
+third_party_settings:
+  field_group:
+    group_start_to_end_date:
+      children:
+        - field_start_date
+        - field_end_date
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'event--date pb-2'
+      label: Date
+      region: content
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 50-50
+        components:
+          3ece90d0-1040-4141-b4c3-3b943edf3912:
+            uuid: 3ece90d0-1040-4141-b4c3-3b943edf3912
+            region: second
+            configuration:
+              id: 'entity_field:group:field_featured_media'
+              label: 'Featured media'
+              provider: ctools_block
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: banner
+                third_party_settings: {  }
+                weight: 0
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          33f507d6-08b1-45ef-9bf7-56a7ebbd48fb:
+            uuid: 33f507d6-08b1-45ef-9bf7-56a7ebbd48fb
+            region: first
+            configuration:
+              id: 'entity_field:group:field_summary'
+              label: Summary
+              provider: ctools_block
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                weight: 0
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          5ff70167-4e37-4914-896a-9c362956e2e4:
+            uuid: 5ff70167-4e37-4914-896a-9c362956e2e4
+            region: first
+            configuration:
+              id: 'entity_field:group:field_start_date'
+              label: 'Start date'
+              provider: ctools_block
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: month_day_year
+                third_party_settings: {  }
+                weight: 0
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          f0ba9d18-4391-4b02-8898-945b5c80b3c1:
+            uuid: f0ba9d18-4391-4b02-8898-945b5c80b3c1
+            region: first
+            configuration:
+              id: 'entity_field:group:field_end_date'
+              label: 'End date'
+              provider: ctools_block
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: month_day_year
+                third_party_settings: {  }
+                weight: 0
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          eb54840f-ddc0-431a-804d-0021091b1271:
+            uuid: eb54840f-ddc0-431a-804d-0021091b1271
+            region: content
+            configuration:
+              id: 'entity_field:group:field_featured_content'
+              label: 'Featured content'
+              provider: ctools_block
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: featured
+                third_party_settings: {  }
+                weight: 0
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          b8edfc7f-5414-41b5-bbc5-46b150c1f68f:
+            uuid: b8edfc7f-5414-41b5-bbc5-46b150c1f68f
+            region: content
+            configuration:
+              id: 'entity_field:group:field_featured_groups'
+              label: 'Featured groups'
+              provider: ctools_block
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: featured
+                third_party_settings: {  }
+                weight: 0
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          e13f6a77-8db6-4d2e-9d7c-443219404227:
+            uuid: e13f6a77-8db6-4d2e-9d7c-443219404227
+            region: content
+            configuration:
+              id: 'views_block:group_news-block_1'
+              label: 'News and notices'
+              provider: views
+              label_display: visible
+              views_label: 'News and notices'
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 2
+          f9ba6635-c459-4d0b-892e-155e223a9372:
+            uuid: f9ba6635-c459-4d0b-892e-155e223a9372
+            region: content
+            configuration:
+              id: 'views_block:group_events-block_1'
+              label: Events
+              provider: views
+              label_display: visible
+              views_label: Events
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
+  layout_library:
+    enable: true
+  layout_builder_restrictions:
+    allowed_blocks: {  }
+    allowed_layouts: {  }
+id: group.project.full
+targetEntityType: group
+bundle: project
+mode: full
+content:
+  field_end_date:
+    type: datetime_default
+    weight: 20
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: month_day_year
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: End
+            prefix: through
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  field_featured_content:
+    weight: 4
+    label: above
+    settings:
+      view_mode: featured
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: Featured
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_featured_groups:
+    weight: 6
+    label: above
+    settings:
+      view_mode: featured
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: 'Programs and projects'
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_featured_media:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: banner
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: ''
+            ow-cl: mb-3
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_entity_view
+    region: content
+  field_start_date:
+    weight: 19
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: month_day_year
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: Start
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: datetime_default
+    region: content
+  field_summary:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: p
+            fi-cl: lead
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: content
+  group_site_menu_entity_view_1:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  field_audience: true
+  field_enable_documents_menu_item: true
+  field_enable_events_menu_item: true
+  field_enable_guides_and_informat: true
+  field_enable_news_and_notices_me: true
+  field_enable_projects_menu_item: true
+  field_legacy_path: true
+  field_parent_group: true
+  field_project_status: true
+  field_project_type: true
+  field_search_keywords: true
+  field_shortname_or_acronym: true
+  field_topics: true
+  label: true
+  layout_selection: true
+  uid: true

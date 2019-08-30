@@ -7,7 +7,9 @@ dependencies:
     - field.field.node.page.field_body_content
     - field.field.node.page.field_featured_media
     - field.field.node.page.field_group
+    - field.field.node.page.field_include_in_group_menu
     - field.field.node.page.field_legacy_path
+    - field.field.node.page.field_menu_text
     - field.field.node.page.field_menulink
     - field.field.node.page.field_page_type
     - field.field.node.page.field_popular
@@ -24,6 +26,7 @@ dependencies:
     - layout_builder_restrictions
     - layout_library
     - menu_link
+    - panelizer
     - text
     - user
 third_party_settings:
@@ -35,6 +38,11 @@ third_party_settings:
   layout_builder_restrictions:
     allowed_blocks: {  }
     allowed_layouts: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -132,7 +140,9 @@ hidden:
   content_moderation_control: true
   field_audience: true
   field_group: true
+  field_include_in_group_menu: true
   field_legacy_path: true
+  field_menu_text: true
   field_page_type: true
   field_popular: true
   field_related_content: true

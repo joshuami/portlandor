@@ -1,0 +1,14 @@
+uuid: a087a11a-d72d-4708-b052-9aeb7873920b
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: group.full
+label: 'Full Content'
+targetEntityType: group
+cache: true

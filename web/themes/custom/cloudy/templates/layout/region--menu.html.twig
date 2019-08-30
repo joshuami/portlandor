@@ -1,0 +1,19 @@
+{%
+  set classes = [
+    'region',
+    'region-' ~ region|clean_class,
+  ]
+%}
+{% if content %}
+<div class="page-menu col-xl-2 col-lg-3 col-md-0 col-sm-0 col-xs-0 order-1">
+  <nav class="navbar navbar-expand-lg navbar-light m-0 p-0">
+    <button class="navbar-toggler w-100" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle page menu">
+      <span class="navbar-toggler-text">menu</span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      {{ content }}
+    </div>
+    </nav>
+  </div>
+</div>
+{% endif %}

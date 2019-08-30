@@ -44,7 +44,7 @@
 </a>
 <header id="header" class="header" aria-label="{{ 'Site header'|t}}" role="banner">
   <nav class="navbar navbar-light navbar-expand-xl" id="navbar-main">
-    <div class="container">
+    <div class="container-fluid">
       {{ page.header }}
       {% if page.primary_menu or page.header_form %}
         <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="{{ 'Toggle navigation'|t }}">{{ 'Menu'|t }}</button>
@@ -73,21 +73,28 @@
 {% endif %}
 {% set pre_content = page.pre_content|render %}
 {% if pre_content %}
-  <section class="container">
+  <section>
     {{ page.pre_content }}
   </section>
 {% endif %}
 {%
   set main_classes = [
     'main-content',
-    'row-offcanvas',
-    'row-offcanvas-left',
+    not is_front ? 'col-xl-10',
+    not is_front ? 'col-lg-9',
+    not is_front ? 'col-md-12',
+    not is_front ? 'col-sm-12',
+    not is_front ? 'col-xs-12,',
+    not is_front ? 'order-2',
     not is_front ? 'container',
   ]
 %}
-<main {{ attributes.addClass(main_classes) }} id="content" role="main">
-  {{ page.content }}
-</main>
+<div class="row container-fluid">
+  <main {{ attributes.addClass(main_classes) }} id="content" role="main">
+    {{ page.content }}
+  </main>
+  {{ page.menu }}
+</div>
 <footer class="site-footer text-dark">
   <div class="container">
     <div class="row">

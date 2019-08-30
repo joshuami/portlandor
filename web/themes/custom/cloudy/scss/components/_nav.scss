@@ -18,3 +18,8 @@
         background-color: rgba($black, 0.15);
       }
 }
+
+.page-menu a.active {
+  border-left: 2px solid $primary;
+  background-color: $gray-100;
+}

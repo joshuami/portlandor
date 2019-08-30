@@ -216,6 +216,9 @@
             },
             "drupal/rabbit_hole": {
                 "3060274 - Tokens as redirect": "https://www.drupal.org/files/issues/2019-08-22/rabbit_hole-tokens_as_redirect-3060274-7.patch"
+            },
+            "drupal/menu_block": {
+                "2756675 - Follow active trail": "https://www.drupal.org/files/issues/2018-08-08/menu_block-follow-2756675-55.patch"
             }
         },
         "merge-plugin": {

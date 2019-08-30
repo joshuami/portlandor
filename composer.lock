@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dcc65d70c6ca6368886c847f81fae22d",
+    "content-hash": "b416181081f6685c8635068e98a6010d",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -7950,6 +7950,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "2756675 - Follow active trail": "https://www.drupal.org/files/issues/2018-08-08/menu_block-follow-2756675-55.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
