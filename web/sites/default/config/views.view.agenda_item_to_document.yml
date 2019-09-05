@@ -1,14 +1,15 @@
-uuid: 58786c22-54fc-47d6-a5f1-ff63941e189e
+uuid: 49f8c9ab-5197-4691-9341-d545373dd302
 langcode: en
 status: true
 dependencies:
   config:
     - paragraphs.paragraphs_type.council_agenda_item
   module:
+    - ds
     - moderation_dashboard
     - paragraphs
-id: council_document_on_agenda
-label: 'Council document on agenda'
+id: agenda_item_to_document
+label: 'Agenda item to document'
 module: views
 description: ''
 tag: ''
@@ -54,7 +55,7 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'ds_entity:paragraph'
       fields:
         link_to_latest_version:
           table: paragraphs_item_field_data
@@ -129,7 +130,7 @@ display:
           entity_field: type
           plugin_id: bundle
       sorts: {  }
-      title: 'Council document on agenda'
+      title: 'Agenda item to document'
       header: {  }
       footer: {  }
       empty: {  }

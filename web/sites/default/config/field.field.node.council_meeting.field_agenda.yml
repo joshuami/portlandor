@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_agenda
     - node.type.council_meeting
-    - paragraphs.paragraphs_type.council_agenda_section
+    - paragraphs.paragraphs_type.council_agenda_item
   module:
     - custom_add_another
     - entity_reference_revisions
@@ -28,7 +28,7 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      council_agenda_section: council_agenda_section
+      council_agenda_item: council_agenda_item
     target_bundles_drag_drop:
       address:
         weight: 23
@@ -49,8 +49,8 @@ settings:
         weight: 28
         enabled: false
       council_agenda_item:
+        enabled: true
         weight: 29
-        enabled: false
       document:
         weight: 30
         enabled: false
@@ -64,8 +64,8 @@ settings:
         weight: 33
         enabled: false
       council_agenda_section:
-        enabled: true
         weight: 33
+        enabled: false
       council_communication_item:
         weight: 34
         enabled: false
