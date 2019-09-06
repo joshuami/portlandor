@@ -1,19 +1,18 @@
-uuid: 49f8c9ab-5197-4691-9341-d545373dd302
+uuid: 42c2a350-c2d6-40fe-9ede-724fb5b42984
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.council_agenda_item
+    - node.type.council_document
   module:
-    - ds
-    - moderation_dashboard
-    - paragraphs
-id: agenda_item_to_document
-label: 'Agenda item to document'
+    - node
+    - user
+id: paragraph_test
+label: 'Paragraph test'
 module: views
 description: ''
 tag: ''
-base_table: paragraphs_item_field_data
+base_table: node_field_data
 base_field: nid
 core: 8.x
 display:
@@ -24,8 +23,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -55,15 +55,15 @@ display:
       style:
         type: default
       row:
-        type: 'ds_entity:paragraph'
+        type: fields
       fields:
-        link_to_latest_version:
-          table: paragraphs_item_field_data
-          field: link_to_latest_version
-          id: link_to_latest_version
-          entity_type: null
-          entity_field: null
-          plugin_id: link_to_latest_version
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          settings:
+            link_to_entity: true
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -108,13 +108,25 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       filters:
         status:
           value: '1'
-          table: paragraphs_item_field_data
+          table: node_field_data
           field: status
           plugin_id: boolean
-          entity_type: paragraph
+          entity_type: node
           entity_field: status
           id: status
           expose:
@@ -122,15 +134,30 @@ display:
           group: 1
         type:
           id: type
-          table: paragraphs_item_field_data
+          table: node_field_data
           field: type
           value:
-            council_agenda_item: council_agenda_item
-          entity_type: paragraph
+            council_document: council_document
+          entity_type: node
           entity_field: type
           plugin_id: bundle
-      sorts: {  }
-      title: 'Agenda item to document'
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: 'Paragraph test'
       header: {  }
       footer: {  }
       empty: {  }
@@ -139,7 +166,10 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
       tags: {  }
   block_1:
     display_plugin: block
@@ -151,5 +181,8 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
       tags: {  }

@@ -1,0 +1,9 @@
+uuid: 67d029e9-6232-4ca0-9d1c-f704144e6959
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.relationship
+name: 'Council Agenda Item'
+type: council_agenda_item
+description: ''

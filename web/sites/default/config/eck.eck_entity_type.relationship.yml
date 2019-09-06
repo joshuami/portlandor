@@ -1,0 +1,10 @@
+uuid: 92d3a312-57ce-4efc-bde7-5be6e998a4f5
+langcode: en
+status: true
+dependencies: {  }
+id: relationship
+label: Relationship
+created: true
+changed: true
+uid: false
+title: false

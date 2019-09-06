@@ -1,0 +1,24 @@
+uuid: 3b420d78-ed61-4a7a-a6b5-b5682355f043
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - field_permissions
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: relationship.field_agenda_item_number
+field_name: field_agenda_item_number
+entity_type: relationship
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

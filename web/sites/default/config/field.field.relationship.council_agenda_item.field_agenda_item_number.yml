@@ -1,0 +1,29 @@
+uuid: 57e1e04a-80c3-49db-ae87-1f3aa3f40b3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.relationship.council_agenda_item
+    - field.storage.relationship.field_agenda_item_number
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: relationship.council_agenda_item.field_agenda_item_number
+field_name: field_agenda_item_number
+entity_type: relationship
+bundle: council_agenda_item
+label: 'Agenda Item Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

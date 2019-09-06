@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.council_meeting.field_agenda
+    - field.field.node.council_meeting.field_agenda_items
     - field.field.node.council_meeting.field_council_meeting_status
     - field.field.node.council_meeting.field_council_meeting_type
     - field.field.node.council_meeting.field_notes
@@ -45,6 +46,15 @@ content:
             lb: Agenda
             lb-col: false
             classes: {  }
+    region: content
+  field_agenda_items:
+    weight: 6
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   field_council_meeting_status:
     weight: 0
@@ -116,4 +126,5 @@ content:
     region: content
 hidden:
   content_moderation_control: true
+  group_content: true
   links: true

@@ -1,0 +1,20 @@
+uuid: b647c01a-0dfb-4f0f-9296-e44d38ebe3b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+id: node.field_agenda_items
+field_name: field_agenda_items
+entity_type: node
+type: entity_reference
+settings:
+  target_type: relationship
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
