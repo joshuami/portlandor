@@ -77,17 +77,9 @@
     {{ page.pre_content }}
   </section>
 {% endif %}
-{%
-  set main_classes = [
-    'main-content',
-    'row-offcanvas',
-    'row-offcanvas-left',
-    not is_front ? 'container',
-  ]
-%}
-<main {{ attributes.addClass(main_classes) }} id="content" role="main">
-  {{ page.content }}
-</main>
+{{ page.content }}
+{{ page.menu }}
+{{ page.tools }}
 <footer class="site-footer text-dark">
   <div class="container">
     <div class="row">
