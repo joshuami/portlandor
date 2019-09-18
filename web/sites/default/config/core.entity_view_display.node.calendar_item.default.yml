@@ -100,4 +100,5 @@ content:
 hidden:
   body: true
   group_content: true
+  langcode: true
   links: true
