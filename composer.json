@@ -21,7 +21,19 @@
         "dev": {
             "type": "vcs",
             "url": "https://github.com/acquia/lightning-dev"
-        }
+        },
+        "2": {
+             "type": "package",
+             "package": {
+                 "name": "toc/toc",
+                 "version": "v0.3.2",
+                 "type": "drupal-library",
+                 "dist": {
+                     "url": "https://raw.githubusercontent.com/jgallen23/toc/greenkeeper/update-all/dist/toc.min.js",
+                     "type": "file"
+                 }
+             }
+         }
     },
     "require": {
         "acquia/lightning": "^4.0",
@@ -56,6 +68,7 @@
         "drupal/draggableviews": "^1.2",
         "drupal/ds": "^3.1",
         "drupal/easy_breadcrumb": "^1.12",
+        "drupal/environment_indicator": "^3.6",
         "drupal/eva": "^2.0",
         "drupal/extlink": "^1.1",
         "drupal/facets": "^1.0",
@@ -69,6 +82,7 @@
         "drupal/google_analytics": "^2.3",
         "drupal/group": "1.0.0-rc4",
         "drupal/groupmedia": "^2.0",
+        "drupal/honeypot": "^1.29",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/key": "^1.8",
         "drupal/lightning_layout": "~2.0.0",
@@ -101,6 +115,8 @@
         "drupal/telephone_validation": "^2.1",
         "drupal/textarea_widget_for_text": "^1.1",
         "drupal/time_field": "^1.1",
+        "drupal/toc_js": "^1.6",
+        "drupal/toc_js_per_node": "^1.6",
         "drupal/transliterate_filenames": "^1.2",
         "drupal/twig_tweak": "^2.0",
         "drupal/views_bulk_operations": "^2.2",
@@ -110,6 +126,7 @@
         "drupal/webform": "^5.1",
         "drush/drush": "^9.5.0",
         "hirak/prestissimo": "^0.3.9",
+        "toc/toc": "*",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "wikimedia/composer-merge-plugin": "^1.4"
@@ -160,6 +177,7 @@
             "npm-asset"
         ],
         "enable-patching": true,
+        "composer-exit-on-patch-failure": 1,
         "patchLevel": {
             "drupal/core": "-p2"
         },
@@ -182,6 +200,9 @@
             },
             "drupal/content_lock": {
                 "2919019 - content_lock_entity_operation doesn't work if the entity list is cached": "https://www.drupal.org/files/issues/content_lock-caching-invalidation-2919019-3.patch"
+            },
+            "drupal/field_group": {
+                "2872723-8 - Render child field in field group": "https://www.drupal.org/files/issues/2018-07-31/field_group-rendering_child_field_in_field_group_twig_template-2872723-8.patch"
             },
             "drupal/group": {
                 "2774827 - node:group functionality for adding node:group:title": "https://www.drupal.org/files/issues/group_add-node-group-tokens-2774827-22.patch",
