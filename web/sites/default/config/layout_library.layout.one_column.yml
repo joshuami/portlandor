@@ -1,0 +1,82 @@
+uuid: 13b07560-6c6d-41bc-9472-42fd99e5d5f0
+langcode: en
+status: true
+dependencies: {  }
+id: one_column
+label: 'One column'
+targetEntityType: node
+targetBundle: page
+layout:
+  -
+    layout_id: layout_onecol
+    layout_settings: {  }
+    components:
+      c9735846-5c76-46dd-ad9c-b2a317c39fde:
+        uuid: c9735846-5c76-46dd-ad9c-b2a317c39fde
+        region: content
+        configuration:
+          id: 'entity_field:node:field_featured_media'
+          label: 'Featured media'
+          provider: ctools_block
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: entity_reference_entity_view
+            settings:
+              view_mode: banner
+            third_party_settings: {  }
+            weight: 0
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 0
+      f217a4e6-8e5d-490f-8ac2-71cffcb9934b:
+        uuid: f217a4e6-8e5d-490f-8ac2-71cffcb9934b
+        region: content
+        configuration:
+          id: 'field_block:node:page:field_summary'
+          label: Summary
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: string
+            settings:
+              link_to_entity: false
+            third_party_settings:
+              ds:
+                ft:
+                  id: expert
+                  settings:
+                    lb: ''
+                    lb-col: false
+                    classes: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 1
+      1c4dd27f-d5a2-4437-82de-ba2c2b719fbc:
+        uuid: 1c4dd27f-d5a2-4437-82de-ba2c2b719fbc
+        region: content
+        configuration:
+          id: 'field_block:node:page:field_body_content'
+          label: 'Body content'
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: text_default
+            settings: {  }
+            third_party_settings:
+              ds:
+                ft:
+                  id: default
+                  settings:
+                    lb: ''
+                    lb-col: false
+                    classes: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 2
+    third_party_settings: {  }

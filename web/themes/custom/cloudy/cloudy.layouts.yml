@@ -50,6 +50,17 @@ cloudy_main_with_sidebar:
     secondary:
       label: Secondary
 
+# Main with menu is used for pages with a group menu
+cloudy_main_with_menu:
+  label: Cloudy main with menu
+  category: Cloudy
+  template: templates/layout/cloudy-main-with-menu
+  regions:
+    primary:
+      label: Primary
+    secondary:
+      label: Secondary
+
 elected_official_homepage_pattern:
   label: Elected official homepage
   category: Cloudy

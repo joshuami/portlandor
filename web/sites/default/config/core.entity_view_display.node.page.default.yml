@@ -18,6 +18,9 @@ dependencies:
     - node.type.page
   module:
     - ds
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_library
     - panelizer
     - text
     - user
@@ -27,19 +30,14 @@ third_party_settings:
     custom: false
     allow: false
     default: default
-  ds:
-    layout:
-      id: layout_onecol
-      library: layout_discovery/onecol
-      disable_css: false
-      entity_classes: all_classes
-      settings: {  }
-    regions:
-      content:
-        - field_featured_media
-        - field_summary
-        - toc_js
-        - field_body_content
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  layout_library:
+    enable: false
+  layout_builder_restrictions:
+    allowed_blocks: {  }
+    allowed_layouts: {  }
 id: node.page.default
 targetEntityType: node
 bundle: page

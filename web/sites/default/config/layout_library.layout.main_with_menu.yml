@@ -1,0 +1,115 @@
+uuid: 0fde5fb8-ab91-4167-b8e6-f7496235d95f
+langcode: en
+status: true
+dependencies: {  }
+id: main_with_menu
+label: 'Main with menu'
+targetEntityType: node
+targetBundle: page
+layout:
+  -
+    layout_id: cloudy_main_with_menu
+    layout_settings: {  }
+    components:
+      6b949151-397e-4768-8fa4-be6a505d686a:
+        uuid: 6b949151-397e-4768-8fa4-be6a505d686a
+        region: primary
+        configuration:
+          id: 'field_block:node:page:field_featured_media'
+          label: 'Featured media'
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: entity_reference_entity_view
+            settings:
+              view_mode: banner
+            third_party_settings:
+              ds:
+                ft:
+                  id: default
+                  settings:
+                    lb: ''
+                    lb-col: false
+                    classes: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 0
+      39192503-0a4e-4249-835e-70ce8d8a1d3b:
+        uuid: 39192503-0a4e-4249-835e-70ce8d8a1d3b
+        region: primary
+        configuration:
+          id: 'field_block:node:page:field_summary'
+          label: Summary
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: string
+            settings:
+              link_to_entity: false
+            third_party_settings:
+              ds:
+                ft:
+                  id: expert
+                  settings:
+                    lb: ''
+                    lb-col: false
+                    classes: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 1
+      8d360c39-216d-44d4-a59c-f395ed1f978f:
+        uuid: 8d360c39-216d-44d4-a59c-f395ed1f978f
+        region: primary
+        configuration:
+          id: 'field_block:node:page:field_body_content'
+          label: 'Body content'
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: text_default
+            settings: {  }
+            third_party_settings:
+              ds:
+                ft:
+                  id: default
+                  settings:
+                    lb: ''
+                    lb-col: false
+                    classes: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 2
+      8ad17536-8b4b-40c5-9e1e-f0f4cfb6fe2b:
+        uuid: 8ad17536-8b4b-40c5-9e1e-f0f4cfb6fe2b
+        region: secondary
+        configuration:
+          id: 'field_block:node:page:changed'
+          label: Changed
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: above
+            type: timestamp
+            settings:
+              date_format: medium
+              custom_date_format: ''
+              timezone: ''
+            third_party_settings:
+              ds:
+                ft:
+                  id: default
+                  settings:
+                    lb: ''
+                    lb-col: false
+                    classes: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
