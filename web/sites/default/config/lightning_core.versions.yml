@@ -93,7 +93,10 @@ inline_form_errors: 0.0.0
 jsonapi: 0.0.0
 key: 1.8.0
 kint: 1.2.0
+layout_builder: 8.7.7
+layout_builder_restrictions: 1.5.0
 layout_discovery: 0.0.0
+layout_library: 1.0.0-alpha2
 lightning: 3.2.0
 lightning_api: 0.0.0
 lightning_contact_form: 0.0.0
