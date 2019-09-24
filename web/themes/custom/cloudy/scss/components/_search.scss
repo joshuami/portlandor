@@ -14,7 +14,7 @@
 
 // homepage search styles
 
-.search-api-page-block-form {
+.search-api-page-block-form-search-portland-gov {
   margin: 0 !important;
   .form-item,
   .form-action,
@@ -111,7 +111,7 @@ h1.homepage-title {
 // header search styles 
 
 .header {
-  .search-api-page-block-form {
+  .search-api-page-block-form-search-portland-gov {
     .form-search,
     .form-autocomplete {
       margin: 0 0 0 .75rem;
@@ -149,15 +149,15 @@ h1.homepage-title {
   }
 }
 
-.header .search-api-page-block-form .form-action, 
-.header .search-api-page-block-form .form-autocomplete, 
-.header .search-api-page-block-form .form-search {
+.header .search-api-page-block-form-search-portland-gov .form-action, 
+.header .search-api-page-block-form-search-portland-gov .form-autocomplete, 
+.header .search-api-page-block-form-search-portland-gov .form-search {
   height: auto;
 }
 
-.header .search-api-page-block-form .form-action:focus, 
-.header .search-api-page-block-form .form-autocomplete:focus, 
-.header .search-api-page-block-form .form-search:focus, 
+.header .search-api-page-block-form-search-portland-gov .form-action:focus, 
+.header .search-api-page-block-form-search-portland-gov .form-autocomplete:focus, 
+.header .search-api-page-block-form-search-portland-gov .form-search:focus, 
 select.form-select:focus {
   color: black;
   box-shadow: inset 0 0 0 0.25rem $gray;
@@ -166,7 +166,7 @@ select.form-select:focus {
 // main content search styles
 
 .main-content {
-  .search-api-page-block-form {
+  .search-api-page-block-form-search-portland-gov {
     form {
       margin: $spacer 0 0 0;
       border-bottom: 10px solid $yellow;
@@ -193,7 +193,7 @@ select.form-select:focus {
 
 @media (max-width: 1199px) {
   .header {
-    .search-api-page-block-form {
+    .search-api-page-block-form-search-portland-gov {
       .form-search,
       .form-autocomplete {
         margin: 0;
