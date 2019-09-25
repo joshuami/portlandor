@@ -1,0 +1,29 @@
+<?php
+/*
+ * @file
+ * "Portland Address Autocomplete" provides address suggestions from PortlandMaps.
+ * 
+ */
+
+
+function portland_address_complete_field_widget_form_alter(&$element, $form_state, $context) {
+  if (($context['items']->getName() == 'field_address_or_entrance')) {
+    //$element['address'] = 1;
+  }
+}
+
+// The Location edit form
+function portland_address_complete_form_alter(&$form, &$form_state, $form_id) {
+  if(array_key_exists("field_address_or_entrance", $form)) {
+    $form['field_address_or_entrance']['address']['address_line1']['#attributes']['list'] = 'address_list';
+    $form['address_list']['#markup'] = t('<datalist id="address_list"></datalist>');
+    $form['#attached']['library'][] = 'portland_address_complete/portland_address_complete';
+  }
+}
+
+// The location edit form embedded in entity browser
+function portland_address_complete_inline_entity_form_entity_form_alter(&$form, &$form_state) {
+  if(array_key_exists("field_address_or_entrance", $form)) {
+    $form['#attached']['library'][] = 'portland_address_complete/portland_address_complete';
+  }
+}
