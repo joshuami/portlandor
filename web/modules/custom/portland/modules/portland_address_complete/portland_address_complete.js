@@ -7,10 +7,10 @@
     var option = $('#addresslist').find("[value='" + value + "']");
 
     if (option.length > 0) {
-      $('#edit-field-address-or-entrance-0-address-locality').val(option.data("city"));
-      $('#edit-field-address-or-entrance-0-address-postal-code').val(option.data("zip"));
+      $('input.locality').val(option.data("city"));
+      $('input.postal-code').val(option.data("zip"));
 
-      var dd = document.getElementById('edit-field-address-or-entrance-0-address-administrative-area');
+      var dd = document.querySelector('input.administrative-area');
       for (var i = 0; i < dd.options.length; i++) {
           if (dd.options[i].text.toLowerCase() === option.data("state").toLowerCase()) {
               dd.selectedIndex = i;
@@ -50,7 +50,7 @@
                     // Create a new <option> element.
                     var option = document.createElement('option');
                     option.value = item.address;
-                    option.text = item.address;
+                    option.text = item.address + ', ' + item.attributes.city + ', ' + item.attributes.state + ', ' + item.attributes.zip_code;
                     option.setAttribute('data-city', item.attributes.city);
                     option.setAttribute('data-state', item.attributes.state);
                     option.setAttribute('data-zip', item.attributes.zip_code);
