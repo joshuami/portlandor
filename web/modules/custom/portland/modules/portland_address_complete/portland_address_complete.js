@@ -10,13 +10,9 @@
       $('input.locality').val(option.data("city"));
       $('input.postal-code').val(option.data("zip"));
 
-      var dd = document.querySelector('input.administrative-area');
-      for (var i = 0; i < dd.options.length; i++) {
-          if (dd.options[i].text.toLowerCase() === option.data("state").toLowerCase()) {
-              dd.selectedIndex = i;
-              break;
-          }
-      }
+      $("input.administrative-area option").each(function() {
+        this.selected =  (this.text.toLowerCase() === option.data("state").toLowerCase());
+      });
     }
   }
 
@@ -28,7 +24,7 @@
     var addresslist = document.getElementById('addresslist');
 
     // minimum number of characters before we start to generate suggestions
-    var min_characters = 3;
+    var min_characters = 2;
 
     if (input.value.length < min_characters ) { 
         return;
@@ -50,10 +46,17 @@
                     // Create a new <option> element.
                     var option = document.createElement('option');
                     option.value = item.address;
-                    option.text = item.address + ', ' + item.attributes.city + ', ' + item.attributes.state + ', ' + item.attributes.zip_code;
-                    option.setAttribute('data-city', item.attributes.city);
-                    option.setAttribute('data-state', item.attributes.state);
-                    option.setAttribute('data-zip', item.attributes.zip_code);
+                    // Set default when the data is incomplete
+                    var city = item.attributes.city ? item.attributes.city : 'Portland';
+                    var state = item.attributes.state ? item.attributes.state : 'Oregon';
+                    var zip_code = item.attributes.zip_code ? item.attributes.zip_code : '';
+
+
+                    option.text = item.address + ', ' + city + ', ' + state;
+                    if(zip_code) option.text += ', ' + item.attributes.zip_code;
+                    option.setAttribute('data-city', city);
+                    option.setAttribute('data-state', state);
+                    option.setAttribute('data-zip', zip_code);
 
                     // attach the option to the datalist element
                     addresslist.appendChild(option);
@@ -61,20 +64,18 @@
             }
         };
 
-        hinterXHR.open("GET", "https://www.portlandmaps.com/api/suggest/?alt_coords=1&api_key=F75A809DAF9012F7B28A4FB552FA5469&query=" + encodeURIComponent(input.value), true);
+        hinterXHR.open("GET", "https://www.portlandmaps.com/api/suggest/?alt_coords=1&api_key=" + drupalSettings.portlandmaps_api_key + "&query=" + encodeURIComponent(input.value), true);
         hinterXHR.send();
     }
   }
 
   // On keyup, query PortlandMaps Suggest API
   $( document ).ready(function() {
-    // Add a keyup event listener to our input element
+    // Bind event listeners to our input element
     var address_input = $('input.address-line1');
     if(address_input) {
       address_input.on("keyup", handleAddressKeyup);
       address_input.on("input", handleAddressInput);
-      // address_input.attr('list', 'addresslist');
-      // address_input.after('<datalist id="addresslist"></datalist>');
     }
   });
 
