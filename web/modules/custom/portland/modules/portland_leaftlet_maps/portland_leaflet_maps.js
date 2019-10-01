@@ -27,6 +27,10 @@
 // Once the Leaflet Map is loaded with its features.
 jQuery(document).on('leaflet.map', function (e, settings, lMap, mapid) {
 
+  // Make sure the fields are set
+  if( !drupalSettings.portlandmaps_layer || !drupalSettings.portlandmaps_id )
+    return;
+
   var features = L.esri.featureLayer({
     url: drupalSettings.portlandmaps_layer,
     where: 'PropertyID=' + drupalSettings.portlandmaps_id,
