@@ -8,6 +8,8 @@ dependencies:
     - field.storage.node.field_neighborhood
     - field.storage.node.field_park_amenities_activities
     - node.type.park_facility
+    - taxonomy.vocabulary.city_section
+    - taxonomy.vocabulary.neighborhood
     - taxonomy.vocabulary.park_location_type
   module:
     - geofield
@@ -48,8 +50,8 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
-          reset_button: false
+          submit_button: Find
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -281,7 +283,7 @@ display:
           exposed: true
           expose:
             operator_id: field_park_location_type_target_id_op
-            label: 'Park location type'
+            label: Type
             description: ''
             use_operator: false
             operator: field_park_location_type_target_id_op
@@ -315,6 +317,106 @@ display:
           type: select
           limit: true
           vid: park_location_type
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_city_section_target_id:
+          id: field_city_section_target_id
+          table: node__field_city_section
+          field: field_city_section_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_city_section_target_id_op
+            label: 'City section'
+            description: ''
+            use_operator: false
+            operator: field_city_section_target_id_op
+            identifier: field_city_section_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              sitewide_editor: '0'
+              code_editor: '0'
+              council_clerk: '0'
+              group_creator: '0'
+              park_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: city_section
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_neighborhood_target_id:
+          id: field_neighborhood_target_id
+          table: node__field_neighborhood
+          field: field_neighborhood_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_neighborhood_target_id_op
+            label: Neighborhood
+            description: ''
+            use_operator: false
+            operator: field_neighborhood_target_id_op
+            identifier: field_neighborhood_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              sitewide_editor: '0'
+              code_editor: '0'
+              council_clerk: '0'
+              group_creator: '0'
+              park_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: neighborhood
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
@@ -608,7 +710,7 @@ display:
           leaflet_map: portlandmaps_park
           height: '400'
           hide_empty_map: 0
-          disable_wheel: 0
+          disable_wheel: 1
           fullscreen_control: 1
           reset_map:
             control: 0
@@ -795,6 +897,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          group: 1
         field_park_location_type_target_id:
           id: field_park_location_type_target_id
           table: node__field_park_location_type
@@ -842,6 +945,106 @@ display:
           type: select
           limit: true
           vid: park_location_type
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_city_section_target_id:
+          id: field_city_section_target_id
+          table: node__field_city_section
+          field: field_city_section_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_city_section_target_id_op
+            label: 'City section (field_city_section)'
+            description: ''
+            use_operator: false
+            operator: field_city_section_target_id_op
+            identifier: field_city_section_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              sitewide_editor: '0'
+              code_editor: '0'
+              council_clerk: '0'
+              group_creator: '0'
+              park_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: city_section
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_neighborhood_target_id:
+          id: field_neighborhood_target_id
+          table: node__field_neighborhood
+          field: field_neighborhood_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_neighborhood_target_id_op
+            label: 'Neighborhood (field_neighborhood)'
+            description: ''
+            use_operator: false
+            operator: field_neighborhood_target_id_op
+            identifier: field_neighborhood_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              sitewide_editor: '0'
+              code_editor: '0'
+              council_clerk: '0'
+              group_creator: '0'
+              park_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: neighborhood
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
