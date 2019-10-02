@@ -1,0 +1,29 @@
+uuid: c225281e-2b56-4209-92e5-7f30aedfdca8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events_index
+  module:
+    - system
+    - views
+  theme:
+    - cloudy
+id: exposedformevents_indexpage_3
+theme: cloudy
+region: tools
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:events_index-page_3'
+settings:
+  id: 'views_exposed_filter_block:events_index-page_3'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events\r\n/events/*"
+    negate: false
+    context_mapping: {  }
