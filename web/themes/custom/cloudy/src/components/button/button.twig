@@ -1,0 +1,14 @@
+
+{# small, medium, and large size button with a default, primary, secondary, and call to action #}
+{# isExternal ??? #}
+{# link with button style #}
+{% set size = size|default('normal') %}
+{% set type = type|default('default') %}
+
+{% set classes = [
+  'cloudy-button',
+  'cloudy-button--' ~ type,
+  'cloudy-button--' ~ size,
+] %}
+
+<button type="button" class="{{ classes|join(' ') }}" aria-label="">{{ text|capitalize }}</button>

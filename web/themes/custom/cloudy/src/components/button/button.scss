@@ -1,0 +1,133 @@
+.cloudy-button {
+  display: inline-block;
+  padding: 0.375rem 0.75rem; // replace with variables
+  font-size: $cloudy-space-4;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: $border-radius-tight;
+  border: none;
+
+  &:focus {
+  }
+
+  &:hover {
+    background-color: ;
+  }
+
+  &--default {
+    background: $cloudy-gray-base;
+  }
+
+  &--primary {
+    background: $cloudy-gray-base;
+  }
+
+  &--secondary {
+    background: $cloudy-gray-base;
+  }
+
+  &--small {
+  }
+
+  &--normal {
+  }
+
+  &--large {
+  }
+}
+
+// .button {
+//   border: dotted 1px #ccc;
+//   &__text {
+//   }
+// }
+
+// // Buttons
+// .btn {
+//   border-radius: $border-radius-tight;
+// }
+
+// .button {
+//   @extend .btn;
+// }
+
+// .paragraphs-icon-button {
+//   @extend .btn-light;
+//   @extend .btn-sm;
+// }
+
+// .button .fa,
+// .fas {
+//   margin: 0 $cloudy-space-2 0 0;
+// }
+
+// // Form buttons
+// .form-actions button.btn {
+//   margin-right: $cloudy-space-2;
+// }
+// form .btn {
+//   margin-bottom: 0;
+// }
+
+// input.form-submit:not(.button--primary), #edit-actions a[class="button"] {
+//   @extend .btn-light;
+// }
+
+// // Editor buttons
+// .button--primary {
+//   @extend .btn-primary;
+//   @extend .btn-lg;
+// }
+
+// .button--danger {
+//   @extend .btn-outline-danger;
+// }
+
+// .powr-btn-default {
+//   @extend .btn-light;
+// }
+
+// .powr-btn-secondary {
+//   @extend .btn-outline-primary;
+// }
+
+// .powr-btn-warning {
+//   @extend .btn-warning;
+// }
+
+// .powr-btn-danger {
+//   @extend .btn-danger;
+// }
+
+// .powr-btn-link {
+//   @extend .btn-link;
+// }
+
+// .btn-cta {
+//   @extend .btn;
+//   @extend .btn-primary;
+//   white-space: inherit;
+// }
+
+// .btn-cta-outline {
+//   @extend .btn;
+//   @extend .btn-outline-primary;
+// }
+
+// *[class*="btn--"]:before {
+//   display: inline-block;
+//   padding-right: $cloudy-space-2;
+//   vertical-align: middle;
+// }
+
+// .btn--download:before {
+//   font-family: "Font Awesome 5 Free";
+//   content: "\f019";
+// }
+
+// .btn--fax:not(.disabled):hover {
+//   cursor: default;
+// }

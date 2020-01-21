@@ -1,0 +1,13 @@
+{# small, medium, and large size button with a default, primary, secondary, and call to action #}
+{% set types = ['default', 'primary', 'secondary'] %}
+
+<h2>Button</h2>
+{% for type in types %}
+  <div>
+    <div class="pl-button-demo">Type: <code>{{ type }}</code></div>
+    {% include "@components/button/button.twig" with {
+      "text": "button",
+      "type": type,
+    } only %}
+  </div>
+{% endfor %}
