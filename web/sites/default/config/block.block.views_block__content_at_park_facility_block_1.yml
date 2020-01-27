@@ -1,31 +1,31 @@
-uuid: a5d412b8-9413-4d80-9683-197b9133f0d0
+uuid: 56679612-cd5d-492e-b08e-e8ed4e189f88
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.my_groups
+    - views.view.content_at_park_facility
   module:
     - system
     - views
   theme:
     - cloudy
-id: views_block__my_groups_block_1
+id: views_block__content_at_park_facility_block_1
 theme: cloudy
 region: content
-weight: -20
+weight: -6
 provider: null
-plugin: 'views_block:my_groups-block_1'
+plugin: 'views_block:content_at_park_facility-block_1'
 settings:
-  id: 'views_block:my_groups-block_1'
+  id: 'views_block:content_at_park_facility-block_1'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
   context_mapping: {  }
 visibility:
   request_path:
     id: request_path
-    pages: "/user/*\r\n~/user/*/edit"
+    pages: '/parks/finder/*'
     negate: false
     context_mapping: {  }
