@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.featured
     - core.entity_view_mode.node.teaser
     - node.type.news
   module:
@@ -70,8 +71,8 @@ display:
       row:
         type: 'entity:node'
         options:
-          relationship: reverse__node__field_location
-          view_mode: teaser
+          relationship: reverse__node__field_related_content
+          view_mode: featured
       fields:
         title:
           id: title
@@ -252,6 +253,8 @@ display:
         filters: false
         filter_groups: false
         arguments: false
+        style: false
+        row: false
       filters:
         type:
           id: type
@@ -341,6 +344,14 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: node_nid
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: reverse__node__field_location
+          view_mode: teaser
     cache_metadata:
       max-age: -1
       contexts:
@@ -447,6 +458,8 @@ display:
         filter_groups: false
         relationships: false
         arguments: false
+        style: false
+        row: false
       filter_groups:
         operator: AND
         groups:
@@ -503,6 +516,14 @@ display:
           entity_field: nid
           plugin_id: node_nid
       inherit_arguments: true
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: reverse__node__field_related_content
+          view_mode: teaser
     cache_metadata:
       max-age: -1
       contexts:
@@ -524,7 +545,7 @@ display:
       defaults:
         arguments: false
         title: false
-      title: 'test New block'
+      title: 'test News block'
     cache_metadata:
       max-age: -1
       contexts:
