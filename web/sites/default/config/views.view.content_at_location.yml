@@ -850,7 +850,7 @@ display:
     display_options:
       display_extenders:
         metatag_display_extender: {  }
-      path: node/%/news
+      path: node_old/%/news
       display_description: ''
       empty:
         area:
