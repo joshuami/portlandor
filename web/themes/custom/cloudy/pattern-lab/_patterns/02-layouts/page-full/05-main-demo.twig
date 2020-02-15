@@ -1,0 +1,27 @@
+{% set marquee_primary_left %}
+  <div class="pl-layout-placeholder pl-layout-placeholder--fllled" style="height: 150px;">Marquee Primary Left</div>
+{% endset %}
+
+{% set marquee_primary_right %}
+  <div class="pl-layout-placeholder pl-layout-placeholder--fllled" style="height: 150px;">Marquee Primary Right</div>
+{% endset %}
+
+{% set body_header %}
+  <div class="pl-layout-placeholder pl-layout-placeholder--fllled" style="height: 50px;">Body Header</div>
+{% endset %}
+
+{% set body_body %}
+  <div class="pl-layout-placeholder pl-layout-placeholder--fllled" style="height: 500px;">Body Body</div>
+{% endset %}
+
+{% set body_footer %}
+  <div class="pl-layout-placeholder pl-layout-placeholder--fllled" style="height: 50px;">Body Footer</div>
+{% endset %}
+
+{% include "@layouts/page-full/page-full.twig" with {
+  marquee_primary_left: marquee_primary_left,
+  marquee_primary_right: marquee_primary_right,
+  body_header: body_header,
+  body_body: body_body,
+  body_footer: body_footer,
+} %}
