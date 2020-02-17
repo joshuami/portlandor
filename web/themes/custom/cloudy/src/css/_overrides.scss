@@ -156,6 +156,12 @@ ul.pagination {
   color: $cloudy-gray-700a;
 }
 
+.cloudy-homepage .block-views-blocktopics-block-1 {
+  > h2 {
+    margin-bottom: 0.5rem;
+  }
+}
+
 // External links
 
 span.ext {
@@ -224,6 +230,10 @@ h3.field-group-format-toggler {
   @extend .container;
 }
 
+.nav-tabs {
+  margin-top: 2rem;
+}
+
 /* embedded media */
 drupal-entity { display: inline; }
 
@@ -249,4 +259,6 @@ drupal-entity { display: inline; }
   clip: auto !important;
   white-space: normal !important;
 }
+
+
 

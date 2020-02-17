@@ -23,6 +23,9 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: darken($cloudy-white-base, 15%);
+  & + .field {
+    margin-top: 0;
+  }
 }
 
 .node--type-news {
@@ -47,6 +50,11 @@
     .card-body {
       flex-basis: 100%;
     }
+  }
+  .badge + .field,
+  .badge + h2,
+  .badge + h3 {
+    margin-top: 0;
   }
 }
 .card-deck {
@@ -91,4 +99,8 @@
       margin-bottom: $card-deck-margin;
     }
   }
+}
+
+.card .field--name-field-end-time {
+  margin-top: 0;
 }

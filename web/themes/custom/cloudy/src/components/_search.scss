@@ -214,3 +214,10 @@ select.form-select:focus {
     }
   }
 }
+
+.search-api-page__results {
+  margin-top: 2.5rem;
+  .card:not(:first-child) {
+    margin-top: 1rem;
+  }
+}

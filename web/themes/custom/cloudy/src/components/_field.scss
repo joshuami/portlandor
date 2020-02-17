@@ -158,3 +158,9 @@ span.postal-code {
 .field-label {
   font-weight: $font-weight-semibold;
 }
+
+.field--name-field-featured-content {
+  > h2 {
+    margin-bottom: 1.5rem;
+  }
+}

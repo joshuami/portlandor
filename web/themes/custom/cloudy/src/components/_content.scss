@@ -44,12 +44,8 @@ ol.steps {
 #block-feedbacklink .content {
   @extend .container-fluid;
   margin-top: $cloudy-space-8;
-  padding: $cloudy-space-2 $cloudy-space-4;
+  padding: $cloudy-space-4;
   border-left: 10px solid $cloudy-blue-base;
   background-color: $cloudy-gray-base;
   border-radius: $border-radius-tight;
-}
-
-#block-feedbacklink .content p {
-  margin-top: $cloudy-space-4;
 }
