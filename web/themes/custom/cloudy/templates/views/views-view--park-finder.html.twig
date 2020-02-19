@@ -1,0 +1,15 @@
+{% set marquee_primary_left %}
+  {{ exposed }}
+  {# {{ attachment_before }} #}
+
+  {{ rows }}
+  {{ empty }}
+  {{ pager }}
+
+  {{ attachment_after }}
+  {{ more }}
+{% endset %}
+{% set marquee_primary_right %}
+  {{ attachment_before }}
+{% endset %}
+{% include "@layouts/page-full/page-full.twig" %}
