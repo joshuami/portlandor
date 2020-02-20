@@ -1,0 +1,26 @@
+/*
+* Full Page Styles and all things related
+*/
+
+// Find a park view page
+// Example: https://portlandor.lndo.site/parks/finder
+// Note: We may consider refactoring this into a twig template vs attempting to handle here
+.view.view-park-finder.park-finder-page-wrapper {
+  // Map: attach to the right
+  > .attachment.attachment-before {
+    float: right;
+    width: calc(50% - 7.5px);
+    min-height: 500px;
+  }
+
+  // Content: attach to the left
+  > .view-content {
+    float: left;
+    width: calc(50% - 7.5px);
+  }
+
+  // Add a clear here for the float
+  > nav[role="navigation"] {
+    clear: both;
+  }
+}

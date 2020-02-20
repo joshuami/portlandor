@@ -11,8 +11,11 @@
 {% block pre_content %}{% endblock %}
 
 {% block main_content %}
+  <h1 class="title display-4">
+    {{ page['#title'] }}
+  </h1>
   <div>{{ page.tools }}</div>
-  {{ page.content }}
+  {{ page.content|without("cloudy_page_title") }}
 {% endblock %}
 
 {% block footer %}{% endblock %}
