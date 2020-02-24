@@ -1375,7 +1375,7 @@ display:
     display_options:
       display_extenders:
         metatag_display_extender: {  }
-      path: parks/finder
+      path: parks/search
       cache:
         type: search_api_tag
         options: {  }
