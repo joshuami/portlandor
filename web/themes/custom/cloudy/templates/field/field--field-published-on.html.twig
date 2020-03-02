@@ -1,6 +1,4 @@
-{% embed "field.html.twig" with {
-  'margin': '2'
-} %}
+{% embed "field.html.twig" %}
   {% block field %}
     {% set field_classes = field_classes|merge(['align-items-baseline']) %}
     {{ parent() }}
