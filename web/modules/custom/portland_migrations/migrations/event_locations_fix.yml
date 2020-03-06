@@ -8,16 +8,18 @@ source:
   keys:
     - id
 process:
-  nid:
+  nid: id
+    plugin: entity_lookup
     source: id
-    plugin: entity_lookup
-  field_location:
-    source: location_id
-    plugin: entity_lookup
-    value_key: title
     entity_type: node
-    bundle_key: id
-    bundle: article
+    bundle_key: type
+    bundle: event
+  field_location:
+    plugin: entity_lookup
+    source: location_id
+    entity_type: node
+    bundle_key: type
+    bundle: location
 destination:
   plugin: entity:node
   default_bundle: event
