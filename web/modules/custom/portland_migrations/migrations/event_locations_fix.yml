@@ -1,0 +1,25 @@
+id: event_locations_fix
+label: 'Fix the locations on events'
+migration_group: events
+source:
+  plugin: csv
+  path: modules/custom/portland_migrations/sources/events_to_locations_export.csv
+  header_row_count: 1
+  keys:
+    - id
+process:
+  nid:
+    source: id
+    plugin: entity_lookup
+  field_location:
+    source: location_id
+    plugin: entity_lookup
+    value_key: title
+    entity_type: node
+    bundle_key: id
+    bundle: article
+destination:
+  plugin: entity:node
+  default_bundle: event
+  overwrite_properties:
+    - field_location
