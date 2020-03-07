@@ -9,11 +9,6 @@ source:
     - id
 process:
   nid: id
-    plugin: entity_lookup
-    source: id
-    entity_type: node
-    bundle_key: type
-    bundle: event
   field_location:
     plugin: entity_lookup
     source: location_id
@@ -21,7 +16,7 @@ process:
     bundle_key: type
     bundle: location
 destination:
-  plugin: entity:node
+  plugin: 'entity:node'
   default_bundle: event
   overwrite_properties:
     - field_location
