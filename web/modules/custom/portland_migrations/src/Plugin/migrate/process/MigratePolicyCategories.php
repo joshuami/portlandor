@@ -26,8 +26,8 @@ class MigratePolicyCategories extends ProcessPluginBase {
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
 
     // $value is an array
-    // 0 - 3rd level category name
-    // 1 - Policy Number, from which to parse the 2nd level category abbreviations
+    // 0 - 3rd level category name. E.g. "Park Uses"
+    // 1 - Policy Number, from which to parse the 2nd level category abbreviations. E.g. "ARB-PRK-1.14"
     $l3_category = $value[0];
     $policy_number = $value[1];
     // if policy number is empty, this may be one of the overview documents; skip assigning a category
@@ -46,66 +46,38 @@ class MigratePolicyCategories extends ProcessPluginBase {
     $l2_category_code = $policy_number_array[1];
     $vocabulary = "policy_category";
 
-    // see if l3 category exists
-    $term = $this->getTermByFieldValue($vocabulary, 'name', $l3_category);
-    if ($term && count($term) == 1) {
-      // term exists, just return the tid to link it
-      if (!is_array($term)) {
-        $halt = true;
-      }
-      return reset($term)->id();
-    } else if (count($term) > 1) {
-      // more than one matching category found, whoops! log error.
-      $message = "Multiple matching categories found for " . $l3_category . " in vocabulary ". $vocabulary;
-      \Drupal::logger('portland_migrations')->notice($message);
-      throw new MigrateSkipProcessException();      
-    }
+    // Load L2 category, this will be created by policies_category migration
+    $term_storage = \Drupal::entityManager()->getStorage('taxonomy_term');
+    $properties = [
+      'vid' => "policy_category",
+      'field_category_abbreviation' => $l2_category_code,
+    ];
+    $l2_category = $term_storage->loadByProperties($properties);
 
-    // l3 category doesn't exist, create it
-    $term = Term::create([
-      'name' => $l3_category, 
-      'vid'  => $vocabulary,
-    ]);
-    //$term = $this->getTermByFieldValue($vocabulary, 'name', $l3_category);
-    //$term = reset($term);
-
-    // get parent term by abbreviation and set it as the parent
-    $parent_term = $this->getTermByFieldValue($vocabulary, 'field_category_abbreviation', $l2_category_code);
-    if ($parent_term === false || count($parent_term) < 1) {
-      // parent not found, throw error
-      $message = "Parent term (" . $l2_category_code . ") not found for policies category term " . $l3_category . ". Cannot continue.";
-      \Drupal::logger('portland_migrations')->notice($message);
-      throw new MigrateException($message);
-      echo $message;
+    if(count($l2_category) == 0) {
+      echo ($l2_category_code . ' is not found as a Level 2 category. Please check policy_category taxonomy.');
       exit();
-    } else if (count($parent_term) > 1) {
-      // more than one parent category found with that code, throw error
-      $message = "Multiple matching parent categories with code " . $l2_category_code . " found in vocabulary " . $vocabulary . ". Cannot continue.";
-      \Drupal::logger('portland_migrations')->notice($message);
-      throw new MigrateException();      
     }
 
-    if (!is_array($parent_term)) {
-      $halt = true;
+    $l3_category_terms = $term_storage->loadChildren(reset($l2_category)->id());
+    $l3_term = null;
+    foreach($l3_category_terms as $l3_category_term) {
+      if($l3_category == $l3_category_term->getName()){
+        $l3_term = $l3_category_term;
+        break;
+      }
     }
-    $parent_term = reset($parent_term);
-    $parent_term_id = $parent_term->id();
-    $term->parent = $parent_term_id;
-    $term->save();
+    // Create the L3 category term if not found
+    if( $l3_term == null ) {
+      $l3_term = Term::create([
+        'name' => $l3_category, 
+        'vid'  => $vocabulary,
+      ]);
+      $l3_term->parent = reset($l2_category)->id();
+      $l3_term->save();
+    }
 
-    // return id of newly created term
-    return $term->id();
+    // return id of the L3 category
+    return $l3_term->id();
   }
-
-  /**
-   * Load term by field value.
-   */
-  protected function getTermByFieldValue($vid, $field_name, $value) {
-    $properties = [];
-    $properties['vid'] = $vid;
-    $properties[$field_name] = $value;
-    $terms = \Drupal::entityManager()->getStorage('taxonomy_term')->loadByProperties($properties);
-    return $terms;
-  }
-
 }
