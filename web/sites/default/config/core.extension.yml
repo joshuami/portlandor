@@ -32,6 +32,7 @@ module:
   contextual: 0
   copyright_block: 0
   crop: 0
+  cshs: 0
   csv_serialization: 0
   ctools: 0
   ctools_block: 0
@@ -222,6 +223,7 @@ module:
   pathauto: 1
   portland_taxonomy_create: 1
   ds_extras: 2
+  menu_link_weight: 10
   views: 10
   paragraphs: 11
   lightning: 1000

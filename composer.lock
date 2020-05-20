@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "970846d674b79c9d05cc7b590fadc5f2",
+    "content-hash": "2eb1935ff7a936ed604e0be556827632",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -314,7 +314,7 @@
             "version": "3.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
+                "url": "git@github.com:jquery/jquery-dist.git",
                 "reference": "15bc73803f76bc53b654b9fdbbbc096f56d7c03d"
             },
             "dist": {
@@ -4546,6 +4546,61 @@
             }
         },
         {
+            "name": "drupal/cshs",
+            "version": "1.0.0-beta4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cshs.git",
+                "reference": "8.x-1.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cshs-8.x-1.0-beta4.zip",
+                "reference": "8.x-1.0-beta4",
+                "shasum": "332c4cf5b70644ab65b338706186e390256a034e"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta4",
+                    "datestamp": "1497737343",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "BR0kEN",
+                    "homepage": "https://www.drupal.org/user/2802285"
+                },
+                {
+                    "name": "purushotam.rai",
+                    "homepage": "https://www.drupal.org/user/3193859"
+                },
+                {
+                    "name": "valderama",
+                    "homepage": "https://www.drupal.org/user/103634"
+                }
+            ],
+            "description": "A simple client-side hierarchical select widget for taxonomy terms.",
+            "homepage": "https://www.drupal.org/project/cshs",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cshs"
+            }
+        },
+        {
             "name": "drupal/csv_serialization",
             "version": "1.4.0",
             "source": {
@@ -8703,6 +8758,68 @@
             "homepage": "https://www.drupal.org/project/menu_link",
             "support": {
                 "source": "http://cgit.drupalcode.org/menu_link"
+            }
+        },
+        {
+            "name": "drupal/menu_link_weight",
+            "version": "2.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_link_weight.git",
+                "reference": "8.x-2.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_link_weight-8.x-2.0-alpha2.zip",
+                "reference": "8.x-2.0-alpha2",
+                "shasum": "a7bd4002f6939b05cc5949ee155cc3a6dc0bf251"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "require-dev": {
+                "drupal/cshs": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-alpha2",
+                    "datestamp": "1498228442",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bart.hanssens",
+                    "homepage": "https://www.drupal.org/user/699486"
+                },
+                {
+                    "name": "johndevman",
+                    "homepage": "https://www.drupal.org/user/3331569"
+                },
+                {
+                    "name": "stefan.r",
+                    "homepage": "https://www.drupal.org/user/551886"
+                },
+                {
+                    "name": "webflo",
+                    "homepage": "https://www.drupal.org/user/254778"
+                }
+            ],
+            "description": "Replaces the menu link weight dropdown with a tabledrag widget",
+            "homepage": "https://www.drupal.org/project/menu_link_weight",
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_link_weight"
             }
         },
         {
@@ -21564,6 +21681,7 @@
         "drupal/conditional_fields": 15,
         "drupal/content_lock": 15,
         "drupal/copyright_block": 5,
+        "drupal/cshs": 10,
         "drupal/custom_add_another": 10,
         "drupal/custom_view_filters": 10,
         "drupal/field_permissions": 5,
