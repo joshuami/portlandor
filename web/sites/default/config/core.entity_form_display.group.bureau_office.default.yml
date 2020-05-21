@@ -5,7 +5,6 @@ dependencies:
   config:
     - entity_browser.browser.locations_browser
     - field.field.group.bureau_office.field_address
-    - field.field.group.bureau_office.field_audience
     - field.field.group.bureau_office.field_contact
     - field.field.group.bureau_office.field_disable_legacy_paths_block
     - field.field.group.bureau_office.field_email
@@ -72,7 +71,7 @@ third_party_settings:
         - field_enable_advisory_menu_item
         - field_enable_const_project_menu
       parent_name: ''
-      weight: 13
+      weight: 14
       format_type: details
       region: content
       format_settings:
@@ -88,7 +87,7 @@ third_party_settings:
         - field_redirects
         - field_disable_legacy_paths_block
       parent_name: ''
-      weight: 14
+      weight: 15
       format_type: details
       region: content
       format_settings:
@@ -101,12 +100,11 @@ third_party_settings:
     group_administrative_fields:
       children:
         - field_shortname_or_acronym
-        - field_menu_link
         - field_search_keywords
         - uid
         - path
       parent_name: ''
-      weight: 15
+      weight: 16
       format_type: details
       region: content
       format_settings:
@@ -401,7 +399,7 @@ content:
     region: content
     third_party_settings: {  }
   field_menu_link:
-    weight: 3
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: menu_link_default
@@ -517,5 +515,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  field_audience: true
+hidden: {  }

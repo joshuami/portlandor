@@ -1,0 +1,23 @@
+uuid: 9206f253-f7f0-44f8-8357-fdbd15629065
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.test_block
+  module:
+    - fixed_block_content
+  theme:
+    - cloudy
+id: testblock
+theme: cloudy
+region: footer_second
+weight: 0
+provider: null
+plugin: 'fixed_block_content:test_block'
+settings:
+  id: 'fixed_block_content:test_block'
+  label: 'Test block'
+  provider: fixed_block_content
+  label_display: visible
+  view_mode: ''
+visibility: {  }

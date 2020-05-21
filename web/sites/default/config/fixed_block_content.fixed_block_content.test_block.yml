@@ -1,0 +1,10 @@
+uuid: b2bc80c6-face-4494-8fb2-f6b80d6bb8a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+id: test_block
+title: 'Test block'
+block_content_bundle: basic
+default_content: null

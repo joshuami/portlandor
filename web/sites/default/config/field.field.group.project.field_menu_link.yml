@@ -26,6 +26,7 @@ settings:
   available_menus:
     site-map: site-map
     admin: '0'
+    council-toolbar: '0'
     editor-toolbar: '0'
     footer: '0'
     main: '0'

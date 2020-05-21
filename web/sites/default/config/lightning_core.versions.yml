@@ -142,6 +142,7 @@ media_entity_file_replace: 1.0.0-beta2
 media_entity_instagram: 0.0.0
 media_entity_twitter: 0.0.0
 media_library: 8.6.1
+menu_block: 1.6.0
 menu_breadcrumb: 1.8.0
 menu_link_content: 0.0.0
 menu_link_weight: 2.0.0-alpha2

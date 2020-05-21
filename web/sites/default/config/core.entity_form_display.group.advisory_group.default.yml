@@ -55,7 +55,7 @@ third_party_settings:
         - field_enable_documents_menu_item
         - field_enable_const_project_menu
       parent_name: ''
-      weight: 10
+      weight: 11
       format_type: details
       region: content
       format_settings:
@@ -71,7 +71,7 @@ third_party_settings:
         - field_redirects
         - field_disable_legacy_paths_block
       parent_name: ''
-      weight: 11
+      weight: 12
       format_type: details
       region: content
       format_settings:
@@ -84,10 +84,9 @@ third_party_settings:
     group_administrative_fields_site:
       children:
         - field_shortname_or_acronym
-        - field_menu_link
         - field_search_keywords
       parent_name: ''
-      weight: 12
+      weight: 13
       format_type: details
       region: content
       format_settings:
@@ -298,7 +297,7 @@ content:
     type: entity_browser_entity_reference
     region: content
   field_menu_link:
-    weight: 5
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: menu_link_default

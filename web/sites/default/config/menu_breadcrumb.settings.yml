@@ -18,9 +18,9 @@ menu_breadcrumb_menus:
     weight: 0
     taxattach: 0
     langhandle: 0
-  site-map:
-    enabled: 1
+  council-toolbar:
     weight: 0
+    enabled: 0
     taxattach: 0
     langhandle: 0
   editor-toolbar:
@@ -33,9 +33,19 @@ menu_breadcrumb_menus:
     enabled: 0
     taxattach: 0
     langhandle: 0
+  site-map:
+    enabled: 1
+    weight: 0
+    taxattach: 0
+    langhandle: 0
   tools:
     enabled: 1
     weight: 0
+    taxattach: 0
+    langhandle: 0
+  topics:
+    weight: 0
+    enabled: 0
     taxattach: 0
     langhandle: 0
   account:

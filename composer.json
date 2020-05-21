@@ -84,6 +84,7 @@
         "drupal/linkit": "^4.3",
         "drupal/maxlength": "^1.0",
         "drupal/media_entity_file_replace": "^1.0@beta",
+        "drupal/menu_block": "^1.6",
         "drupal/menu_breadcrumb": "^1.8",
         "drupal/menu_link": "^1.0@alpha",
         "drupal/menu_link_weight": "^2.0",
