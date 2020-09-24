@@ -8,6 +8,12 @@ config:
   edge: false
   cache: false
 services:
+  appserver_nginx:
+    run_as_root:
+      # Increase the FastCGI buffer size
+      - /bin/sh -c "sed -i 's/fastcgi_buffers 16 16k;/fastcgi_buffers 16 256k;/gI' /opt/bitnami/nginx/conf/nginx.conf"
+      - /bin/sh -c "sed -i 's/fastcgi_buffer_size 32k;/fastcgi_buffer_size 512k;/gI' /opt/bitnami/nginx/conf/nginx.conf"
+      - /bin/sh -c "/opt/bitnami/nginx/sbin/nginx -s reload"
   appserver:
     build:
       - "/app/vendor/bin/phpcs --config-set installed_paths /app/vendor/drupal/coder/coder_sniffer"
