@@ -1,5 +1,5 @@
 # Ignore paths that contain user-generated content.
-web/sites/*/files/*
+web/sites/*/files
 web/sites/*/private
 files/*
 artifacts
@@ -134,6 +134,3 @@ site.conf
 log.conf
 php.Dockerfile
 php.ini
-
-!web/sites/default/**/files/
-!web/sites/default/**/files/pdxreporter
