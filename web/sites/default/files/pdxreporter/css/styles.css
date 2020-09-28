@@ -1,0 +1,6575 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto:100, 300,400,700, 900, https://fonts.googleapis.com/css?family=Varela+Round:400");
+/* line 45, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 61, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 74, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 84, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 97, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 109, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 119, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 132, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+a, .a-link {
+  background: transparent;
+}
+
+/* line 139, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+a:focus, .a-link:focus {
+  outline: thin dotted;
+}
+
+/* line 145, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+a:hover, .a-link:hover, a:active, .a-link:active {
+  outline: 0;
+}
+
+/* line 159, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 164, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 169, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 174, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 179, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 184, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/* line 198, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 204, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 220, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 233, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 241, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 257, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 266, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 273, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 281, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 285, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 337, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+img {
+  border: 0;
+}
+
+/* line 346, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 356, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* line 373, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 384, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 398, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* line 413, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 422, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 435, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 448, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 457, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 466, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 477, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 485, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+/* line 493, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 503, c:/_projects/pdxreporter.org/src/scss/libs/_normalize.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 4, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_core.scss */
+.fa, .icon-user, .icon-arrow-l, .files__overlay--check, .files__overlay--delete {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* makes the font 33% larger relative to the icon container */
+/* line 5, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_larger.scss */
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+/* line 10, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_larger.scss */
+.fa-2x {
+  font-size: 2em;
+}
+
+/* line 11, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_larger.scss */
+.fa-3x {
+  font-size: 3em;
+}
+
+/* line 12, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_larger.scss */
+.fa-4x {
+  font-size: 4em;
+}
+
+/* line 13, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_larger.scss */
+.fa-5x {
+  font-size: 5em;
+}
+
+/* line 3, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_fixed-width.scss */
+.fa-fw {
+  width: 1.28571em;
+  text-align: center;
+}
+
+/* line 4, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_list.scss */
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.14286em;
+  list-style-type: none;
+}
+
+/* line 8, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_list.scss */
+.fa-ul > li {
+  position: relative;
+}
+
+/* line 10, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_list.scss */
+.fa-li {
+  position: absolute;
+  left: -2.14286em;
+  width: 2.14286em;
+  top: 0.14286em;
+  text-align: center;
+}
+
+/* line 16, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_list.scss */
+.fa-li.fa-lg {
+  left: -1.85714em;
+}
+
+/* line 4, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_bordered-pulled.scss */
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+}
+
+/* line 10, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_bordered-pulled.scss */
+.fa-pull-left {
+  float: left;
+}
+
+/* line 11, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_bordered-pulled.scss */
+.fa-pull-right {
+  float: right;
+}
+
+/* line 14, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_bordered-pulled.scss */
+.fa.fa-pull-left, .fa-pull-left.icon-user, .fa-pull-left.icon-arrow-l, .fa-pull-left.files__overlay--check, .fa-pull-left.files__overlay--delete {
+  margin-right: .3em;
+}
+
+/* line 15, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_bordered-pulled.scss */
+.fa.fa-pull-right, .fa-pull-right.icon-user, .fa-pull-right.icon-arrow-l, .fa-pull-right.files__overlay--check, .fa-pull-right.files__overlay--delete {
+  margin-left: .3em;
+}
+
+/* Deprecated as of 4.4.0 */
+/* line 19, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_bordered-pulled.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 20, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_bordered-pulled.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 23, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_bordered-pulled.scss */
+.fa.pull-left, .pull-left.icon-user, .pull-left.icon-arrow-l, .pull-left.files__overlay--check, .pull-left.files__overlay--delete {
+  margin-right: .3em;
+}
+
+/* line 24, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_bordered-pulled.scss */
+.fa.pull-right, .pull-right.icon-user, .pull-right.icon-arrow-l, .pull-right.files__overlay--check, .pull-right.files__overlay--delete {
+  margin-left: .3em;
+}
+
+/* line 4, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_animated.scss */
+.fa-spin {
+  animation: fa-spin 2s infinite linear;
+}
+
+/* line 9, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_animated.scss */
+.fa-pulse {
+  animation: fa-spin 1s infinite steps(8);
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+/* line 4, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_rotated-flipped.scss */
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  transform: rotate(90deg);
+}
+
+/* line 5, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_rotated-flipped.scss */
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  transform: rotate(180deg);
+}
+
+/* line 6, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_rotated-flipped.scss */
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  transform: rotate(270deg);
+}
+
+/* line 8, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_rotated-flipped.scss */
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  transform: scale(-1, 1);
+}
+
+/* line 9, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_rotated-flipped.scss */
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  transform: scale(1, -1);
+}
+
+/* line 14, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_rotated-flipped.scss */
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  filter: none;
+}
+
+/* line 4, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_stacked.scss */
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+/* line 12, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_stacked.scss */
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 18, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_stacked.scss */
+.fa-stack-1x {
+  line-height: inherit;
+}
+
+/* line 19, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_stacked.scss */
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+/* line 20, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_stacked.scss */
+.fa-inverse {
+  color: #fff;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+/* line 4, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-glass:before {
+  content: "";
+}
+
+/* line 5, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-music:before {
+  content: "";
+}
+
+/* line 6, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-search:before {
+  content: "";
+}
+
+/* line 7, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-envelope-o:before {
+  content: "";
+}
+
+/* line 8, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-heart:before {
+  content: "";
+}
+
+/* line 9, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-star:before {
+  content: "";
+}
+
+/* line 10, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-star-o:before {
+  content: "";
+}
+
+/* line 11, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-user:before, .icon-user:before {
+  content: "";
+}
+
+/* line 12, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-film:before {
+  content: "";
+}
+
+/* line 13, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-th-large:before {
+  content: "";
+}
+
+/* line 14, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-th:before {
+  content: "";
+}
+
+/* line 15, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-th-list:before {
+  content: "";
+}
+
+/* line 16, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-check:before, .files__overlay--check:before {
+  content: "";
+}
+
+/* line 17, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-remove:before,
+.fa-close:before,
+.files__overlay--delete:before,
+.fa-times:before {
+  content: "";
+}
+
+/* line 18, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-search-plus:before {
+  content: "";
+}
+
+/* line 19, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-search-minus:before {
+  content: "";
+}
+
+/* line 20, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-power-off:before {
+  content: "";
+}
+
+/* line 21, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-signal:before {
+  content: "";
+}
+
+/* line 22, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-gear:before,
+.fa-cog:before {
+  content: "";
+}
+
+/* line 23, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-trash-o:before {
+  content: "";
+}
+
+/* line 24, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-home:before {
+  content: "";
+}
+
+/* line 25, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file-o:before {
+  content: "";
+}
+
+/* line 26, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-clock-o:before {
+  content: "";
+}
+
+/* line 27, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-road:before {
+  content: "";
+}
+
+/* line 28, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-download:before {
+  content: "";
+}
+
+/* line 29, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrow-circle-o-down:before {
+  content: "";
+}
+
+/* line 30, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrow-circle-o-up:before {
+  content: "";
+}
+
+/* line 31, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-inbox:before {
+  content: "";
+}
+
+/* line 32, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-play-circle-o:before {
+  content: "";
+}
+
+/* line 33, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-rotate-right:before,
+.fa-repeat:before {
+  content: "";
+}
+
+/* line 34, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-refresh:before {
+  content: "";
+}
+
+/* line 35, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-list-alt:before {
+  content: "";
+}
+
+/* line 36, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-lock:before {
+  content: "";
+}
+
+/* line 37, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-flag:before {
+  content: "";
+}
+
+/* line 38, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-headphones:before {
+  content: "";
+}
+
+/* line 39, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-volume-off:before {
+  content: "";
+}
+
+/* line 40, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-volume-down:before {
+  content: "";
+}
+
+/* line 41, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-volume-up:before {
+  content: "";
+}
+
+/* line 42, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-qrcode:before {
+  content: "";
+}
+
+/* line 43, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-barcode:before {
+  content: "";
+}
+
+/* line 44, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-tag:before {
+  content: "";
+}
+
+/* line 45, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-tags:before {
+  content: "";
+}
+
+/* line 46, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-book:before {
+  content: "";
+}
+
+/* line 47, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bookmark:before {
+  content: "";
+}
+
+/* line 48, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-print:before {
+  content: "";
+}
+
+/* line 49, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-camera:before {
+  content: "";
+}
+
+/* line 50, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-font:before {
+  content: "";
+}
+
+/* line 51, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bold:before {
+  content: "";
+}
+
+/* line 52, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-italic:before {
+  content: "";
+}
+
+/* line 53, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-text-height:before {
+  content: "";
+}
+
+/* line 54, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-text-width:before {
+  content: "";
+}
+
+/* line 55, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-align-left:before {
+  content: "";
+}
+
+/* line 56, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-align-center:before {
+  content: "";
+}
+
+/* line 57, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-align-right:before {
+  content: "";
+}
+
+/* line 58, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-align-justify:before {
+  content: "";
+}
+
+/* line 59, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-list:before {
+  content: "";
+}
+
+/* line 60, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-dedent:before,
+.fa-outdent:before {
+  content: "";
+}
+
+/* line 61, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-indent:before {
+  content: "";
+}
+
+/* line 62, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-video-camera:before {
+  content: "";
+}
+
+/* line 63, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-photo:before,
+.fa-image:before,
+.fa-picture-o:before {
+  content: "";
+}
+
+/* line 64, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pencil:before {
+  content: "";
+}
+
+/* line 65, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-map-marker:before {
+  content: "";
+}
+
+/* line 66, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-adjust:before {
+  content: "";
+}
+
+/* line 67, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-tint:before {
+  content: "";
+}
+
+/* line 68, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: "";
+}
+
+/* line 69, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-share-square-o:before {
+  content: "";
+}
+
+/* line 70, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-check-square-o:before {
+  content: "";
+}
+
+/* line 71, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrows:before {
+  content: "";
+}
+
+/* line 72, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-step-backward:before {
+  content: "";
+}
+
+/* line 73, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-fast-backward:before {
+  content: "";
+}
+
+/* line 74, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-backward:before {
+  content: "";
+}
+
+/* line 75, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-play:before {
+  content: "";
+}
+
+/* line 76, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pause:before {
+  content: "";
+}
+
+/* line 77, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-stop:before {
+  content: "";
+}
+
+/* line 78, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-forward:before {
+  content: "";
+}
+
+/* line 79, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-fast-forward:before {
+  content: "";
+}
+
+/* line 80, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-step-forward:before {
+  content: "";
+}
+
+/* line 81, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-eject:before {
+  content: "";
+}
+
+/* line 82, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-chevron-left:before, .icon-arrow-l:before {
+  content: "";
+}
+
+/* line 83, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-chevron-right:before {
+  content: "";
+}
+
+/* line 84, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-plus-circle:before {
+  content: "";
+}
+
+/* line 85, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-minus-circle:before {
+  content: "";
+}
+
+/* line 86, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-times-circle:before {
+  content: "";
+}
+
+/* line 87, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-check-circle:before {
+  content: "";
+}
+
+/* line 88, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-question-circle:before {
+  content: "";
+}
+
+/* line 89, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-info-circle:before {
+  content: "";
+}
+
+/* line 90, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-crosshairs:before {
+  content: "";
+}
+
+/* line 91, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-times-circle-o:before {
+  content: "";
+}
+
+/* line 92, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-check-circle-o:before {
+  content: "";
+}
+
+/* line 93, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-ban:before {
+  content: "";
+}
+
+/* line 94, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrow-left:before {
+  content: "";
+}
+
+/* line 95, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrow-right:before {
+  content: "";
+}
+
+/* line 96, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrow-up:before {
+  content: "";
+}
+
+/* line 97, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrow-down:before {
+  content: "";
+}
+
+/* line 98, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mail-forward:before,
+.fa-share:before {
+  content: "";
+}
+
+/* line 99, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-expand:before {
+  content: "";
+}
+
+/* line 100, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-compress:before {
+  content: "";
+}
+
+/* line 101, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-plus:before {
+  content: "";
+}
+
+/* line 102, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-minus:before {
+  content: "";
+}
+
+/* line 103, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-asterisk:before {
+  content: "";
+}
+
+/* line 104, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-exclamation-circle:before {
+  content: "";
+}
+
+/* line 105, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-gift:before {
+  content: "";
+}
+
+/* line 106, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-leaf:before {
+  content: "";
+}
+
+/* line 107, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-fire:before {
+  content: "";
+}
+
+/* line 108, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-eye:before {
+  content: "";
+}
+
+/* line 109, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-eye-slash:before {
+  content: "";
+}
+
+/* line 110, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: "";
+}
+
+/* line 111, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-plane:before {
+  content: "";
+}
+
+/* line 112, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-calendar:before {
+  content: "";
+}
+
+/* line 113, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-random:before {
+  content: "";
+}
+
+/* line 114, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-comment:before {
+  content: "";
+}
+
+/* line 115, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-magnet:before {
+  content: "";
+}
+
+/* line 116, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-chevron-up:before {
+  content: "";
+}
+
+/* line 117, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-chevron-down:before {
+  content: "";
+}
+
+/* line 118, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-retweet:before {
+  content: "";
+}
+
+/* line 119, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-shopping-cart:before {
+  content: "";
+}
+
+/* line 120, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-folder:before {
+  content: "";
+}
+
+/* line 121, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-folder-open:before {
+  content: "";
+}
+
+/* line 122, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrows-v:before {
+  content: "";
+}
+
+/* line 123, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrows-h:before {
+  content: "";
+}
+
+/* line 124, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bar-chart-o:before,
+.fa-bar-chart:before {
+  content: "";
+}
+
+/* line 125, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-twitter-square:before {
+  content: "";
+}
+
+/* line 126, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-facebook-square:before {
+  content: "";
+}
+
+/* line 127, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-camera-retro:before {
+  content: "";
+}
+
+/* line 128, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-key:before {
+  content: "";
+}
+
+/* line 129, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-gears:before,
+.fa-cogs:before {
+  content: "";
+}
+
+/* line 130, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-comments:before {
+  content: "";
+}
+
+/* line 131, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-thumbs-o-up:before {
+  content: "";
+}
+
+/* line 132, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-thumbs-o-down:before {
+  content: "";
+}
+
+/* line 133, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-star-half:before {
+  content: "";
+}
+
+/* line 134, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-heart-o:before {
+  content: "";
+}
+
+/* line 135, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sign-out:before {
+  content: "";
+}
+
+/* line 136, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-linkedin-square:before {
+  content: "";
+}
+
+/* line 137, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-thumb-tack:before {
+  content: "";
+}
+
+/* line 138, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-external-link:before {
+  content: "";
+}
+
+/* line 139, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sign-in:before {
+  content: "";
+}
+
+/* line 140, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-trophy:before {
+  content: "";
+}
+
+/* line 141, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-github-square:before {
+  content: "";
+}
+
+/* line 142, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-upload:before {
+  content: "";
+}
+
+/* line 143, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-lemon-o:before {
+  content: "";
+}
+
+/* line 144, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-phone:before {
+  content: "";
+}
+
+/* line 145, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-square-o:before {
+  content: "";
+}
+
+/* line 146, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bookmark-o:before {
+  content: "";
+}
+
+/* line 147, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-phone-square:before {
+  content: "";
+}
+
+/* line 148, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-twitter:before {
+  content: "";
+}
+
+/* line 149, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-facebook-f:before,
+.fa-facebook:before {
+  content: "";
+}
+
+/* line 150, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-github:before {
+  content: "";
+}
+
+/* line 151, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-unlock:before {
+  content: "";
+}
+
+/* line 152, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-credit-card:before {
+  content: "";
+}
+
+/* line 153, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-feed:before,
+.fa-rss:before {
+  content: "";
+}
+
+/* line 154, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hdd-o:before {
+  content: "";
+}
+
+/* line 155, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bullhorn:before {
+  content: "";
+}
+
+/* line 156, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bell:before {
+  content: "";
+}
+
+/* line 157, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-certificate:before {
+  content: "";
+}
+
+/* line 158, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hand-o-right:before {
+  content: "";
+}
+
+/* line 159, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hand-o-left:before {
+  content: "";
+}
+
+/* line 160, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hand-o-up:before {
+  content: "";
+}
+
+/* line 161, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hand-o-down:before {
+  content: "";
+}
+
+/* line 162, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrow-circle-left:before {
+  content: "";
+}
+
+/* line 163, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrow-circle-right:before {
+  content: "";
+}
+
+/* line 164, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrow-circle-up:before {
+  content: "";
+}
+
+/* line 165, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrow-circle-down:before {
+  content: "";
+}
+
+/* line 166, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-globe:before {
+  content: "";
+}
+
+/* line 167, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-wrench:before {
+  content: "";
+}
+
+/* line 168, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-tasks:before {
+  content: "";
+}
+
+/* line 169, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-filter:before {
+  content: "";
+}
+
+/* line 170, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-briefcase:before {
+  content: "";
+}
+
+/* line 171, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrows-alt:before {
+  content: "";
+}
+
+/* line 172, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-group:before,
+.fa-users:before {
+  content: "";
+}
+
+/* line 173, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-chain:before,
+.fa-link:before {
+  content: "";
+}
+
+/* line 174, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cloud:before {
+  content: "";
+}
+
+/* line 175, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-flask:before {
+  content: "";
+}
+
+/* line 176, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cut:before,
+.fa-scissors:before {
+  content: "";
+}
+
+/* line 177, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-copy:before,
+.fa-files-o:before {
+  content: "";
+}
+
+/* line 178, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-paperclip:before {
+  content: "";
+}
+
+/* line 179, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-save:before,
+.fa-floppy-o:before {
+  content: "";
+}
+
+/* line 180, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-square:before {
+  content: "";
+}
+
+/* line 181, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: "";
+}
+
+/* line 182, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-list-ul:before {
+  content: "";
+}
+
+/* line 183, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-list-ol:before {
+  content: "";
+}
+
+/* line 184, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-strikethrough:before {
+  content: "";
+}
+
+/* line 185, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-underline:before {
+  content: "";
+}
+
+/* line 186, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-table:before {
+  content: "";
+}
+
+/* line 187, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-magic:before {
+  content: "";
+}
+
+/* line 188, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-truck:before {
+  content: "";
+}
+
+/* line 189, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pinterest:before {
+  content: "";
+}
+
+/* line 190, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pinterest-square:before {
+  content: "";
+}
+
+/* line 191, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-google-plus-square:before {
+  content: "";
+}
+
+/* line 192, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-google-plus:before {
+  content: "";
+}
+
+/* line 193, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-money:before {
+  content: "";
+}
+
+/* line 194, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-caret-down:before {
+  content: "";
+}
+
+/* line 195, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-caret-up:before {
+  content: "";
+}
+
+/* line 196, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-caret-left:before {
+  content: "";
+}
+
+/* line 197, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-caret-right:before {
+  content: "";
+}
+
+/* line 198, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-columns:before {
+  content: "";
+}
+
+/* line 199, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-unsorted:before,
+.fa-sort:before {
+  content: "";
+}
+
+/* line 200, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: "";
+}
+
+/* line 201, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: "";
+}
+
+/* line 202, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-envelope:before {
+  content: "";
+}
+
+/* line 203, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-linkedin:before {
+  content: "";
+}
+
+/* line 204, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: "";
+}
+
+/* line 205, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-legal:before,
+.fa-gavel:before {
+  content: "";
+}
+
+/* line 206, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "";
+}
+
+/* line 207, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-comment-o:before {
+  content: "";
+}
+
+/* line 208, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-comments-o:before {
+  content: "";
+}
+
+/* line 209, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-flash:before,
+.fa-bolt:before {
+  content: "";
+}
+
+/* line 210, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sitemap:before {
+  content: "";
+}
+
+/* line 211, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-umbrella:before {
+  content: "";
+}
+
+/* line 212, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-paste:before,
+.fa-clipboard:before {
+  content: "";
+}
+
+/* line 213, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-lightbulb-o:before {
+  content: "";
+}
+
+/* line 214, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-exchange:before {
+  content: "";
+}
+
+/* line 215, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cloud-download:before {
+  content: "";
+}
+
+/* line 216, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cloud-upload:before {
+  content: "";
+}
+
+/* line 217, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-user-md:before {
+  content: "";
+}
+
+/* line 218, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-stethoscope:before {
+  content: "";
+}
+
+/* line 219, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-suitcase:before {
+  content: "";
+}
+
+/* line 220, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bell-o:before {
+  content: "";
+}
+
+/* line 221, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-coffee:before {
+  content: "";
+}
+
+/* line 222, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cutlery:before {
+  content: "";
+}
+
+/* line 223, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file-text-o:before {
+  content: "";
+}
+
+/* line 224, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-building-o:before {
+  content: "";
+}
+
+/* line 225, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hospital-o:before {
+  content: "";
+}
+
+/* line 226, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-ambulance:before {
+  content: "";
+}
+
+/* line 227, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-medkit:before {
+  content: "";
+}
+
+/* line 228, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-fighter-jet:before {
+  content: "";
+}
+
+/* line 229, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-beer:before {
+  content: "";
+}
+
+/* line 230, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-h-square:before {
+  content: "";
+}
+
+/* line 231, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-plus-square:before {
+  content: "";
+}
+
+/* line 232, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-angle-double-left:before {
+  content: "";
+}
+
+/* line 233, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-angle-double-right:before {
+  content: "";
+}
+
+/* line 234, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-angle-double-up:before {
+  content: "";
+}
+
+/* line 235, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-angle-double-down:before {
+  content: "";
+}
+
+/* line 236, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-angle-left:before {
+  content: "";
+}
+
+/* line 237, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-angle-right:before {
+  content: "";
+}
+
+/* line 238, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-angle-up:before {
+  content: "";
+}
+
+/* line 239, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-angle-down:before {
+  content: "";
+}
+
+/* line 240, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-desktop:before {
+  content: "";
+}
+
+/* line 241, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-laptop:before {
+  content: "";
+}
+
+/* line 242, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-tablet:before {
+  content: "";
+}
+
+/* line 243, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: "";
+}
+
+/* line 244, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-circle-o:before {
+  content: "";
+}
+
+/* line 245, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-quote-left:before {
+  content: "";
+}
+
+/* line 246, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-quote-right:before {
+  content: "";
+}
+
+/* line 247, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-spinner:before {
+  content: "";
+}
+
+/* line 248, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-circle:before {
+  content: "";
+}
+
+/* line 249, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: "";
+}
+
+/* line 250, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-github-alt:before {
+  content: "";
+}
+
+/* line 251, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-folder-o:before {
+  content: "";
+}
+
+/* line 252, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-folder-open-o:before {
+  content: "";
+}
+
+/* line 253, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-smile-o:before {
+  content: "";
+}
+
+/* line 254, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-frown-o:before {
+  content: "";
+}
+
+/* line 255, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-meh-o:before {
+  content: "";
+}
+
+/* line 256, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-gamepad:before {
+  content: "";
+}
+
+/* line 257, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-keyboard-o:before {
+  content: "";
+}
+
+/* line 258, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-flag-o:before {
+  content: "";
+}
+
+/* line 259, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-flag-checkered:before {
+  content: "";
+}
+
+/* line 260, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-terminal:before {
+  content: "";
+}
+
+/* line 261, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-code:before {
+  content: "";
+}
+
+/* line 262, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mail-reply-all:before,
+.fa-reply-all:before {
+  content: "";
+}
+
+/* line 263, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: "";
+}
+
+/* line 264, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-location-arrow:before {
+  content: "";
+}
+
+/* line 265, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-crop:before {
+  content: "";
+}
+
+/* line 266, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-code-fork:before {
+  content: "";
+}
+
+/* line 267, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: "";
+}
+
+/* line 268, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-question:before {
+  content: "";
+}
+
+/* line 269, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-info:before {
+  content: "";
+}
+
+/* line 270, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-exclamation:before {
+  content: "";
+}
+
+/* line 271, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-superscript:before {
+  content: "";
+}
+
+/* line 272, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-subscript:before {
+  content: "";
+}
+
+/* line 273, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-eraser:before {
+  content: "";
+}
+
+/* line 274, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-puzzle-piece:before {
+  content: "";
+}
+
+/* line 275, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-microphone:before {
+  content: "";
+}
+
+/* line 276, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-microphone-slash:before {
+  content: "";
+}
+
+/* line 277, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-shield:before {
+  content: "";
+}
+
+/* line 278, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-calendar-o:before {
+  content: "";
+}
+
+/* line 279, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-fire-extinguisher:before {
+  content: "";
+}
+
+/* line 280, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-rocket:before {
+  content: "";
+}
+
+/* line 281, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-maxcdn:before {
+  content: "";
+}
+
+/* line 282, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-chevron-circle-left:before {
+  content: "";
+}
+
+/* line 283, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-chevron-circle-right:before {
+  content: "";
+}
+
+/* line 284, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-chevron-circle-up:before {
+  content: "";
+}
+
+/* line 285, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-chevron-circle-down:before {
+  content: "";
+}
+
+/* line 286, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-html5:before {
+  content: "";
+}
+
+/* line 287, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-css3:before {
+  content: "";
+}
+
+/* line 288, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-anchor:before {
+  content: "";
+}
+
+/* line 289, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-unlock-alt:before {
+  content: "";
+}
+
+/* line 290, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bullseye:before {
+  content: "";
+}
+
+/* line 291, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-ellipsis-h:before {
+  content: "";
+}
+
+/* line 292, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-ellipsis-v:before {
+  content: "";
+}
+
+/* line 293, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-rss-square:before {
+  content: "";
+}
+
+/* line 294, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-play-circle:before {
+  content: "";
+}
+
+/* line 295, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-ticket:before {
+  content: "";
+}
+
+/* line 296, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-minus-square:before {
+  content: "";
+}
+
+/* line 297, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-minus-square-o:before {
+  content: "";
+}
+
+/* line 298, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-level-up:before {
+  content: "";
+}
+
+/* line 299, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-level-down:before {
+  content: "";
+}
+
+/* line 300, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-check-square:before {
+  content: "";
+}
+
+/* line 301, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pencil-square:before {
+  content: "";
+}
+
+/* line 302, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-external-link-square:before {
+  content: "";
+}
+
+/* line 303, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-share-square:before {
+  content: "";
+}
+
+/* line 304, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-compass:before {
+  content: "";
+}
+
+/* line 305, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: "";
+}
+
+/* line 306, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: "";
+}
+
+/* line 307, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: "";
+}
+
+/* line 308, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-euro:before,
+.fa-eur:before {
+  content: "";
+}
+
+/* line 309, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-gbp:before {
+  content: "";
+}
+
+/* line 310, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-dollar:before,
+.fa-usd:before {
+  content: "";
+}
+
+/* line 311, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-rupee:before,
+.fa-inr:before {
+  content: "";
+}
+
+/* line 312, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
+  content: "";
+}
+
+/* line 313, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: "";
+}
+
+/* line 314, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-won:before,
+.fa-krw:before {
+  content: "";
+}
+
+/* line 315, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: "";
+}
+
+/* line 316, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file:before {
+  content: "";
+}
+
+/* line 317, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file-text:before {
+  content: "";
+}
+
+/* line 318, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sort-alpha-asc:before {
+  content: "";
+}
+
+/* line 319, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sort-alpha-desc:before {
+  content: "";
+}
+
+/* line 320, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sort-amount-asc:before {
+  content: "";
+}
+
+/* line 321, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sort-amount-desc:before {
+  content: "";
+}
+
+/* line 322, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sort-numeric-asc:before {
+  content: "";
+}
+
+/* line 323, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sort-numeric-desc:before {
+  content: "";
+}
+
+/* line 324, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-thumbs-up:before {
+  content: "";
+}
+
+/* line 325, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-thumbs-down:before {
+  content: "";
+}
+
+/* line 326, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-youtube-square:before {
+  content: "";
+}
+
+/* line 327, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-youtube:before {
+  content: "";
+}
+
+/* line 328, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-xing:before {
+  content: "";
+}
+
+/* line 329, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-xing-square:before {
+  content: "";
+}
+
+/* line 330, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-youtube-play:before {
+  content: "";
+}
+
+/* line 331, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-dropbox:before {
+  content: "";
+}
+
+/* line 332, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-stack-overflow:before {
+  content: "";
+}
+
+/* line 333, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-instagram:before {
+  content: "";
+}
+
+/* line 334, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-flickr:before {
+  content: "";
+}
+
+/* line 335, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-adn:before {
+  content: "";
+}
+
+/* line 336, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bitbucket:before {
+  content: "";
+}
+
+/* line 337, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bitbucket-square:before {
+  content: "";
+}
+
+/* line 338, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-tumblr:before {
+  content: "";
+}
+
+/* line 339, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-tumblr-square:before {
+  content: "";
+}
+
+/* line 340, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-long-arrow-down:before {
+  content: "";
+}
+
+/* line 341, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-long-arrow-up:before {
+  content: "";
+}
+
+/* line 342, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-long-arrow-left:before {
+  content: "";
+}
+
+/* line 343, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-long-arrow-right:before {
+  content: "";
+}
+
+/* line 344, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-apple:before {
+  content: "";
+}
+
+/* line 345, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-windows:before {
+  content: "";
+}
+
+/* line 346, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-android:before {
+  content: "";
+}
+
+/* line 347, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-linux:before {
+  content: "";
+}
+
+/* line 348, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-dribbble:before {
+  content: "";
+}
+
+/* line 349, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-skype:before {
+  content: "";
+}
+
+/* line 350, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-foursquare:before {
+  content: "";
+}
+
+/* line 351, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-trello:before {
+  content: "";
+}
+
+/* line 352, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-female:before {
+  content: "";
+}
+
+/* line 353, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-male:before {
+  content: "";
+}
+
+/* line 354, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-gittip:before,
+.fa-gratipay:before {
+  content: "";
+}
+
+/* line 355, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sun-o:before {
+  content: "";
+}
+
+/* line 356, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-moon-o:before {
+  content: "";
+}
+
+/* line 357, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-archive:before {
+  content: "";
+}
+
+/* line 358, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bug:before {
+  content: "";
+}
+
+/* line 359, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-vk:before {
+  content: "";
+}
+
+/* line 360, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-weibo:before {
+  content: "";
+}
+
+/* line 361, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-renren:before {
+  content: "";
+}
+
+/* line 362, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pagelines:before {
+  content: "";
+}
+
+/* line 363, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-stack-exchange:before {
+  content: "";
+}
+
+/* line 364, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrow-circle-o-right:before {
+  content: "";
+}
+
+/* line 365, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-arrow-circle-o-left:before {
+  content: "";
+}
+
+/* line 366, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: "";
+}
+
+/* line 367, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-dot-circle-o:before {
+  content: "";
+}
+
+/* line 368, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-wheelchair:before {
+  content: "";
+}
+
+/* line 369, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-vimeo-square:before {
+  content: "";
+}
+
+/* line 370, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: "";
+}
+
+/* line 371, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-plus-square-o:before {
+  content: "";
+}
+
+/* line 372, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-space-shuttle:before {
+  content: "";
+}
+
+/* line 373, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-slack:before {
+  content: "";
+}
+
+/* line 374, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-envelope-square:before {
+  content: "";
+}
+
+/* line 375, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-wordpress:before {
+  content: "";
+}
+
+/* line 376, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-openid:before {
+  content: "";
+}
+
+/* line 377, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-institution:before,
+.fa-bank:before,
+.fa-university:before {
+  content: "";
+}
+
+/* line 378, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mortar-board:before,
+.fa-graduation-cap:before {
+  content: "";
+}
+
+/* line 379, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-yahoo:before {
+  content: "";
+}
+
+/* line 380, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-google:before {
+  content: "";
+}
+
+/* line 381, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-reddit:before {
+  content: "";
+}
+
+/* line 382, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-reddit-square:before {
+  content: "";
+}
+
+/* line 383, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-stumbleupon-circle:before {
+  content: "";
+}
+
+/* line 384, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-stumbleupon:before {
+  content: "";
+}
+
+/* line 385, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-delicious:before {
+  content: "";
+}
+
+/* line 386, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-digg:before {
+  content: "";
+}
+
+/* line 387, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pied-piper-pp:before {
+  content: "";
+}
+
+/* line 388, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pied-piper-alt:before {
+  content: "";
+}
+
+/* line 389, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-drupal:before {
+  content: "";
+}
+
+/* line 390, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-joomla:before {
+  content: "";
+}
+
+/* line 391, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-language:before {
+  content: "";
+}
+
+/* line 392, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-fax:before {
+  content: "";
+}
+
+/* line 393, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-building:before {
+  content: "";
+}
+
+/* line 394, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-child:before {
+  content: "";
+}
+
+/* line 395, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-paw:before {
+  content: "";
+}
+
+/* line 396, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-spoon:before {
+  content: "";
+}
+
+/* line 397, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cube:before {
+  content: "";
+}
+
+/* line 398, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cubes:before {
+  content: "";
+}
+
+/* line 399, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-behance:before {
+  content: "";
+}
+
+/* line 400, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-behance-square:before {
+  content: "";
+}
+
+/* line 401, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-steam:before {
+  content: "";
+}
+
+/* line 402, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-steam-square:before {
+  content: "";
+}
+
+/* line 403, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-recycle:before {
+  content: "";
+}
+
+/* line 404, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-automobile:before,
+.fa-car:before {
+  content: "";
+}
+
+/* line 405, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cab:before,
+.fa-taxi:before {
+  content: "";
+}
+
+/* line 406, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-tree:before {
+  content: "";
+}
+
+/* line 407, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-spotify:before {
+  content: "";
+}
+
+/* line 408, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-deviantart:before {
+  content: "";
+}
+
+/* line 409, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-soundcloud:before {
+  content: "";
+}
+
+/* line 410, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-database:before {
+  content: "";
+}
+
+/* line 411, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file-pdf-o:before {
+  content: "";
+}
+
+/* line 412, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file-word-o:before {
+  content: "";
+}
+
+/* line 413, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file-excel-o:before {
+  content: "";
+}
+
+/* line 414, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file-powerpoint-o:before {
+  content: "";
+}
+
+/* line 415, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file-photo-o:before,
+.fa-file-picture-o:before,
+.fa-file-image-o:before {
+  content: "";
+}
+
+/* line 416, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file-zip-o:before,
+.fa-file-archive-o:before {
+  content: "";
+}
+
+/* line 417, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file-sound-o:before,
+.fa-file-audio-o:before {
+  content: "";
+}
+
+/* line 418, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file-movie-o:before,
+.fa-file-video-o:before {
+  content: "";
+}
+
+/* line 419, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-file-code-o:before {
+  content: "";
+}
+
+/* line 420, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-vine:before {
+  content: "";
+}
+
+/* line 421, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-codepen:before {
+  content: "";
+}
+
+/* line 422, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-jsfiddle:before {
+  content: "";
+}
+
+/* line 423, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-life-bouy:before,
+.fa-life-buoy:before,
+.fa-life-saver:before,
+.fa-support:before,
+.fa-life-ring:before {
+  content: "";
+}
+
+/* line 424, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-circle-o-notch:before {
+  content: "";
+}
+
+/* line 425, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-ra:before,
+.fa-resistance:before,
+.fa-rebel:before {
+  content: "";
+}
+
+/* line 426, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-ge:before,
+.fa-empire:before {
+  content: "";
+}
+
+/* line 427, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-git-square:before {
+  content: "";
+}
+
+/* line 428, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-git:before {
+  content: "";
+}
+
+/* line 429, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
+.fa-hacker-news:before {
+  content: "";
+}
+
+/* line 430, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-tencent-weibo:before {
+  content: "";
+}
+
+/* line 431, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-qq:before {
+  content: "";
+}
+
+/* line 432, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-wechat:before,
+.fa-weixin:before {
+  content: "";
+}
+
+/* line 433, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-send:before,
+.fa-paper-plane:before {
+  content: "";
+}
+
+/* line 434, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-send-o:before,
+.fa-paper-plane-o:before {
+  content: "";
+}
+
+/* line 435, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-history:before {
+  content: "";
+}
+
+/* line 436, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-circle-thin:before {
+  content: "";
+}
+
+/* line 437, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-header:before {
+  content: "";
+}
+
+/* line 438, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-paragraph:before {
+  content: "";
+}
+
+/* line 439, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sliders:before {
+  content: "";
+}
+
+/* line 440, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-share-alt:before {
+  content: "";
+}
+
+/* line 441, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-share-alt-square:before {
+  content: "";
+}
+
+/* line 442, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bomb:before {
+  content: "";
+}
+
+/* line 443, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-soccer-ball-o:before,
+.fa-futbol-o:before {
+  content: "";
+}
+
+/* line 444, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-tty:before {
+  content: "";
+}
+
+/* line 445, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-binoculars:before {
+  content: "";
+}
+
+/* line 446, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-plug:before {
+  content: "";
+}
+
+/* line 447, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-slideshare:before {
+  content: "";
+}
+
+/* line 448, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-twitch:before {
+  content: "";
+}
+
+/* line 449, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-yelp:before {
+  content: "";
+}
+
+/* line 450, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-newspaper-o:before {
+  content: "";
+}
+
+/* line 451, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-wifi:before {
+  content: "";
+}
+
+/* line 452, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-calculator:before {
+  content: "";
+}
+
+/* line 453, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-paypal:before {
+  content: "";
+}
+
+/* line 454, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-google-wallet:before {
+  content: "";
+}
+
+/* line 455, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cc-visa:before {
+  content: "";
+}
+
+/* line 456, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cc-mastercard:before {
+  content: "";
+}
+
+/* line 457, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cc-discover:before {
+  content: "";
+}
+
+/* line 458, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cc-amex:before {
+  content: "";
+}
+
+/* line 459, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cc-paypal:before {
+  content: "";
+}
+
+/* line 460, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cc-stripe:before {
+  content: "";
+}
+
+/* line 461, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bell-slash:before {
+  content: "";
+}
+
+/* line 462, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bell-slash-o:before {
+  content: "";
+}
+
+/* line 463, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-trash:before {
+  content: "";
+}
+
+/* line 464, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-copyright:before {
+  content: "";
+}
+
+/* line 465, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-at:before {
+  content: "";
+}
+
+/* line 466, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-eyedropper:before {
+  content: "";
+}
+
+/* line 467, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-paint-brush:before {
+  content: "";
+}
+
+/* line 468, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-birthday-cake:before {
+  content: "";
+}
+
+/* line 469, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-area-chart:before {
+  content: "";
+}
+
+/* line 470, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pie-chart:before {
+  content: "";
+}
+
+/* line 471, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-line-chart:before {
+  content: "";
+}
+
+/* line 472, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-lastfm:before {
+  content: "";
+}
+
+/* line 473, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-lastfm-square:before {
+  content: "";
+}
+
+/* line 474, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-toggle-off:before {
+  content: "";
+}
+
+/* line 475, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-toggle-on:before {
+  content: "";
+}
+
+/* line 476, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bicycle:before {
+  content: "";
+}
+
+/* line 477, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bus:before {
+  content: "";
+}
+
+/* line 478, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-ioxhost:before {
+  content: "";
+}
+
+/* line 479, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-angellist:before {
+  content: "";
+}
+
+/* line 480, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cc:before {
+  content: "";
+}
+
+/* line 481, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-shekel:before,
+.fa-sheqel:before,
+.fa-ils:before {
+  content: "";
+}
+
+/* line 482, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-meanpath:before {
+  content: "";
+}
+
+/* line 483, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-buysellads:before {
+  content: "";
+}
+
+/* line 484, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-connectdevelop:before {
+  content: "";
+}
+
+/* line 485, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-dashcube:before {
+  content: "";
+}
+
+/* line 486, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-forumbee:before {
+  content: "";
+}
+
+/* line 487, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-leanpub:before {
+  content: "";
+}
+
+/* line 488, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sellsy:before {
+  content: "";
+}
+
+/* line 489, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-shirtsinbulk:before {
+  content: "";
+}
+
+/* line 490, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-simplybuilt:before {
+  content: "";
+}
+
+/* line 491, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-skyatlas:before {
+  content: "";
+}
+
+/* line 492, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cart-plus:before {
+  content: "";
+}
+
+/* line 493, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cart-arrow-down:before {
+  content: "";
+}
+
+/* line 494, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-diamond:before {
+  content: "";
+}
+
+/* line 495, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-ship:before {
+  content: "";
+}
+
+/* line 496, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-user-secret:before {
+  content: "";
+}
+
+/* line 497, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-motorcycle:before {
+  content: "";
+}
+
+/* line 498, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-street-view:before {
+  content: "";
+}
+
+/* line 499, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-heartbeat:before {
+  content: "";
+}
+
+/* line 500, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-venus:before {
+  content: "";
+}
+
+/* line 501, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mars:before {
+  content: "";
+}
+
+/* line 502, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mercury:before {
+  content: "";
+}
+
+/* line 503, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "";
+}
+
+/* line 504, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-transgender-alt:before {
+  content: "";
+}
+
+/* line 505, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-venus-double:before {
+  content: "";
+}
+
+/* line 506, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mars-double:before {
+  content: "";
+}
+
+/* line 507, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-venus-mars:before {
+  content: "";
+}
+
+/* line 508, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mars-stroke:before {
+  content: "";
+}
+
+/* line 509, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mars-stroke-v:before {
+  content: "";
+}
+
+/* line 510, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mars-stroke-h:before {
+  content: "";
+}
+
+/* line 511, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-neuter:before {
+  content: "";
+}
+
+/* line 512, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-genderless:before {
+  content: "";
+}
+
+/* line 513, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-facebook-official:before {
+  content: "";
+}
+
+/* line 514, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pinterest-p:before {
+  content: "";
+}
+
+/* line 515, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-whatsapp:before {
+  content: "";
+}
+
+/* line 516, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-server:before {
+  content: "";
+}
+
+/* line 517, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-user-plus:before {
+  content: "";
+}
+
+/* line 518, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-user-times:before {
+  content: "";
+}
+
+/* line 519, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hotel:before,
+.fa-bed:before {
+  content: "";
+}
+
+/* line 520, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-viacoin:before {
+  content: "";
+}
+
+/* line 521, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-train:before {
+  content: "";
+}
+
+/* line 522, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-subway:before {
+  content: "";
+}
+
+/* line 523, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-medium:before {
+  content: "";
+}
+
+/* line 524, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "";
+}
+
+/* line 525, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-optin-monster:before {
+  content: "";
+}
+
+/* line 526, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-opencart:before {
+  content: "";
+}
+
+/* line 527, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-expeditedssl:before {
+  content: "";
+}
+
+/* line 528, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "";
+}
+
+/* line 529, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "";
+}
+
+/* line 530, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "";
+}
+
+/* line 531, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "";
+}
+
+/* line 532, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "";
+}
+
+/* line 533, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mouse-pointer:before {
+  content: "";
+}
+
+/* line 534, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-i-cursor:before {
+  content: "";
+}
+
+/* line 535, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-object-group:before {
+  content: "";
+}
+
+/* line 536, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-object-ungroup:before {
+  content: "";
+}
+
+/* line 537, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sticky-note:before {
+  content: "";
+}
+
+/* line 538, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-sticky-note-o:before {
+  content: "";
+}
+
+/* line 539, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cc-jcb:before {
+  content: "";
+}
+
+/* line 540, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-cc-diners-club:before {
+  content: "";
+}
+
+/* line 541, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-clone:before {
+  content: "";
+}
+
+/* line 542, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-balance-scale:before {
+  content: "";
+}
+
+/* line 543, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hourglass-o:before {
+  content: "";
+}
+
+/* line 544, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "";
+}
+
+/* line 545, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "";
+}
+
+/* line 546, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "";
+}
+
+/* line 547, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hourglass:before {
+  content: "";
+}
+
+/* line 548, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "";
+}
+
+/* line 549, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "";
+}
+
+/* line 550, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hand-scissors-o:before {
+  content: "";
+}
+
+/* line 551, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hand-lizard-o:before {
+  content: "";
+}
+
+/* line 552, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hand-spock-o:before {
+  content: "";
+}
+
+/* line 553, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hand-pointer-o:before {
+  content: "";
+}
+
+/* line 554, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hand-peace-o:before {
+  content: "";
+}
+
+/* line 555, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-trademark:before {
+  content: "";
+}
+
+/* line 556, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-registered:before {
+  content: "";
+}
+
+/* line 557, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-creative-commons:before {
+  content: "";
+}
+
+/* line 558, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-gg:before {
+  content: "";
+}
+
+/* line 559, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-gg-circle:before {
+  content: "";
+}
+
+/* line 560, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-tripadvisor:before {
+  content: "";
+}
+
+/* line 561, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-odnoklassniki:before {
+  content: "";
+}
+
+/* line 562, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-odnoklassniki-square:before {
+  content: "";
+}
+
+/* line 563, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-get-pocket:before {
+  content: "";
+}
+
+/* line 564, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-wikipedia-w:before {
+  content: "";
+}
+
+/* line 565, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-safari:before {
+  content: "";
+}
+
+/* line 566, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-chrome:before {
+  content: "";
+}
+
+/* line 567, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-firefox:before {
+  content: "";
+}
+
+/* line 568, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-opera:before {
+  content: "";
+}
+
+/* line 569, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-internet-explorer:before {
+  content: "";
+}
+
+/* line 570, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-tv:before,
+.fa-television:before {
+  content: "";
+}
+
+/* line 571, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-contao:before {
+  content: "";
+}
+
+/* line 572, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-500px:before {
+  content: "";
+}
+
+/* line 573, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-amazon:before {
+  content: "";
+}
+
+/* line 574, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-calendar-plus-o:before {
+  content: "";
+}
+
+/* line 575, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-calendar-minus-o:before {
+  content: "";
+}
+
+/* line 576, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-calendar-times-o:before {
+  content: "";
+}
+
+/* line 577, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-calendar-check-o:before {
+  content: "";
+}
+
+/* line 578, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-industry:before {
+  content: "";
+}
+
+/* line 579, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-map-pin:before {
+  content: "";
+}
+
+/* line 580, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-map-signs:before {
+  content: "";
+}
+
+/* line 581, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-map-o:before {
+  content: "";
+}
+
+/* line 582, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-map:before {
+  content: "";
+}
+
+/* line 583, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-commenting:before {
+  content: "";
+}
+
+/* line 584, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-commenting-o:before {
+  content: "";
+}
+
+/* line 585, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-houzz:before {
+  content: "";
+}
+
+/* line 586, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-vimeo:before {
+  content: "";
+}
+
+/* line 587, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-black-tie:before {
+  content: "";
+}
+
+/* line 588, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-fonticons:before {
+  content: "";
+}
+
+/* line 589, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-reddit-alien:before {
+  content: "";
+}
+
+/* line 590, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-edge:before {
+  content: "";
+}
+
+/* line 591, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-credit-card-alt:before {
+  content: "";
+}
+
+/* line 592, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-codiepie:before {
+  content: "";
+}
+
+/* line 593, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-modx:before {
+  content: "";
+}
+
+/* line 594, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-fort-awesome:before {
+  content: "";
+}
+
+/* line 595, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-usb:before {
+  content: "";
+}
+
+/* line 596, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-product-hunt:before {
+  content: "";
+}
+
+/* line 597, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-mixcloud:before {
+  content: "";
+}
+
+/* line 598, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-scribd:before {
+  content: "";
+}
+
+/* line 599, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pause-circle:before {
+  content: "";
+}
+
+/* line 600, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pause-circle-o:before {
+  content: "";
+}
+
+/* line 601, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-stop-circle:before {
+  content: "";
+}
+
+/* line 602, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-stop-circle-o:before {
+  content: "";
+}
+
+/* line 603, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-shopping-bag:before {
+  content: "";
+}
+
+/* line 604, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-shopping-basket:before {
+  content: "";
+}
+
+/* line 605, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-hashtag:before {
+  content: "";
+}
+
+/* line 606, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bluetooth:before {
+  content: "";
+}
+
+/* line 607, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bluetooth-b:before {
+  content: "";
+}
+
+/* line 608, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-percent:before {
+  content: "";
+}
+
+/* line 609, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-gitlab:before {
+  content: "";
+}
+
+/* line 610, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-wpbeginner:before {
+  content: "";
+}
+
+/* line 611, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-wpforms:before {
+  content: "";
+}
+
+/* line 612, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-envira:before {
+  content: "";
+}
+
+/* line 613, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-universal-access:before {
+  content: "";
+}
+
+/* line 614, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-wheelchair-alt:before {
+  content: "";
+}
+
+/* line 615, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-question-circle-o:before {
+  content: "";
+}
+
+/* line 616, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-blind:before {
+  content: "";
+}
+
+/* line 617, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-audio-description:before {
+  content: "";
+}
+
+/* line 618, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-volume-control-phone:before {
+  content: "";
+}
+
+/* line 619, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-braille:before {
+  content: "";
+}
+
+/* line 620, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-assistive-listening-systems:before {
+  content: "";
+}
+
+/* line 621, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "";
+}
+
+/* line 622, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "";
+}
+
+/* line 623, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-glide:before {
+  content: "";
+}
+
+/* line 624, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-glide-g:before {
+  content: "";
+}
+
+/* line 625, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "";
+}
+
+/* line 626, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-low-vision:before {
+  content: "";
+}
+
+/* line 627, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-viadeo:before {
+  content: "";
+}
+
+/* line 628, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-viadeo-square:before {
+  content: "";
+}
+
+/* line 629, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-snapchat:before {
+  content: "";
+}
+
+/* line 630, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-snapchat-ghost:before {
+  content: "";
+}
+
+/* line 631, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-snapchat-square:before {
+  content: "";
+}
+
+/* line 632, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-pied-piper:before {
+  content: "";
+}
+
+/* line 633, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-first-order:before {
+  content: "";
+}
+
+/* line 634, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-yoast:before {
+  content: "";
+}
+
+/* line 635, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-themeisle:before {
+  content: "";
+}
+
+/* line 636, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "";
+}
+
+/* line 637, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "";
+}
+
+/* line 638, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-handshake-o:before {
+  content: "";
+}
+
+/* line 639, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-envelope-open:before {
+  content: "";
+}
+
+/* line 640, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-envelope-open-o:before {
+  content: "";
+}
+
+/* line 641, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-linode:before {
+  content: "";
+}
+
+/* line 642, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-address-book:before {
+  content: "";
+}
+
+/* line 643, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-address-book-o:before {
+  content: "";
+}
+
+/* line 644, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "";
+}
+
+/* line 645, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "";
+}
+
+/* line 646, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-user-circle:before {
+  content: "";
+}
+
+/* line 647, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-user-circle-o:before {
+  content: "";
+}
+
+/* line 648, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-user-o:before {
+  content: "";
+}
+
+/* line 649, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-id-badge:before {
+  content: "";
+}
+
+/* line 650, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "";
+}
+
+/* line 651, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "";
+}
+
+/* line 652, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-quora:before {
+  content: "";
+}
+
+/* line 653, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-free-code-camp:before {
+  content: "";
+}
+
+/* line 654, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-telegram:before {
+  content: "";
+}
+
+/* line 655, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "";
+}
+
+/* line 656, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "";
+}
+
+/* line 657, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "";
+}
+
+/* line 658, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "";
+}
+
+/* line 659, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "";
+}
+
+/* line 660, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-shower:before {
+  content: "";
+}
+
+/* line 661, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "";
+}
+
+/* line 662, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-podcast:before {
+  content: "";
+}
+
+/* line 663, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-window-maximize:before {
+  content: "";
+}
+
+/* line 664, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-window-minimize:before {
+  content: "";
+}
+
+/* line 665, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-window-restore:before {
+  content: "";
+}
+
+/* line 666, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "";
+}
+
+/* line 667, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "";
+}
+
+/* line 668, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-bandcamp:before {
+  content: "";
+}
+
+/* line 669, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-grav:before {
+  content: "";
+}
+
+/* line 670, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-etsy:before {
+  content: "";
+}
+
+/* line 671, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-imdb:before {
+  content: "";
+}
+
+/* line 672, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-ravelry:before {
+  content: "";
+}
+
+/* line 673, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-eercast:before {
+  content: "";
+}
+
+/* line 674, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-microchip:before {
+  content: "";
+}
+
+/* line 675, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-snowflake-o:before {
+  content: "";
+}
+
+/* line 676, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-superpowers:before {
+  content: "";
+}
+
+/* line 677, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-wpexplorer:before {
+  content: "";
+}
+
+/* line 678, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_icons.scss */
+.fa-meetup:before {
+  content: "";
+}
+
+/* line 4, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_screen-reader.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* line 51, c:/_projects/pdxreporter.org/node_modules/font-awesome/scss/_mixins.scss */
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?-jqsd02");
+  src: url("../fonts/icomoon.eot?#iefix-jqsd02") format("embedded-opentype"), url("../fonts/icomoon.woff?-jqsd02") format("woff"), url("../fonts/icomoon.ttf?-jqsd02") format("truetype"), url("../fonts/icomoon.svg?-jqsd02#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat66 {
+  background-image: url("/img/categories/66.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat66:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat66:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat73 {
+  background-image: url("/img/categories/73.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat73:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat73:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat77 {
+  background-image: url("/img/categories/77.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat77:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat77:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat176 {
+  background-image: url("/img/categories/176.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat176:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat176:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat314 {
+  background-image: url("/img/categories/314.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat314:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat314:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat596 {
+  background-image: url("/img/categories/596.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat596:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat596:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1206 {
+  background-image: url("/img/categories/1206.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1206:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat1206:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1261 {
+  background-image: url("/img/categories/1261.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1261:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat1261:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1324 {
+  background-image: url("/img/categories/1324.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1324:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat1324:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1459 {
+  background-image: url("/img/categories/1459.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1459:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat1459:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1489 {
+  background-image: url("/img/categories/1489.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1489:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat1489:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1530 {
+  background-image: url("/img/categories/1530.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1530:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat1530:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1790 {
+  background-image: url("/img/categories/1790.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1790:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat1790:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1878 {
+  background-image: url("/img/categories/1878.jpg");
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+.cat1878:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 768px) {
+  /* line 65, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-functions.scss */
+  .cat1878:before {
+    padding-top: 66.6%;
+  }
+}
+
+/* line 7, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+.a-btn {
+  text-align: center;
+}
+
+/* line 13, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+h1, .a-headline--hero, .a-headline--primary, .a-headline--primary--grouped, .a-headline--primary--modal {
+  font-size: 1.333rem;
+  line-height: 1.81818;
+  font-weight: 400;
+  letter-spacing: -0.01875em;
+  text-transform: none;
+  margin: 1.25em 0 0;
+  color: #31393C;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  /* line 13, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+  h1, .a-headline--hero, .a-headline--primary, .a-headline--primary--grouped, .a-headline--primary--modal {
+    font-size: 1.777rem;
+    line-height: 2;
+  }
+}
+
+/* line 28, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+h2, .a-headline--secondary--grouped, .a-headline--secondary {
+  font-size: 1rem;
+  line-height: 1.66667;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0.625em 0 0;
+  letter-spacing: 0.5px;
+  color: #999da1;
+}
+
+/* line 45, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+.header__container, .group--apart {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+/* line 51, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+.a-alert__close:before, .card__icon:before, .a-btn--back:before, .toggle:before, .report__btn--back:before, .report__link:after, .ath-container:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: middle;
+  font-size: 100%;
+  font-size: 170%;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: color 0.3s ease;
+}
+
+/* line 70, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+.a-btn {
+  padding: 15px 30px;
+  border: 0;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-bottom: strip-units(20px)/strip-units(14px)0em;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 400;
+  transition: opacity 0.3s;
+  display: block;
+}
+
+@media (min-width: 480px) {
+  /* line 70, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+  .a-btn {
+    width: auto;
+    display: inline-block;
+  }
+  /* line 236, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .a-btn + .a-btn {
+    margin-left: 0.625em;
+  }
+}
+
+/* line 94, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+.a-btn:hover {
+  opacity: .75;
+}
+
+/* line 98, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+.a-btn:active {
+  opacity: initial;
+}
+
+/* line 103, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+.sidebar {
+  background-color: #31393C;
+}
+
+/* line 107, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+.header {
+  background-color: #fff;
+}
+
+/* line 111, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-extends.scss */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+/* line 3, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 12, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 16, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+html {
+  box-sizing: border-box;
+  background-color: #fff;
+  font-size: 100%;
+}
+
+/* line 22, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+body {
+  font-weight: 400;
+  font-size: 16;
+  color: #485458;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 32, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+a, .a-link {
+  background: transparent;
+  color: #23ccef;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-weight: 400;
+}
+
+/* line 41, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+p > a, p > .a-link {
+  text-decoration: underline;
+}
+
+/* line 45, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 50, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-family: "Varela Round", "Helvetica Neue", Arial, sans-serif, "Roboto", sans-serif;
+  color: #31393C;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 72, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+.p {
+  font-size: 1rem;
+  line-height: 1.66667;
+  font-weight: 400;
+  margin: 0 0 1.25em 0;
+  color: #999da1;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.p--nm {
+  margin: 0;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.p--meta {
+  font-size: 0.75rem;
+  line-height: 1.53846;
+  color: #797e83;
+  margin-bottom: 0.625rem;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.p--notice {
+  font-weight: 800;
+  color: #656a6e;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.p--modal {
+  line-height: 1.25em;
+}
+
+@media (min-width: 768px) {
+  /* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .p--modal {
+    font-size: 1rem;
+    line-height: 1.66667;
+  }
+}
+
+/* line 97, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+ul {
+  margin: 0;
+}
+
+/* line 101, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+ul li {
+  list-style-type: none;
+}
+
+/* line 105, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+ol {
+  margin-left: 1.25rem;
+}
+
+/* line 109, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+blockquote ol {
+  margin-left: 2.5rem;
+}
+
+/* line 113, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+blockquote p.p {
+  margin-left: 2.5rem;
+}
+
+/* line 117, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover {
+  outline: 0px !important;
+  -webkit-appearance: none;
+}
+
+/* line 131, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+.report__header, .report__body, .pane--my-reports, .pane--help {
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  /* line 131, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+  .report__header, .report__body, .pane--my-reports, .pane--help {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 131, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+  .report__header, .report__body, .pane--my-reports, .pane--help {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* line 131, c:/_projects/pdxreporter.org/src/scss/02_base/_b-base.scss */
+  .report__header, .report__body, .pane--my-reports, .pane--help {
+    max-width: 40%;
+  }
+}
+
+/* line 2, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-extends.scss */
+.a-alert {
+  padding: 0 0.9375rem;
+  min-height: 60px;
+  width: 100%;
+  border-radius: 0.25rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: center;
+}
+
+/* line 15, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-extends.scss */
+.a-alert__close {
+  color: #31393C;
+}
+
+/* line 299, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-alert__close:before {
+  content: "";
+}
+
+/* line 21, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-extends.scss */
+.card__icon {
+  color: #31393C;
+}
+
+/* line 299, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.card__icon:before {
+  content: "";
+}
+
+/* line 28, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-extends.scss */
+.m-form__input {
+  font-size: 1.0625em;
+  margin-bottom: 0.625em;
+  border: 1px solid #d6d7d9;
+  border-radius: 0.25rem;
+  background: #fff;
+  font-weight: 400;
+  padding: 0.625rem 0.9375rem;
+  -ms-flex: 1;
+      flex: 1;
+  width: 100%;
+  display: block;
+  transition: border-color 0.3s;
+  outline: none;
+}
+
+/* line 42, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-extends.scss */
+.m-form__input:focus {
+  border-color: #23ccef;
+  color: #1a1e20;
+}
+
+/* line 49, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-extends.scss */
+.report__message textarea {
+  border-radius: 0.25rem;
+  border: 1px solid #ebecec;
+  padding: 0.625rem;
+  margin: 1.25em 0;
+  width: 100%;
+}
+
+/* line 58, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-extends.scss */
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+
+/* line 12, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+textarea {
+  height: 100px;
+}
+
+/* line 16, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+select {
+  position: relative;
+  width: 100%;
+  display: block;
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  height: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0.875rem;
+}
+
+/* line 27, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+select:focus {
+  outline: 0px !important;
+}
+
+/* line 32, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+option {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 .5em;
+  cursor: pointer;
+}
+
+/* line 40, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+input[type="button"] {
+  background: transparent;
+  padding: 0.9375rem 2rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 0.625rem;
+  border-radius: 0.125rem;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 52, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+input[type="button"]:hover {
+  color: #fff;
+}
+
+/* -webkit-appearance: none is causing radio buttons and checkboxes to flicker on hover */
+/* line 59, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+input[type="radio"]:hover,
+input[type="radio"]:active,
+input[type="radio"]:focus {
+  -webkit-appearance: radio;
+}
+
+/* line 65, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+input[type="checkbox"]:hover,
+input[type="checkbox"]:active,
+input[type="checkbox"]:focus {
+  -webkit-appearance: checkbox;
+}
+
+/* line 72, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+tags-input .host {
+  margin: 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.125rem;
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: 0;
+}
+
+/* line 82, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+tags-input .host .tags {
+  padding: 0.3125rem;
+  border: none;
+  -ms-flex: 1;
+      flex: 1;
+  width: 100%;
+  display: block;
+  box-shadow: none;
+}
+
+/* line 121, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+.files__overlay--check:before {
+  line-height: 25px;
+}
+
+/* line 126, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+.files__overlay--check {
+  color: #fff;
+  position: absolute;
+  bottom: -7px;
+  right: -7px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* line 148, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+.files__overlay--delete:before {
+  line-height: 20px;
+}
+
+/* line 153, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+a.close-panel, .close-panel.a-link {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  visibility: visible;
+  opacity: 1;
+  border-radius: 0.125rem 0 0 0.125rem;
+  transition: opacity 0.3s ease;
+}
+
+/* line 170, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+a.close-panel .icon-arrow-l, .close-panel.a-link .icon-arrow-l {
+  color: #fff;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  /* line 153, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+  a.close-panel, .close-panel.a-link {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+}
+
+/* line 184, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+.report-status {
+  color: #656a6e;
+  font-weight: 800;
+}
+
+/* line 190, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+.req {
+  color: #ff6600;
+  margin: 0;
+}
+
+/* line 195, c:/_projects/pdxreporter.org/src/scss/03_atoms/_atoms.scss */
+.copyright {
+  padding: 0.625rem;
+  text-align: center;
+  width: 100%;
+  font-size: 0.875rem;
+  color: #999da1;
+  position: absolute;
+  bottom: 0;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.copyright--desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  /* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .copyright--desktop {
+    display: block;
+    position: relative;
+    padding: 1.25rem;
+    border-top: 1px solid #ebecec;
+    width: 96%;
+    margin: 1.875rem auto 0;
+  }
+}
+
+/*
+.site-logo {
+  display: inline-block;
+  @include circle(45px, $color--primary);
+  @include hide-text;
+}
+*/
+/* line 10, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-branding.scss */
+.temp-logo {
+  padding-left: 1.25rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+/* line 14, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-branding.scss */
+.temp-logo h1 {
+  margin: 0 0 0 0.3125rem;
+  color: #23ccef;
+  display: inline;
+  font-size: 1.25rem;
+}
+
+/* line 20, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-branding.scss */
+.temp-logo img {
+  height: 30px;
+}
+
+/* line 22, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-branding.scss */
+.temp-logo img.betabadge {
+  margin-left: 5px;
+  height: auto;
+}
+
+/* line 171, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-btn--default {
+  background-color: #23ccef;
+}
+
+/* line 171, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-btn--successs {
+  background-color: #23ccef;
+}
+
+/* line 171, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-btn--warning {
+  background-color: #ffa534;
+}
+
+/* line 171, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-btn--error {
+  background-color: #fb404b;
+}
+
+/* line 171, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-btn--info {
+  background-color: #797e83;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-btn--disabled {
+  opacity: 0.3;
+}
+
+/* line 9, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-buttons.scss */
+.a-btn--disabled:hover {
+  opacity: 0.3;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-btn--is-active {
+  opacity: 1;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-btn--fw {
+  width: 100%;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-btn--inline {
+  margin: 0.625em;
+}
+
+/* line 24, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-buttons.scss */
+.a-btn--inline + .a-btn--inline {
+  margin-left: 0;
+}
+
+/* line 299, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-btn--back:before {
+  content: "";
+}
+
+/* line 32, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-buttons.scss */
+.a-btn--back:before {
+  margin-left: -10px;
+  line-height: 0.625em;
+}
+
+/* line 39, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-buttons.scss */
+.a-btn + .a-link {
+  display: block;
+  margin-top: 1.25em;
+}
+
+@media (min-width: 480px) {
+  /* line 39, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-buttons.scss */
+  .a-btn + .a-link {
+    margin-top: 0;
+  }
+}
+
+/* line 48, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-buttons.scss */
+.toggle {
+  padding: 0 0.9375em;
+  text-align: center;
+  height: 100%;
+}
+
+/* line 299, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.toggle:before {
+  content: "";
+}
+
+/* line 55, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-buttons.scss */
+.toggle:hover:before {
+  color: #0fafd0;
+}
+
+/* line 59, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-buttons.scss */
+.toggle:before {
+  font-size: 170%;
+  line-height: 60px;
+}
+
+@media (min-width: 1024px) {
+  /* line 48, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-buttons.scss */
+  .toggle {
+    display: none;
+  }
+}
+
+/* line 69, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-buttons.scss */
+.toggle--desktop:before {
+  line-height: normal;
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-card.scss */
+.card {
+  background-color: white;
+  width: 100%;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
+/* line 13, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-card.scss */
+.card:hover .card__image {
+  filter: contrast(100%);
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.card__title {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  position: absolute;
+  font-weight: 400;
+  top: 0;
+  margin: 0.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 768px) {
+  /* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .card__title {
+    font-size: 1.125rem;
+  }
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.card__icon {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 80%;
+  padding: 0.25rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 480px) {
+  /* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .card__icon {
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .card__icon {
+    font-size: 110%;
+  }
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.card--basic, .card--message {
+  box-shadow: 0px 0px 0px;
+  border: 1px solid #ebecec;
+  padding: 0.625rem;
+}
+
+/* line 64, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-card.scss */
+.card--basic > div, .card--message > div {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.card--message {
+  text-align: center;
+  padding: 0.625em 1.25em 1.25em;
+  max-width: 500px;
+  margin: 40px auto 0 auto;
+}
+
+/* line 76, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-card.scss */
+.card--message > div {
+  padding-top: 1.25em;
+  border-top: 1px solid #ebecec;
+}
+
+/* line 83, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-card.scss */
+.content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+/* line 90, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-card.scss */
+#NewReportPanel {
+  height: calc(100% - 60px);
+  width: 100%;
+  position: absolute;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 171, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-alert--default {
+  background-color: #23ccef;
+}
+
+/* line 171, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-alert--successs {
+  background-color: #23ccef;
+}
+
+/* line 171, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-alert--warning {
+  background-color: #ffa534;
+}
+
+/* line 171, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-alert--error {
+  background-color: #fb404b;
+}
+
+/* line 171, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-alert--info {
+  background-color: #797e83;
+}
+
+/* line 6, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-alerts.scss */
+.a-alert p {
+  width: 100%;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-alert__top {
+  border-radius: 0;
+  position: fixed;
+  top: -60px;
+  right: 0;
+  left: 0;
+  z-index: 9600;
+  padding: 0.625rem 0 0.625rem 0.625rem;
+  transition: top 0.3s ease;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-alert__top--is-active {
+  top: 0;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-alert__close {
+  padding: 0.625rem;
+  color: #485458;
+  font-size: 60%;
+}
+
+/* line 32, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-alerts.scss */
+.a-notice {
+  font-weight: 700;
+}
+
+/* line 185, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-link--default {
+  color: #23ccef;
+}
+
+/* line 187, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-link--default:hover {
+  color: #0fafd0;
+}
+
+/* line 185, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-link--successs {
+  color: #23ccef;
+}
+
+/* line 187, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-link--successs:hover {
+  color: #0fafd0;
+}
+
+/* line 185, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-link--warning {
+  color: #ffa534;
+}
+
+/* line 187, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-link--warning:hover {
+  color: #ff8e01;
+}
+
+/* line 185, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-link--error {
+  color: #fb404b;
+}
+
+/* line 187, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-link--error:hover {
+  color: #fa0e1c;
+}
+
+/* line 185, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-link--info {
+  color: #797e83;
+}
+
+/* line 187, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-link--info:hover {
+  color: #616568;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-link--select {
+  display: block;
+  border-top: 1px solid #ebecec;
+  border-bottom: 1px solid #ebecec;
+  color: #000;
+  letter-spacing: 0.5px;
+}
+
+/* line 15, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-links.scss */
+.a-link--select + .a-link--select {
+  border-top: none;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-link--username {
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 0.625rem;
+}
+
+/* line 3, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+::-webkit-input-placeholder {
+  color: #d6d7d9;
+  opacity: 1 !important;
+}
+
+/* line 4, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+:-moz-placeholder {
+  color: #d6d7d9;
+}
+
+/* line 5, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+::-moz-placeholder {
+  color: #d6d7d9;
+}
+
+/* line 6, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+:-ms-input-placeholder {
+  color: #d6d7d9;
+}
+
+/* line 8, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+label {
+  color: #000;
+}
+
+/* line 12, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+.control-group {
+  display: inline-block;
+  width: 100%;
+  padding: 1.5625rem 0 0;
+}
+
+/* line 18, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+.control {
+  position: relative;
+  display: inline-block;
+  padding-left: 1.875rem;
+  cursor: pointer;
+  line-height: 24px;
+  text-align: left;
+  color: #485458;
+}
+
+/* line 26, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* line 31, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+.control .control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #e6e6e6;
+}
+
+/* Hover and focus states */
+/* line 42, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+
+/* Checked state */
+/* line 48, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+.control input:checked ~ .control__indicator {
+  background: #23ccef;
+}
+
+/* Disabled state */
+/* line 54, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+.control input:disabled ~ .control__indicator {
+  pointer-events: none;
+  opacity: .6;
+  background: #e6e6e6;
+}
+
+/* Check mark */
+/* line 61, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+.control__indicator:after {
+  position: absolute;
+  display: none;
+  content: '';
+}
+
+/* Show check mark */
+/* line 68, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+/* Checkbox tick */
+/* line 73, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+.control--checkbox .control__indicator:after {
+  top: 4px;
+  left: 8px;
+  width: 5px;
+  height: 10px;
+  transform: rotate(45deg);
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+}
+
+/* Disabled tick colour */
+/* line 84, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-inputs.scss */
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-headline--hero {
+  margin: 0;
+  color: #fff;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-headline--primary {
+  margin-bottom: 0.3125em;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-headline--primary--grouped {
+  color: #23ccef;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-headline--primary--modal {
+  color: #485458 !important;
+  margin-top: 0;
+  margin-bottom: 0.625em;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.a-headline--secondary--grouped {
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.hero--secondary {
+  height: 150px;
+  text-align: center;
+  background: #23ccef;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: relative;
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-navigation.scss */
+.top-nav__link, .top-nav__link--current {
+  border-bottom: 1px solid #1a1e20;
+  transition: background-color 1s ease;
+  display: block;
+  font-size: 1rem;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 400;
+  display: block;
+  background-color: #31393C;
+}
+
+/* line 13, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-navigation.scss */
+.top-nav__link:first-letter, .top-nav__link--current:first-letter {
+  text-transform: capitalize;
+}
+
+/* line 17, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-navigation.scss */
+.top-nav__link:hover, .top-nav__link--current:hover {
+  background-color: #1a1e20;
+}
+
+/* line 22, c:/_projects/pdxreporter.org/src/scss/03_atoms/_a-navigation.scss */
+.top-nav__link--current {
+  background-color: #1a1e20;
+}
+
+/* line 14, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.formactions {
+  padding: 0.625rem 0.625rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  height: 200px;
+}
+
+/* line 19, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.formactions:after {
+  width: 100%;
+}
+
+/* line 24, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.formactions__btn {
+  width: 100%;
+}
+
+/* line 29, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.metafields {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+/* line 34, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.metafields__header--btn {
+  width: 100%;
+}
+
+/* line 39, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.metafields__group {
+  margin-bottom: 1.25rem;
+  padding: 0 1.25rem;
+}
+
+/* line 53, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.metafields__group--hint {
+  font-size: 0.76875rem;
+  line-height: 0.875rem;
+}
+
+/* line 63, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.tags .tag-list .tag-item {
+  color: #fff;
+  border: 0;
+}
+
+/* line 68, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.tags .tag-list .tag-item a, .tags .tag-list .tag-item .a-link {
+  color: #fff;
+}
+
+/* line 77, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.files--uiselected .files__overlay {
+  border-radius: 0.125rem;
+}
+
+/* line 83, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.files--uiselected .files__overlay--check {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* line 89, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.files__overlay {
+  position: absolute;
+  width: 200px;
+  height: 148px;
+  background: transparent;
+  transition: all 0.2s;
+}
+
+/* line 97, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.files__overlay:hover .files__overlay--gradient {
+  opacity: 1;
+}
+
+/* line 102, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.files__overlay--gradient {
+  opacity: 0;
+  position: absolute;
+  height: 40px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  transition: all 0.2s;
+}
+
+/* line 113, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.files__overlay--check {
+  opacity: 0;
+  transition: all .30s;
+  transform: scale(0.2);
+}
+
+/* line 121, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.files__overlay--delete {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: all .30s;
+  transform: scale(0.5);
+}
+
+/* line 141, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.multiValue {
+  /*color: $red;*/
+}
+
+/* styling placeholder text for ngTagsInput */
+/* line 146, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+.multiValue input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+}
+
+/* line 152, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+:-moz-placeholder {
+  /* Firefox 18- */
+}
+
+/* line 158, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+::-moz-placeholder {
+  /* Firefox 19+ */
+}
+
+/* line 164, c:/_projects/pdxreporter.org/src/scss/04_molecules/_molecules.scss */
+:-ms-input-placeholder {
+  /* IE 10+ */
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-navigation.scss */
+.top-nav {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.top-nav__list {
+  background-color: #23ccef;
+  display: block;
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  transition: all 1s ease;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.nav--large-screens {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  /* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .nav--large-screens {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+}
+
+/* line 34, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-navigation.scss */
+.nav--large-screens a, .nav--large-screens .a-link {
+  margin-left: 0.9375em;
+  display: inline-block;
+  padding: 1rem 1.25rem;
+  color: #999da1;
+  text-decoration: none;
+}
+
+/* line 40, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-navigation.scss */
+.nav--large-screens a:hover, .nav--large-screens .a-link:hover {
+  color: #23ccef;
+}
+
+/* line 47, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-navigation.scss */
+.nav-dd {
+  position: relative;
+}
+
+/* line 49, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-navigation.scss */
+.nav-dd > li:hover ul {
+  opacity: 1;
+  visibility: visible;
+  top: 73px;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.nav-dd__menu {
+  top: 65px;
+  right: 10px;
+  position: absolute;
+  background: #ebecec;
+  z-index: 8000;
+  border-radius: 0.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 64, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-navigation.scss */
+.nav-dd__menu li a, .nav-dd__menu li .a-link {
+  margin: 0;
+}
+
+/* line 67, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-navigation.scss */
+.nav-dd__menu:before {
+  top: -8px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #ebecec;
+  border-style: none double solid;
+  display: block;
+  position: absolute;
+  right: 16px;
+  vertical-align: middle;
+  content: "";
+  width: 0;
+  height: 0;
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-cards.scss */
+.cards {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0.625rem;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.cards__item {
+  cursor: pointer;
+  border-radius: 0.25rem;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.625rem;
+  width: 50%;
+}
+
+@media (min-width: 480px) {
+  /* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .cards__item {
+    width: 33.3333%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .cards__item {
+    width: 25%;
+  }
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-forms.scss */
+.m-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.m-form__actions {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+@media (min-width: 480px) {
+  /* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .m-form__actions {
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.m-form--login {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.m-form__link {
+  color: #d6d7d9;
+  transition: all 0.3s ease;
+}
+
+/* line 23, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-forms.scss */
+.m-form__link:hover {
+  color: #999da1;
+}
+
+@media (min-width: 480px) {
+  /* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .m-form__link {
+    margin-top: 0;
+  }
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-message.scss */
+.m-message {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.m-message--bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 9, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-message.scss */
+.m-message--bottom > a, .m-message--bottom > .a-link {
+  width: 100%;
+  margin: 0;
+  color: #999da1;
+  padding: 0.9375rem 0.3125rem;
+  display: inline-block;
+}
+
+@media (min-width: 480px) {
+  /* line 9, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-message.scss */
+  .m-message--bottom > a, .m-message--bottom > .a-link {
+    color: #e6e6e6;
+  }
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-leaflet.scss */
+.leaflet-container {
+  width: 100%;
+  position: absolute;
+  top: 61px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+/* line 11, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-leaflet.scss */
+#LeafletMap, #LeafletMap path, .hereIcon {
+  cursor: crosshair;
+}
+
+/* line 15, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-leaflet.scss */
+#ReviewMap {
+  cursor: pointer;
+}
+
+/* line 19, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-leaflet.scss */
+.map-controls {
+  z-index: 8600;
+  position: fixed;
+  bottom: -5em;
+  height: 5em;
+  background: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  -ms-flex-pack: center;
+      justify-content: center;
+  transition: bottom 0.2s ease;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 35, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-leaflet.scss */
+.leaflet-control {
+  box-shadow: none;
+}
+
+/* line 39, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-leaflet.scss */
+.leaflet-touch .leaflet-bar {
+  border: none;
+}
+
+/* line 43, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-leaflet.scss */
+.leaflet-bar a.leaflet-control-zoom-in, .leaflet-bar .leaflet-control-zoom-in.a-link, .leaflet-bar a.leaflet-control-zoom-out, .leaflet-bar .leaflet-control-zoom-out.a-link, .leaflet-control-custom {
+  height: 50px;
+  width: 50px;
+  line-height: 47px;
+  border-radius: 50%;
+}
+
+/* line 55, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-leaflet.scss */
+.leaflet-container a.leaflet-active, .leaflet-container .leaflet-active.a-link {
+  outline: 0;
+}
+
+/* line 58, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-leaflet.scss */
+.leaflet-bar a.leaflet-control-zoom-in, .leaflet-bar .leaflet-control-zoom-in.a-link {
+  margin-bottom: 0.375em;
+}
+
+/* line 62, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-leaflet.scss */
+.leaflet-control-custom {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+/* line 67, c:/_projects/pdxreporter.org/src/scss/04_molecules/_m-leaflet.scss */
+.leaflet-control-custom:hover {
+  background-color: #f4f4f4;
+}
+
+/* line 9, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+droplet {
+  height: calc(100% - 50px);
+  display: inline-block;
+  z-index: 2;
+  position: relative;
+  width: calc(100% - 6%);
+  padding-right: 60px;
+  background-color: #bababa;
+  transition: background 0.15s;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  /* lets it scroll lazy on mobile */
+}
+
+@media (min-width: 768px) {
+  /* line 9, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+  droplet {
+    padding-right: 0;
+    width: 100%;
+  }
+}
+
+/* line 28, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+droplet comment:after, droplet #dragNotice {
+  content: "Drag & Drop your files here";
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.6875rem;
+  margin-top: calc(50vh - 50px);
+  text-align: center;
+}
+
+/* line 44, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+droplet.event-dragover {
+  box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.25), inset 0 0 5px rgba(255, 255, 255, 0.25);
+}
+
+/* line 49, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+droplet.event-dragover comment:after {
+  content: '';
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* line 55, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+droplet .loading {
+  display: block;
+  height: 395px;
+  width: 670px;
+  margin: 1px;
+  margin-top: 6px;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all .35s;
+}
+
+/* line 68, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+droplet .loading.visible {
+  opacity: 1;
+}
+
+/* line 74, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+droplet .files li {
+  width: 200px;
+  height: 148px;
+  float: left;
+  position: relative;
+  margin: 0.625rem 0.625rem 1.875rem;
+}
+
+/* line 82, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+droplet .files li:hover .files__overlay--delete {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* line 89, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+droplet .files li .name {
+  display: block;
+  word-wrap: break-word;
+  font-size: 0.8em;
+  margin-top: 5px;
+  font-weight: 700;
+}
+
+/* line 97, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+droplet .files li .size {
+  display: none;
+}
+
+/* line 101, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+droplet .files li .select {
+  display: none;
+}
+
+/* line 106, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+droplet .files li img.droplet-preview {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.125rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  display: block;
+}
+
+/* line 123, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+ul.statistics {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+/* line 127, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+ul.statistics li {
+  float: left;
+  overflow: hidden;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+  margin: 10px 5px 10px 0;
+  padding: 1px;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+/* line 138, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+.metafields__group--date {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 141, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+.metafields__group--date > select {
+  -ms-flex: 2;
+      flex: 2;
+  margin-right: 0.5rem;
+}
+
+/* line 146, c:/_projects/pdxreporter.org/src/scss/05_organisms/_organisms.scss */
+.metafields__group--date > input {
+  -ms-flex: 1;
+      flex: 1;
+  max-width: calc(100%/3);
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-header.scss */
+.header {
+  border-bottom: 1px solid #ebecec;
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-panel.scss */
+.o-panel {
+  height: 100vh;
+  padding: 0.625em;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 6500;
+  overflow: hidden;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.o-panel--welcome {
+  background-color: #fff;
+}
+
+@media (min-width: 480px) {
+  /* line 17, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-panel.scss */
+  .o-panel--welcome:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #fff url("../img/welcome.jpg") center center fixed no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    transform: scale(1.1);
+  }
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-modal.scss */
+.o-modal {
+  padding: 1.875em;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.o-modal--inline {
+  padding: 0.625em;
+}
+
+@media (min-width: 480px) {
+  /* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .o-modal--inline {
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    max-width: 90%;
+    padding: 1.875em;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .o-modal--inline {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .o-modal--inline {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .o-modal--inline {
+    max-width: 40%;
+  }
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.o-modal--overlay {
+  z-index: 9000;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  border-radius: 0;
+  -ms-flex-align: center;
+      align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  transition: all 1s ease;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.o-modal--overlay--is-active {
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+  transition: all 1s ease;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.o-modal--overlay__content {
+  padding: 1.25em;
+  min-height: 150px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  /* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .o-modal--overlay__content {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .o-modal--overlay__content {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .o-modal--overlay__content {
+    width: 600px;
+    min-width: auto;
+  }
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.o-modal--overlay__btn {
+  display: inline-block;
+}
+
+/* line 2, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-report.scss */
+#UploadFile {
+  display: none;
+}
+
+/* line 4, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-report.scss */
+.report {
+  position: absolute;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.3s ease;
+  background: #fff;
+  z-index: 6700;
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+/* line 299, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.report__btn--back:before {
+  content: "";
+}
+
+/* line 18, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-report.scss */
+.report__btn--back:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.25rem 0.625rem;
+  color: #fff;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.report__info {
+  padding: 0.625rem 0 1.25rem;
+  margin: 0;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.report__header {
+  height: 150px;
+  text-align: center;
+  background: #23ccef;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: relative;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.report__body {
+  padding: 0.625em;
+  margin: 0 auto 0.625em;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.report__map {
+  height: 150px;
+  width: 100%;
+  position: relative;
+  border-radius: 0.25rem;
+  border: 1px solid #ebecec;
+  margin: 0 0 0.625em 0;
+  padding: 0;
+  top: 0;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.report__photo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: relative;
+  border-radius: 0.25rem;
+  height: 200px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 0 0.625em 0;
+  border: 1px solid #ebecec;
+  background-size: contain;
+}
+
+/* line 75, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-report.scss */
+.report__photo img {
+  max-height: 150px;
+  width: auto;
+  margin: 0.625em;
+  display: block;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.report__link {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #000;
+  padding: 1.25rem 0;
+}
+
+/* line 299, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.report__link:after {
+  content: "";
+}
+
+/* line 93, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-report.scss */
+.report__link:hover:after {
+  color: #999da1;
+}
+
+/* line 97, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-report.scss */
+.report__link:after {
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  /* line 97, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-report.scss */
+  .report__link:after {
+    color: #d6d7d9;
+  }
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.report__link--edit {
+  padding: 1.25rem 0;
+}
+
+/* line 109, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-report.scss */
+.report__link--edit:after {
+  content: '';
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.report__message {
+  padding: 1.25rem 0;
+}
+
+/* line 129, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-report.scss */
+.report__info ul li {
+  list-style-type: disc;
+  font-size: 1rem;
+  line-height: 1.66667;
+  font-weight: 400;
+  margin: 0 0 1.25em 40px;
+  color: #999da1;
+}
+
+/* line 138, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-report.scss */
+.report__info a.tel, .report__info .tel.a-link {
+  white-space: nowrap;
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-progress.scss */
+.progress {
+  padding: 3.125em 0;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.progress__frame {
+  padding: 0;
+  margin-bottom: 1.25rem;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.progress__object {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: relative;
+  margin: 0 auto 0.625rem;
+}
+
+/* line 13, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-progress.scss */
+.progress__object:before, .progress__object:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 10px solid transparent;
+  border-top-color: #23ccef;
+}
+
+/* line 24, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-progress.scss */
+.progress__object:before {
+  z-index: 100;
+  animation: spin 1s infinite;
+}
+
+/* line 28, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-progress.scss */
+.progress__object:after {
+  border: 10px solid #d6d7d9;
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-ath-modal.scss */
+.ath-container {
+  background: #fff !important;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* line 4, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-ath-modal.scss */
+.ath-container:after {
+  background: #fff !important;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* line 9, c:/_projects/pdxreporter.org/src/scss/05_organisms/_o-ath-modal.scss */
+.ath-container:before {
+  content: "\e5cd" !important;
+  background-image: none !important;
+  color: #485458 !important;
+  width: auto !important;
+  height: auto !important;
+  top: 5px !important;
+  right: 5px !important;
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/06_template/_t-page.scss */
+.page-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+/* line 4, c:/_projects/pdxreporter.org/src/scss/06_template/_t-page.scss */
+.page-wrapper .content {
+  overflow-x: hidden;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.header__container {
+  max-width: 1260px;
+  margin: 0 auto;
+  height: 60px;
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/layout/_l-sidebar.scss */
+.sidebar {
+  position: absolute;
+  width: 220px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@media (min-width: 1024px) {
+  /* line 1, c:/_projects/pdxreporter.org/src/scss/layout/_l-sidebar.scss */
+  .sidebar {
+    display: none;
+  }
+}
+
+/* line 1, c:/_projects/pdxreporter.org/src/scss/layout/_l-content.scss */
+.content {
+  -ms-flex: 1;
+      flex: 1;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s ease;
+  background: #fff;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.content--splash {
+  -ms-flex: 1;
+      flex: 1;
+  background: #fff;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+/* line 16, c:/_projects/pdxreporter.org/src/scss/layout/_l-content.scss */
+.page {
+  text-align: center;
+}
+
+/* line 222, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.page__headline {
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.page--location {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.page--categories {
+  margin: auto;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  /* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .page--categories {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+  .page--categories {
+    max-width: 70%;
+  }
+}
+
+/* line 53, c:/_projects/pdxreporter.org/src/scss/layout/_l-content.scss */
+.group--link:hover {
+  color: #23ccef;
+}
+
+/* line 59, c:/_projects/pdxreporter.org/src/scss/layout/_l-content.scss */
+.map {
+  z-index: 6800;
+  position: absolute;
+}
+
+/* line 64, c:/_projects/pdxreporter.org/src/scss/layout/_l-content.scss */
+#HelpPanel, #MyReports {
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  height: calc(100% + -60px);
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.pane--my-reports {
+  padding: 1.25rem;
+}
+
+/* line 74, c:/_projects/pdxreporter.org/src/scss/layout/_l-content.scss */
+.pane--my-reports > div {
+  margin-bottom: 0.625em;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.pane--help {
+  padding: 1.25rem;
+}
+
+/* line 84, c:/_projects/pdxreporter.org/src/scss/layout/_l-content.scss */
+#HelpPanel.pane {
+  text-align: left !important;
+}
+
+/* line 85, c:/_projects/pdxreporter.org/src/scss/layout/_l-content.scss */
+#HelpPanel.pane ol, #HelpPanel.pane ul {
+  padding: inherit;
+}
+
+/* line 86, c:/_projects/pdxreporter.org/src/scss/layout/_l-content.scss */
+#HelpPanel.pane ul li {
+  list-style-type: disc;
+}
+
+/* line 16, c:/_projects/pdxreporter.org/src/scss/states/_index.scss */
+.content--is-open {
+  transform: translate3d(-220px, 0, 0);
+}
+
+@media (min-width: 1024px) {
+  /* line 16, c:/_projects/pdxreporter.org/src/scss/states/_index.scss */
+  .content--is-open {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.report--is-open {
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+  position: absolute;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  top: 61px;
+  transition: transform 0.3s ease;
+}
+
+/* line 228, c:/_projects/pdxreporter.org/src/scss/01_tools/_t-mixins.scss */
+.map--is-open {
+  transform: translate3d(0, 0, 0);
+  top: 60px;
+  z-index: 6700;
+  transition: transform 0.3s ease;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

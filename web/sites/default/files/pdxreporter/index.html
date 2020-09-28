@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js gt-ie9 ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js gt-ie9"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>PDX Reporter</title>
+  <meta name="description" content="">
+  <meta name="robots" content="all">
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, user-scalable=1, initial-scale=1, maximum-scale=1">
+  <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+  <!-- Touch Icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- CSS, you gotta have style -->
+  <link rel="stylesheet" href="css/fallback/leaflet.1.0.3.css">
+  <link rel="stylesheet" href="css/styles.css?cb=201811071544">
+  <link rel="stylesheet" href="css/fallback/addtohomescreen.css">
+
+  <!-- haven't found a good way to fallback on local file if external css fails integrity check, so we're
+  	   just going to serve it locally and depend on browser caching. -->
+
+  <!-- #Page Prefetching -->
+  <!-- http://calendar.perfplanet.com/2012/speed-up-your-site-using-prefetching -->
+  <link rel="prefetch" href="index.html">
+
+  <script type="text/javascript" language="javascript">
+  var CACHE_BUSTER = "202006221224";
+  </script>
+
+  <!-- Modernizer, cause some browsers suck -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
+  <script>typeof Modernizr == 'object' || document.write('<script src="js/fallback/modernizr.min.js"><\/script>')</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js" integrity="sha384-9fzrQY4JobN87hT5sQ0JnL9XZQ5q94Qj46ZFqpcBzz03D3UDKAkN/pKct1IVlP2Y" crossorigin="anonymous"></script>
+  <script>typeof L == 'object' || document.write('<script src="js/fallback/leaflet.1.0.3.js"><\/script>')</script>
+
+</head>
+  <body ng-app="reporter">
+    <main role="main" class="page-wrapper" ng-controller="mainController">
+      <!-- Sidebar -->
+      <section class="sidebar" ng-show="IsLoggedIn">
+        <!-- User navigation -->
+        <nav class="top-nav" role="navigation">
+          <ul class="top-nav__list" id="user">
+            <li  class="top-nav__item"><a href="https://www.portlandoregon.gov/myaccount.cfm?login=1" class="top-nav__link top-nav__link--current a-link--username" ng-bind="PogUser.user_name" target="_blank">profile</a></li>
+            <li  class="top-nav__item" ng-click="navOpen=!navOpen;ActiveSection='NewReport';NewReportActiveSection='SelectCategory';"><a href="#NewReport" class="top-nav__link">new report</a></li>
+            <li  class="top-nav__item" ng-click="navOpen=!navOpen;ActiveSection='MyReports';"><a href="#MyReports" class="top-nav__link">my reports</a></li>
+            <li  class="top-nav__item" ng-click="navOpen=!navOpen;ActiveSection='Help';"><a href="#Help" class="top-nav__link">help</a></li>
+            <li  class="top-nav__item" ng-click="LogOut()"><a href="#" class="top-nav__link">logout</a></li>
+          </ul>
+        </nav>
+        <div class="copyright">
+          PDX Reporter <span ng-bind="AppVersion"></span><br>
+          &copy;<span ng-bind="CopyrightYear"></span> City of Portland, Oregon<br>
+          <a href="https://www.portlandoregon.gov/index.cfm?Popup9D3E4AB1D13707BD33884CB15F1AE916=1" target="_blank"><span>Privacy Policy</span></a>
+        </div>
+
+          <!-- Modal Disclaimer -->
+          <div id="SessionExpire" class="o-modal o-modal--overlay" ng-class="{ 'o-modal--overlay--is-active': ShowSessionExpireAlert }">
+            <div class="o-modal--overlay__content">
+              <h3 class="a-headline-primary--modal">Your session is about to expire</h3>
+              <p class="p p--modal">To continue your session click Continue.</p>
+              <button class="a-btn a-btn--default o-modal--overlay__btn" id="btnLogin" ng-click="LogOut()">Logout</button>
+              <button class="a-btn a-btn--default o-modal--overlay__btn" id="btnLogin" ng-click="refreshSession()">Continue</button>
+            </div>
+          </div>
+
+      </section>
+      <div class="content--splash" ng-click="DismissAlert();">
+        <!-- Splash -->
+        <section class="o-panel o-panel--welcome" id="SplashPanel" ng-show="!IsLoggedIn" ng-cloak>
+          <!-- Loading -->
+          <div id="Loading" ng-hide="InitComplete || InitFailed">Loading application...</div>
+          <!-- Modal Disclaimer -->
+          <div id="SplashHelp" class="o-modal o-modal--overlay" ng-class="{ 'o-modal--overlay--is-active': !DismissHelp.SplashHelp }">
+            <div class="o-modal--overlay__content">
+              <h3 class="a-headline--primary--modal">Heads up!</h3>
+              <p class="p p--modal">This app is not to be used to report any form of police or law enforcement issues. In the event of a life threatening emergency, call 911 immediately.</p>
+              <p class="p p--modal">For general information concerning city issues, please contact us at <a class="a-link" href="tel:+15038234000" style="white-space: nowrap;">503-823-4000</a> or <a class="a-link" href="mailto:{{InfoEmail}}">{{InfoEmail}}</a>. For bug reports or feature requests for this app, send email to <a class="a-link" href="mailto:{{SupportEmail}}" onclick="if(confirm('WARNING: This email is only for reporting bugs and login problems. Do not use it to report other city issues. Do you want to continue?')) return true; else return false;">{{SupportEmail}}</a>.</p>
+              <button class="a-btn a-btn--default o-modal--overlay__btn" id="btnLogin" ng-click="DismissModal('SplashHelp', NoShowSplashHelp);">Okay</button>
+              <div class="control-group">
+                <label class="control control--checkbox" for="NoShowSplashHelp">Do not show this again
+                  <input type="checkbox" id="NoShowSplashHelp" ng-model="NoShowSplashHelp">
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Message Container -->
+          <div class="a-alert a-alert__top a-alert--warning" id="LoginMessage" ng-class="{'a-alert__top--is-active': LoginMessage}"><p ng-bind="LoginMessage"></p><a class="a-alert__close" ng-click="LoginMessage = ''"></a></div>
+          <section class="o-modal o-modal--inline">
+            <!-- Welcome -->
+            <h1 class="a-headline--primary--grouped">Welcome to PDX Reporter</h1>
+            <h2 class="a-headline--secondary--grouped">Report and request service calls to city assets and infrastructure.</h2>
+            <p class="p">This app uses your portlandoregon.gov website login. <span style="white-space: nowrap;">Need an account? <a ng-click="Register()" class="a-form__link a-link">Sign up.</a></span></p>
+            <!-- Login Form -->
+            <div id="Login">
+              <form class="m-form" id="LoginForm" method="post" onsubmit="return false;">
+                <input class="m-form__input" type="text" id="username" name="username" placeholder="User Name" ng-model="Username" ng-focus="DismissAlert()" autocorrect="off" autocapitalize="none">
+                <input class="m-form__input" type="password" id="password" name="password" placeholder="Password" ng-model="Password" ng-focus="DismissAlert()" autocorrect="off" autocapitalize="none">
+                <div class="">
+                  <button class="m-form__btn a-btn a-btn--default" style="float: left;" id="btnLogin" onclick="document.location='#NewReport'; return false;" ng-click="Login(); $event.stopPropagation()">Login</button>
+                  <div style="float: right; text-align: right; margin-top: 10px;">
+                    <a class="m-form__link a-link" ng-click="ForgotPassword(); $event.stopPropagation();">Forgot Password</a><br>
+                    <a class="m-form__link a-link" ng-click="DismissHelp.SplashHelp=0">About</a>
+                  </div>
+				        </div>
+              </form>
+            </div>
+          </section>
+        </section>
+      </div>
+      <!-- Content -->
+      <div class="content" data-ng-class="{'content--is-open': navOpen}" ng-click="AlertMessage=''">
+        <div class="a-alert a-alert__top a-alert--warning" id="AlertMessage" ng-class="{'a-alert__top--is-active': AlertMessage}"><p ng-bind-html="AlertMessage"></p><a class="a-alert__close" ng-click="AlertMessage = ''"></a></div>
+        <header class="header" ng-show="IsLoggedIn">
+          <div class="header__container">
+            <!-- Branding -->
+            <a class="temp-logo" href="/"><img src="img/logo_pdx_40.png" alt="Portland logo" /><h1>PDXReporter</h1><img src="img/betabadge.gif" class="betabadge" alt="Beta" /></a>
+            <a class="toggle" data-ng-init="navOpen=false" data-ng-click="navOpen=!navOpen"></a>
+            <ul class="nav--large-screens">
+              <li><a href="#NewReport" ng-click="ActiveSection='NewReport';NewReportActiveSection='SelectCategory'">New report</a></li>
+              <li><a href="#MyReports" ng-click="ActiveSection='MyReports';">My reports</a></li>
+              <li><a href="#Help" ng-click="ActiveSection='Help';">Help</a></li>
+              <div class="nav-dd">
+                <li><a href="#" class="toggle toggle--desktop"></a>
+                  <ul class="nav-dd__menu">
+                    <li><a href="https://www.portlandoregon.gov/myaccount.cfm?login=1" ng-bind="PogUser.user_name" target="_blank">Account</a></li>
+                    <li><a ng-click="LogOut()" href="#">Logout</a></li>
+                  </ul>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </header>
+        <!-- Report grid -->
+        <section id="NewReportPanel" ng-show="ActiveSection=='NewReport'">
+          <div id="SelectCategory" class="page page--categories" ng-init="NewReportActiveSection='SelectCategory'">
+            <ul class="cards cards--categories" id="categories">
+              <li class="cards__item" ng-repeat="category in Categories.categories" ng-click="selectCategory(category);">
+                <div class="card">
+                  <div class="card__image" ng-class="'cat' + category.category_id"></div>
+                  <h3 class="card__title" ng-bind="category.input_alias"></h3>
+                  <span class="card__icon"></span>
+                </div>
+              </li>
+            </ul>
+            <div class="copyright copyright--desktop">
+            PDX Reporter <span ng-bind="AppVersion"></span><br>
+            &copy;<span ng-bind="CopyrightYear"></span> City of Portland, Oregon<br>
+            <a href="https://www.portlandoregon.gov/index.cfm?Popup9D3E4AB1D13707BD33884CB15F1AE916=1" target="_blank"><span>Privacy Policy</span></a>
+            </div>
+          </div>
+          <!-- Modal Disclaimer -->
+          <div id="ReportHelp" class="o-modal o-modal--overlay" ng-class="{ 'o-modal--overlay--is-active': !DismissHelp.ReportHelp }">
+            <div class="o-modal--overlay__content">
+              <h3 class="a-headline-primary--modal">How to use this app</h3>
+              <p class="p p--modal">To start a new report, select a report type by tapping on it. Then follow the on-screen instructions for completing the report form.
+                All required fields must be completed before submitting.</p>
+              <button class="a-btn a-btn--default o-modal--overlay__btn" id="btnLogin" ng-click="DismissModal('ReportHelp', NoShowReportHelp);">Okay</button>
+              <div class="control-group">
+                <label class="control control--checkbox" for="NoShowReportHelp">Do not show this again
+                  <input type="checkbox" ng-model="NoShowReportHelp" id="NoShowReportHelp">
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- New report form -->
+        <section ng-show="ActiveSection=='NewReport'" ng-cloak>
+          <div class="o-modal o-modal--overlay" ng-class="{ 'o-modal--overlay--is-active': ShowSubmitStatus }">
+            <div class="o-modal--overlay__content">
+              <div class="progress">
+                <div class="progress__frame">
+                  <div class="progress__object" id="loader-1"></div>
+                </div>
+                <p class="a-headline-primary--modal">Submitting report...</p>
+              </div>
+            </div>
+          </div>
+          <div id="Details" class="report" ng-class="{'report--is-open': NewReportActiveSection=='Details'}">
+            <div class="report__header">
+              <a class="report__btn--back" ng-click="NewReportActiveSection='SelectCategory'" ng-class="{'': !NewReportActiveSection=='Details'}"></a>
+              <h4 class="a-headline--hero" ng-bind="NewReport.category.value.input_alias"></h4>
+            </div>
+
+            <div class="report__body">
+              <!-- <p class="p report__info" ng-bind-html="NewReport.category.value.message"></p> -->
+              <div class="report__info" ng-include="CategoryMessageUrl"></div>
+              <div class="a-link--select">
+                <a class="report__link" ng-show="!NewReport.location.value" ng-click="showMap();NewReportActiveSection='SelectLocation'"><p>Location<span class="req">*</span></p></a>
+                <div class="group--apart group--link" ng-show="NewReport.location.value" ng-click="showMap();NewReportActiveSection='SelectLocation'">
+                  <a class="report__link report__link--edit">Location</a>
+                  <a class="m-form__link a-link">Edit</a>
+                </div>
+                <div id="ReviewMap" class="report__map" ng-show="NewReport.location.value" ng-click="showMap(); NewReportActiveSection='SelectLocation'"></div>
+              </div>
+
+              <div class="a-link--select">
+                <a class="report__link btnSelectPhoto" ng-show="!NewReport.file.value"><p>Photo<span class="req" ng-show="NewReport.category.value.binary_input_required">*</span> (max file size 6Mb)</p></a>
+                <div class="group--apart group--link" ng-show="NewReport.file.value" ng-click="clearPhoto()">
+                  <a class="report__link report__link--edit">Photo</a>
+                  <a class="m-form__link a-link">Remove</a>
+                </div>
+                <input id="UploadFile" type="file" ng-model="NewReport.file.value" onchange="selectPhoto(this)" accept="image/*" />
+                <div class="report__photo report-item photo"  ng-show="NewReport.file.value">
+                  <a class="report__link--remove btnClearPhoto" ng-show="NewReport.file.value" ng-click="clearPhoto();"></a>
+                  <img class="uploadReview btnSelectPhoto" title="Click to edit or remove photo" />
+                </div>
+              </div>
+
+              <div class="report__message">
+                <label for="message">Message<span class="req" ng-show="NewReport.category.value.text_input_required">*</span></label>
+                <textarea name="message" id="message" ng-model="NewReport.comments.value" placeholder="Enter the report details here"></textarea>
+                <p class="p--meta"><span class="a-notice">Important:</span> Information provided in this report will become part of the public record and cannot be retracted. Your personal contact information in your user profile will always remain private.</p>
+              </div>
+
+              <p class="req">* Required<br><br></p>
+              <div class="m-form__actions">
+                <button class="m-form__btn a-btn a-btn--default a-btn--disabled" ng-class="{ 'a-btn--is-active': NewReport.isReportValid() }" ng-click="submitReport();" ng-disabled="!NewReport.isReportValid()" title="{{ NewReport.isReportValid() ? 'Tap to submit' : 'Submit button is disabled until all required fields are filled' }}">Submit report</button>
+                <a class="m-form__link a-link" ng-click="clearForm();NewReportActiveSection='SelectCategory'">Clear form</a>
+              </div>
+            </div>
+          </div>
+
+          <div id="Confirmation" ng-show="NewReportActiveSection=='Confirmation'">
+            <div class="o-modal o-modal--overlay" ng-class="{ 'o-modal--overlay--is-active': !NewReport }" ng-click="NewReportActiveSection='SelectCategory'; ResetMaps(); $event.stopPropagation()">
+              <div class="o-modal--overlay__content">
+                <h3>Thank You!</h3>
+                <p class="p p--modal">Your report has been received.</p>
+                <p class="p p--modal">New report ID: <span ng-bind="NewReportId"></span><br>Status: <span ng-bind="NewReportStatus"></span></p>
+                <div class="m-form__actions">
+                  <button class="a-btn a-btn--default o-modal--overlay__btn" ng-click="NewReportActiveSection='SelectCategory'; ResetMaps();">Okay</button>
+                  <a class="m-form__link a-link" ng-click="ActiveSection='MyReports'" onclick="document.location='#MyReports';">View My Reports</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Success -->
+        </section>
+
+        <section id="SelectLocation" class="page--location" ng-show="NewReportActiveSection=='SelectLocation'" ng-cloak>
+          <!-- Map Help Panel -->
+          <div id="MapHelp" class="o-modal o-modal--overlay" ng-class="{ 'o-modal--overlay--is-active': !DismissHelp.MapHelp }">
+            <div class="o-modal o-modal--overlay__content">
+              <h3 class="a-headline-primary--modal">Heads up!</h3>
+              <p class="p p--modal">Click or tap anywhere on the map to place a blue issue pin
+              <span style="white-space: nowrap"><img src="img/marker_issue.png" alt="Issue location pin demo" style="height: 1.5em; margin-bottom: -6px;">.</span>&nbsp;When you are done, click the Accept button.</p>
+              <p class="p p--modal">If location services are enabled, your location will be shown with a red marker
+              <span style="white-space: nowrap"><img src="img/marker_here.png" alt="Location marker example" style="height: 1.5em; margin-bottom: -6px;" />.</span>&nbsp; If you move the map, use the locator
+              <span style="white-space: nowrap">button
+              <img src="img/locator.png" alt="Locator button example" style="height: 1.5em; margin-bottom: -6px;"></span>&nbsp;to find yourself again.</p>
+              <button class="a-btn a-btn--default o-modal--overlay__btn" id="btnLogin" ng-click="DismissModal('MapHelp', NoShowMapHelp);">Okay</button>
+              <div class="control-group">
+                <label class="control control--checkbox" for="NoShowMapHelp">Do not show this again
+                  <input type="checkbox" ng-model="NoShowMapHelp" id="NoShowMapHelp">
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+            </div><!-- End Modal -->
+          </div><!-- End Map Help -->
+          <!-- Map controls -->
+          <div class="map-controls map-controls--show">
+            <button class="a-btn a-btn--info a-btn--inline a-btn--back" ng-click="NewReportActiveSection='Details'">Go Back</button>
+            <button class="a-btn a-btn--inline a-btn a-btn--default a-btn--disabled" ng-click="SaveLocation()"
+            	ng-class="{'a-btn--is-active': NewReport.location.value}">Accept</button>
+          </div>
+          <div id="LeafletMap"></div>
+        </section>
+        <!-- End Set Location -->
+
+        <!-- My Reports -->
+        <section id="MyReports" ng-show="ActiveSection=='MyReports'" ng-cloak>
+          <div class="report__header">
+            <h3 class="a-headline--hero">My Reports</h3>
+          </div>
+
+          <div id="ReportList" class="pane--my-reports">
+            <div ng-repeat="report in TopReports" class="card card--basic">
+              <div>
+                <span class="report-date report-part p p--meta" ng-bind="report.date_created"></span>
+                <span class="report-id report-part p p--meta">#<span class="" ng-bind="report.id"></span></span>
+              </div>
+              <div>
+                <span class="report-type report-part p p--nm" ng-bind="report.category"></span>
+                <span class="report-status report-part p p--nm" ng-bind="report.status"></span>
+              </div>
+            </div>
+            <a class="a-btn a-btn--default a-btn--fw" ng-click="DoShowAllReports()" ng-hide="ShowAllReports || !MoreReports">View all reports</a>
+            <div ng-repeat="report in MoreReports" class="card card--basic" ng-show="ShowAllReports">
+              <div>
+                <span class="report-date report-part p p--meta" ng-bind="report.date_created"></span>
+                <span class="report-id report-part p p--meta">#<span class="" ng-bind="report.id"></span></span>
+              </div>
+              <div>
+                <span class="report-type report-part p p--nm" ng-bind="report.category"></span>
+                <span class="report-status report-part p p--nm" ng-bind="report.status"></span>
+              </div>
+            </div>
+          </div>
+          <div class="copyright copyright--desktop">
+          PDX Reporter <span ng-bind="AppVersion"></span><br>
+          &copy;<span ng-bind="CopyrightYear"></span> City of Portland, Oregon<br>
+          <a href="https://www.portlandoregon.gov/index.cfm?Popup9D3E4AB1D13707BD33884CB15F1AE916=1" target="_blank"><span>Privacy Policy</span></a>
+          </div>
+        </section>
+
+        <!-- Help -->
+        <section id="HelpPanel" ng-show="ActiveSection=='Help'" ng-cloak>
+          <div class="report__header">
+            <h3 class="a-headline--hero">PDX Reporter Help</h3>
+          </div>
+          <div class="pane--help">
+            <p class="card--basic p--notice"><b>IMPORTANT:</b> This app should not be used to report emergencies of any kind. In the event of a life threatening emergency, call 911 immediately.</p>
+
+            <!--
+
+			Abandoned Auto - 73 - 				PBOT
+			Campsite Reporting - 1790 -
+			Debris in Roadway - 66 - 			PBOT
+			Graffitti - 77 - 					ONI
+			Illegal Parking - 1324 - 			PBOT
+			Park Maintenance - 1206 - 			Parks
+			Plugged Storm Drain/Inlet - 1261 - 	PBOT
+			Potholes - 1489 - 					PBOT
+			Sidewalk Cafe Violations - 1530 - 	PBOT
+			Sidewalk Trip Hazard - 176 - 		PBOT
+			Sidewalk Vegetation - 314 - 		BDS Enforcement Services
+			Street Lighting - 596 - 			PBOT
+			Work Zone Concerns - 1878 - 		PBOT
+			Other - 1459 - 						General
+
+            -->
+            <br>
+            <h3>How to Use This App</h3>
+
+            <h3><a href="#" ng-click="open['help1']=!open['help1']">How to report an issue &raquo;</a></h3>
+            <blockquote>
+            <ol ng-show="open['help1']">
+              <li class="p">After logging in, the New Report panel will be displayed. Select a report type to begin. OR, tap the user icon in the upper-right corner and select New Report (mobile), or select New Report from the main navigation (desktop).</li>
+              <li class="p">Follow the on-screen instructions. You will need to provide the location of the issue, and may be asked to provide a photo or other details.</li>
+              <li class="p">Your name and email address are already included in your user profile. Some report types also require a daytime phone number in order for action to be taken. If you provided a phone number in your profile, you do not need to include it in the body of your report.</li>
+              <li class="p">Tap the Submit Report button to send us your report, or tap the Reset Form button to start over.</li>
+            </ol>
+            </blockquote>
+
+            <h3><a href="#" ng-click="open['help2']=!open['help2']">How to view your existing reports &raquo;</a></h3>
+            <blockquote>
+            <ol ng-show="open['help2']">
+              <li class="p">Tap the user icon in the upper-right corner (mobile).</li>
+              <li class="p">Select the My Reports link.</li>
+            </ol>
+			     </blockquote>
+
+            <h3><a href="#" ng-click="open['help3']=!open['help3']">How to change your contact information or password &raquo;</a></h3>
+            <blockquote>
+            <ol ng-show="open['help3']">
+              <li class="p">Tap the user icon in the upper-right corner (mobile), or hover over the user icon (desktop).</li>
+              <li class="p">Tap your username at the top of the menu. You will be redirected to the PortlandOregon.gov website in a new tab or window, where you may update your information. You will be asked to re-authenticate with username and password before accessing this sensitive information.</li>
+              <li class="p">After making your changes, close the tab or window to retutrn to PDX Reporter.</li>
+            </ol>
+			     </blockquote>
+
+            <h3><a href="#" ng-click="open['help4']=!open['help4']">How to add this app to your smartphone or tablet home screen &raquo;</a></h3>
+            <blockquote>
+            <p class="p" ng-show="open['help4']">Your phone or tablet home screen isn't just for apps you get from the app store. You can <a href="https://www.google.com/search?q=add+website+to+home+screen+on+any+smartphone+or+tablet" target="_blank">add this web app to your home screen</a> and use it just like a native mobile app.
+			     </blockquote>
+
+            <h3><a href="#" ng-click="open['help5']=!open['help5']">How to store your password in your browser for future logins &raquo;</a></h3>
+            <blockquote>
+            <p class="p" ng-show="open['help5']">If you don't want to type in your username and password every time you use this app, you may <a href="https://www.google.com/search?q=how+to+force+browser+to+remember+passwords" target="_blank">save your login in your browser</a>. This should only be done when using a smartphone or non-public computer.</p>
+			     </blockquote>
+
+
+			      <br>
+            <h3>Frequently Asked Questions</h3>
+
+            <h3><a href="#" ng-click="open['faq1']=!open['faq1']">Why did PDX Reporter change from a native phone app to a web app? &raquo;</a></h3>
+            <blockquote>
+            <p class="p" ng-show="open['faq1']">The new web-based version of PDX Reporter was created to allow more streamlined maintenance and addition of new features, while providing the same functionality as previous versions. Unlike native iOS or Android apps, a web app can be used on any device with a modern web browser, can be easily updated as the need arises, and can be configured to launch from your phone's home screen just like a native app.</p>
+			     </blockquote>
+
+            <h3><a href="#" ng-click="open['faq2']=!open['faq2']">Is my information private? &raquo;</a></h3>
+            <blockquote>
+            <p class="p" ng-show="open['faq2']">The contact information you provide when you sign up for an account on portlandoregon.gov is completely confidential. However, any information you include within the body of a PDX Reporter report is subject to public records laws and cannot be retracted once submitted.</p>
+			     </blockquote>
+
+            <h3><a href="#" ng-click="open['faq3']=!open['faq3']">How soon will someone respond to my report? &raquo;</a></h3>
+            <blockquote>
+            <p class="p" ng-show="open['faq3']">PDX Reporter services multiple different City bureaus, and each one has its own workflow for processing citizen reports. Response times depend on the type of report and the availability of City employees to respond.</p>
+			     </blockquote>
+
+            <h3><a href="#" ng-click="open['faq4']=!open['faq4']">What does the report status mean (Open, Referred, Closed)? &raquo;</a></h3>
+            <blockquote>
+            <p class="p" ng-show="open['faq4']">The status <b>Open</b> typically means the report has been received but not yet addressed. How the report is handled after that depends on the type of issue and the indivudual City bureau responsible.<br><br><b>Closed</b> typically means the issue has been addressed. However, some bureaus may update the report with a Closed status once they've referred it to another agency (&quot;closed&quot; from their perspective).<br><br><b>Referred</b> means the issue has been forwarded to another bureau or agency, such as Portland General Electric. Once referred, the issue will no longer be managed by the original bureau and may not be updated to indicate closure.</p>
+			     </blockquote>
+
+            <h3><a href="#" ng-click="open['faq5']=!open['faq5']">Can I view more detail about my report? &raquo;</a></h3>
+            <blockquote>
+            <p class="p" ng-show="open['faq5']">Additional details are not currently available through the app, though this functionality is planned for a future release. At present, we suggest contacting City bureaus directly. Contact information can be found on the <a href="http://www.portlandoregon.gov" target="_blank">portlandoregon.gov</a> website.</p>
+			     </blockquote>
+
+            <h3><a href="#" ng-click="open['faq6']=!open['faq6']">I'm having trouble logging in. What can I do? &raquo;</a></h3>
+            <blockquote>
+            <ol ng-show="open['faq6']">
+              <li class="p">Clear your browser history, cache and cookies.</li>
+              <li class="p">Try logging in at <a href="http://www.portlandoregon.gov" target="_blank">portlandoregon.gov</a> to verify your credentials. The same login is used for both.</li>
+              <li class="p">If you still cannot log in, you may use the Forgot Password feature in the app or on <a href="http://www.portlandoregon.gov" target="_blank">portlandoregon.gov</a>. If you don't immediately receive password reset instructions by email, please wait a few minutes and make sure to check the spam folder in your email client.</li>
+            </ol>
+			      </blockquote>
+
+
+            <br>
+            <h3>Other Ways to Reach Us</h3>
+            <p class="p">For general information concerning city issues, please contact us at <a href="tel:+15038234000">503-823-4000</a> or 
+                <a href="mailto:{{InfoEmail}}">{{InfoEmail}}</a>.</p>
+            <p class="p">You may also visit and search our website to find contact information for specific bureaus: 
+                <a href="https://www.portlandoregon.gov/" target="_blank">www.portlandoregon.gov</a>, or view the <a href="https://www.portlandoregon.gov/article/25147" target="_blank">bureau directory</a>.</p>
+            <p class="p">For bug reports or feature requests for this app, send email to <a class="a-link" href="mailto:{{SupportEmail}}">{{SupportEmail}}</a>.</p>
+            <p class="p">The City of Portland will never release personal profile or contact information provided by the user of this application to any outside company or organization unless legally required to do so. However, any information provided in reports submitted through this application becomes part of the public record and cannot be expunged.</p>
+
+            <br>
+            <h3>Problems?</h3>
+            <p class="p">Before reporting issues with this app, please try <a href="https://www.google.com/search?q=how+to+clear+browser+cache+and+cookies" target="_blank">clearing your browser history and cookies</a>, then reload the app and try again.</p>
+            <p class="p">You must have an account at <a href="https://www.portlandoregon.gov" target="_blank">portlandoregon.gov</a> in order to use PDX Reporter. If you are having trouble logging in, visit that site and try logging in to verify your credentials.</p>
+
+          </div>
+          <div class="copyright copyright--desktop">
+	          PDX Reporter <span ng-bind="AppVersion"></span><br>
+	          &copy;<span ng-bind="CopyrightYear"></span> City of Portland, Oregon
+          </div>
+        </section>
+
+    </main>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/fallback/jquery.min.js"><\/script>')</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" integrity="sha384-V6/dyDFv85/V/Ktq3ez5B80/c9ZY7jV9c/319rqwNOz3h9CIPdd2Eve0UQBYMMr/" crossorigin="anonymous"></script>
+    <script>typeof angular != 'undefined' || document.write('<script src="js/fallback/angular.min.js"><\/script>')</script>
+
+    <script type="text/javascript" src="js/libs.js?cb=201811071544"></script>
+    <script type="text/javascript" src="js/app.js?cb=201811071544"></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-6858269-12', 'auto');
+	  ga('send', 'pageview');
+	</script>
+  </body>
+</html>
