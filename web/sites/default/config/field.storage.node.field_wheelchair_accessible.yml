@@ -1,0 +1,22 @@
+uuid: a7d832e2-0cd4-4ed0-840c-9b5ed8134a92
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_wheelchair_accessible
+field_name: field_wheelchair_accessible
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -55,6 +55,16 @@
       {% if group_time %}
         <div class="morsel__time">{{ group_time }}</div>
       {% endif %}
+      {# ! START NEW FIELD #}
+      {% if wheelchair_accessible %}
+        <div class="morsel__wheelchair_accessible">
+          {% include "@elements/icon/icon.twig" with {
+            name: "accessibility"
+          } only %}
+          {{ 'wheelchair accessible'|t }}
+        </div>
+      {% endif %}
+      {# ! END NEW FIELD #}
       {% if status %}
         <div class="morsel__status">{{ status }}</div> {# TODO need a more robust status; change style by status #}
       {% endif %}

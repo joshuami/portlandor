@@ -1,0 +1,29 @@
+uuid: 62ec2be6-0b43-487e-8678-96eecf4bb3c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_wheelchair_accessible
+    - node.type.event
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.event.field_wheelchair_accessible
+field_name: field_wheelchair_accessible
+entity_type: node
+bundle: event
+label: 'wheelchair accessible'
+description: 'Check box if facility is wheelchair accessible.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
