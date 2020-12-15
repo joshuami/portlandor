@@ -20,6 +20,7 @@ bulk_update_fields: 1.0.0-alpha1
 chosen: 2.5.0
 chosen_field: 2.5.0
 chosen_lib: 2.5.0
+cidr: 2.0.1
 ckeditor: 0.0.0
 ckeditor_config: 2.0.0
 clamav: 1.0.0
@@ -74,6 +75,7 @@ feeds_ex: 1.0.0-alpha4
 field: 0.0.0
 field_defaults: 1.0.0-rc2
 field_group: 0.0.0
+field_ipaddress: 1.0.0
 field_permissions: 1.0.0-rc1
 field_ui: 0.0.0
 file: 0.0.0
@@ -107,6 +109,7 @@ image_widget_crop: 0.0.0
 imagemagick: 3.1.0
 inline_entity_form: 0.0.0
 inline_form_errors: 0.0.0
+ip_login: 4.0.0-alpha1
 jsonapi: 0.0.0
 key: 1.8.0
 kint: 1.2.0

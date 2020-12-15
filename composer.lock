@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb8cfde703e085570d06426eb5fa175b",
+    "content-hash": "736841c7088c865467654b55766b7bec",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -201,12 +201,12 @@
             "version": "v1.9.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:eternicode/bootstrap-datepicker.git",
+                "url": "https://github.com/uxsolutions/bootstrap-datepicker.git",
                 "reference": "fb8776d65825068b9f914ab37d6fd847c951f488"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eternicode/bootstrap-datepicker/zipball/fb8776d65825068b9f914ab37d6fd847c951f488",
+                "url": "https://api.github.com/repos/uxsolutions/bootstrap-datepicker/zipball/fb8776d65825068b9f914ab37d6fd847c951f488",
                 "reference": "fb8776d65825068b9f914ab37d6fd847c951f488"
             },
             "require": {
@@ -3175,6 +3175,50 @@
             }
         },
         {
+            "name": "drupal/cidr",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cidr.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cidr-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "c1eb0ceb96da8efed61e192d2076c9d44a63e4df"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1600291968",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "sanduhrs",
+                    "homepage": "https://www.drupal.org/user/28074"
+                }
+            ],
+            "description": "Manage IP ranges for logins from trusted networks.",
+            "homepage": "https://www.drupal.org/project/cidr",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cidr"
+            }
+        },
+        {
             "name": "drupal/ckeditor_config",
             "version": "2.2.0",
             "source": {
@@ -5671,9 +5715,12 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-1.1",
-                    "datestamp": "1580335956",
+                    "datestamp": "1524232684",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5686,12 +5733,12 @@
             ],
             "authors": [
                 {
-                    "name": "Neslee Canil Pinto",
-                    "homepage": "https://www.drupal.org/user/3580850"
-                },
-                {
                     "name": "elachlan",
                     "homepage": "https://www.drupal.org/user/1021502"
+                },
+                {
+                    "name": "jjeff",
+                    "homepage": "https://www.drupal.org/user/17190"
                 },
                 {
                     "name": "quicksketch",
@@ -5701,7 +5748,7 @@
             "description": "Modify behavior and appearance of external links.",
             "homepage": "https://www.drupal.org/project/extlink",
             "support": {
-                "source": "https://git.drupalcode.org/project/extlink"
+                "source": "http://cgit.drupalcode.org/extlink"
             }
         },
         {
@@ -6032,6 +6079,62 @@
             "homepage": "https://www.drupal.org/project/field_group",
             "support": {
                 "source": "https://git.drupalcode.org/project/field_group"
+            }
+        },
+        {
+            "name": "drupal/field_ipaddress",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_ipaddress.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_ipaddress-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "8a32441c8d487c8ec06681d3c598e0a80d9d47cd"
+            },
+            "require": {
+                "drupal/core": "^8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1600430312",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "aidanlis",
+                    "homepage": "https://www.drupal.org/user/502018"
+                },
+                {
+                    "name": "bjaxelsen",
+                    "homepage": "https://www.drupal.org/user/415424"
+                },
+                {
+                    "name": "davidwhthomas",
+                    "homepage": "https://www.drupal.org/user/151344"
+                },
+                {
+                    "name": "hexblot",
+                    "homepage": "https://www.drupal.org/user/233388"
+                }
+            ],
+            "description": "Provides a field to hold single or range of IPs (IPv4 or IPv6).",
+            "homepage": "https://www.drupal.org/project/field_ipaddress",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_ipaddress"
             }
         },
         {
@@ -7120,6 +7223,59 @@
             "homepage": "https://www.drupal.org/project/inline_entity_form",
             "support": {
                 "source": "https://git.drupalcode.org/project/inline_entity_form"
+            }
+        },
+        {
+            "name": "drupal/ip_login",
+            "version": "4.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ip_login.git",
+                "reference": "4.0.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ip_login-4.0.0-alpha1.zip",
+                "reference": "4.0.0-alpha1",
+                "shasum": "2185b5251389522103b07d069cbb439a7c4e1da9"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9",
+                "drupal/field_ipaddress": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.0-alpha1",
+                    "datestamp": "1606733115",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Kirkpatrick",
+                    "homepage": "https://www.drupal.org/user/262181"
+                },
+                {
+                    "name": "amateescu",
+                    "homepage": "https://www.drupal.org/user/729614"
+                },
+                {
+                    "name": "davidwhthomas",
+                    "homepage": "https://www.drupal.org/user/151344"
+                }
+            ],
+            "description": "Allows users to be automatically logged in in by matching IP address, range or wildcards.",
+            "homepage": "https://www.drupal.org/project/ip_login",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ip_login"
             }
         },
         {
@@ -22880,6 +23036,7 @@
         "drupal/field_permissions": 5,
         "drupal/focal_point": 10,
         "drupal/groupmedia": 15,
+        "drupal/ip_login": 15,
         "drupal/media_entity_file_replace": 10,
         "drupal/menu_link": 15,
         "drupal/mimemail": 15,
