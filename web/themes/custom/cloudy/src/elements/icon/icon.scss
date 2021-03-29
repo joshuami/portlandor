@@ -1,7 +1,7 @@
 .icon {
   display: inline-block;
-  margin-right: 0.5rem;
-  color: $cloudy-color-blue-800;
+  margin-right: $cloudy-space-2;
+  color: $cloudy-color-blue-600;
 
   &--size-xs > svg {
     height: 1rem;

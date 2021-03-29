@@ -1,6 +1,6 @@
 .cloudy-link {
-  color: $cloudy-color-blue-600;
   display: inline-flex;
+  color: $cloudy-color-blue-600;
   @include type-style($cloudy-ui-text);
   &.cloudy-link--is-standalone {
     position: relative;
@@ -9,7 +9,7 @@
     vertical-align: middle;
     &:hover {
       .icon {
-        color: $cloudy-color-blue-800;
+        color: $cloudy-color-blue-700;
       }
     }
     .icon {
@@ -19,13 +19,15 @@
       color: $cloudy-color-blue-600;
     }
   }
+
+  // TODO: Deprecate use of .cloudy-link--has-backround (use Button for links with backgrounds)
   &.cloudy-link--has-background {
-    color: $cloudy-color-neutral-200;
     display: inline-block;
     position: relative;
     background: $cloudy-color-blue-600;
     padding: $cloudy-space-2 $cloudy-space-4;
     border-radius: $border-radius-sm;
+    color: $cloudy-color-neutral-0;
     hyphens: auto;
     &:hover {
       text-decoration: none;
@@ -33,15 +35,16 @@
     }
     .icon {
       position: relative;
-      margin-left: $cloudy-space-2;
+      margin-left: $cloudy-space-4;
       margin-right: 0;
-      color: $cloudy-color-neutral-200;
+      color: $cloudy-color-neutral-0;
     }
   }
   &.cloudy-link--has-icon {
     .icon svg,
     i.fas {
-      color: $cloudy-color-blue-800;
+      color: $cloudy-color-blue-900;
+      margin-right: $cloudy-space-2;
     }
     &:hover {
       text-decoration: none;

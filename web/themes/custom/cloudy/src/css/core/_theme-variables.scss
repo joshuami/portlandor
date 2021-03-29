@@ -1,18 +1,20 @@
-/* Typography */
+// Typography 
+// TODO: Review. This variable feels surgical/redundant to framework. 
+// 600 is the bold weight in Open Sans (not semibold) - do we even need this?
 $font-weight-semibold: 600;
 
-/* Editor toolbar  */
+// Editor toolbar
+// TODO: Remove when we switch to Claro for the admin theme.
 $editor-toolbar-active-bg: $cloudy-color-neutral-900;
 
-/* Navbar */
+// Navbar 
+// TODO: Deprecate. These feel out of date. 
 $navbar-menu-focus-bg: $cloudy-color-blue-100;
 $navbar-menu-active-bg: $cloudy-color-blue-100;
 $navbar-menu-alert-badge-bg: $cloudy-color-red-500;
 
-/* Border radius for buttons and form elements */
-$border-radius-tight: 0.125em;
-
-/* Blockquotes */
+// Blockquotes 
+// TODO: This has been commented out for two years. Remove?      
 // Include after fixing Sass import order and update blockquote inside _extends.scss
 // $blockquote-height-border: $border-width * 10;
 
@@ -34,5 +36,5 @@ $search-small-border-style: $cloudy-border-width-2 solid
   $cloudy-color-neutral-900;
 
 // Buttons
-// TODO Refactor into bootstrap button variant
+// TODO: Refactor to use Dark Button variant
 $cloudy-color-mega-menu-button-bg: rgba($cloudy-color-neutral-0, 0.2);

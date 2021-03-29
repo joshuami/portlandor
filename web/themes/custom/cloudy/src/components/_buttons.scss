@@ -1,29 +1,108 @@
-// Bootstrap button overrides
-.button--primary {
-  @include button-variant($cloudy-color-blue-600, $cloudy-color-blue-600, $cloudy-color-blue-700, $cloudy-color-blue-700, $cloudy-color-blue-700, $cloudy-color-blue-700);
-}
-
-// Buttons
-.btn {
-  border-radius: $border-radius-tight;
-}
-
+// Drupal Buttons
+// Overrides default Drupal .button class with Bootstrap's default .btn class.
 .button {
   @extend .btn;
 }
 
+// Primary Buttons (blue) 
+// Design intention: Call to action, primary action. 
+.btn-primary {
+  background: $cloudy-color-blue-600;
+  border-color: $cloudy-color-blue-600;
+  color: $white;
+  &:hover {
+    background: $cloudy-color-blue-700;
+    border-color: $cloudy-color-blue-700;
+  }
+}
+.btn-cta, 
+.button--primary,
+.powr-btn-primary {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+// Secondary Buttons (blue) 
+// Design intention: Default UI. 
+.btn-secondary {
+  background: $cloudy-color-neutral-600;
+  border-color: $cloudy-color-neutral-600;
+  color: $white;
+  &:hover {
+    background: $cloudy-color-neutral-700;
+    border-color: $cloudy-color-neutral-700;
+  }
+}
+.btn-outline-light,
+.powr-btn-default,
 .paragraphs-icon-button {
-  @extend .btn-light;
-  @extend .btn-sm;
+  @extend .btn;
+  @extend .btn-secondary;
 }
 
-.button .fa,
-.fas,
-.fab {
-  margin: 0 $cloudy-space-2 0 0;
+// Light Buttons (white/gray)
+// Design intention: Lite.
+.btn-light {
+  @extend .btn-outline-light;
+  background: $cloudy-color-neutral-0;
+  border-color: $cloudy-color-neutral-300;
+  color: $cloudy-color-neutral-900;
+  &:hover {
+    background: $cloudy-color-neutral-200;
+    border-color: $cloudy-color-neutral-300;
+  }
 }
 
-// Form buttons
+// Primary Outline Buttons (blue outline)
+// TODO: Deprecate use of outline buttons. Requires stakeholder convo.  
+.btn-cta-outline,
+.powr-btn-secondary {
+  @extend .btn;
+  @extend .btn-outline-primary;
+  border-color: $cloudy-color-blue-600;
+  color: $cloudy-color-blue-600;
+  &:hover {
+    background-color: $cloudy-color-blue-600;
+    border-color: $cloudy-color-blue-600;
+    color: $cloudy-color-neutral-0;
+  }
+}
+
+// Dark Buttons (dark fill) 
+// Design intention: For use on light backgrounds only.
+.btn-dark {
+  background: $cloudy-color-neutral-900;
+  border-color: $cloudy-color-neutral-900;
+  color: $cloudy-color-neutral-0;
+  &:hover {
+    background: $cloudy-color-neutral-800;
+    border-color: $cloudy-color-neutral-800;
+  }
+}
+
+// Dark Outline Buttons (glass/transparent background)
+
+// Danger Buttons (red)
+// Design intention: Reserve for permanent actions that cannot be undone
+// like "Delete" or "Remove".
+.btn-danger {
+  background: $cloudy-color-red-600;
+  border-color: $cloudy-color-red-600;
+  color: $white;
+  &:hover {
+    background: $cloudy-color-red-700;
+    border-color: $cloudy-color-red-700;
+  }
+}
+.btn-outline-danger,
+.button--danger, 
+.powr-btn-danger {
+  @extend .btn;
+  @extend .btn-danger;
+}
+
+// Form Buttons
+//TODO: Surgical CSS tweaks to form buttons look suspect. 
 .form-actions button.btn {
   margin-right: $cloudy-space-2;
 }
@@ -31,72 +110,46 @@ form .btn {
   margin-bottom: 0;
 }
 
-// TODO: refactor form submit button which includes search form
+// This targets editor form view "preview" and "unlock" buttons specifically.
 input.form-submit:not(.button--primary),
 #edit-actions a[class="button"] {
-
-  @extend .btn-light;
-
-  // Had to keep extended .btn-light to keep current button states, but needed to override color
-  background: $cloudy-color-neutral-200;
-  border-color: $cloudy-color-neutral-200;
+  @extend .btn-secondary;
 }
 
-// Editor buttons
-.button--danger {
-  @extend .btn-outline-danger;
-}
-
-.powr-btn-default {
-  @extend .btn-light;
-}
-
-.powr-btn-secondary {
-  @extend .btn-outline-primary;
-}
-
-.powr-btn-warning {
-  @extend .btn-warning;
-}
-
-.powr-btn-danger {
-  @extend .btn-danger;
-}
-
-.powr-btn-link {
-  @extend .btn-link;
-
-  .fas {
-    color: $cloudy-color-blue-800;
-  }
-}
-
-.btn-cta {
-  // TODO: Refactor button to use cloudy classes
-  @extend .btn;
-  @extend .btn-primary;
-  white-space: inherit;
-  background: $cloudy-color-blue-600;
-  border: none;
-  color: $cloudy-color-neutral-0;
-
-  &:hover {
-    background: $cloudy-color-blue-800;
-    border: none;
-  }
-}
-
-.btn-cta-outline {
-  @extend .btn;
-  @extend .btn-outline-primary;
-  color: $cloudy-color-blue-600;
-  border-color: $cloudy-color-blue-600;
+// TODO: are the following classes used and where?
+.button .fa,
+.fas,
+.fab {
+  margin: 0 $cloudy-space-2 0 0;
 }
 
 *[class*="btn--"]:before {
   display: inline-block;
   padding-right: $cloudy-space-2;
   vertical-align: middle;
+}
+
+// Deprecate
+//TODO: Deprecate use of all powr-btn classes
+.powr-btn-warning {
+  @extend .btn-warning;
+}
+.powr-btn-success {
+  @extend .btn-success;
+}
+
+// Refactor
+//TODO: Refactor to use Link component
+.paragraphs-icon-button {
+  @extend .btn-light;
+  @extend .btn-sm;
+}
+
+.powr-btn-link {
+  @extend .btn-link;
+  .fas {
+    color: $cloudy-color-blue-600;
+  }
 }
 
 .btn--download:before {
@@ -107,3 +160,4 @@ input.form-submit:not(.button--primary),
 .btn--fax:not(.disabled):hover {
   cursor: default;
 }
+

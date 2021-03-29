@@ -255,7 +255,7 @@
     display: block;
     width: 100%;
     overflow: hidden;
-    padding: $cloudy-space-2;
+    padding: $cloudy-space-2 $cloudy-space-4;
     color: $cloudy-color-neutral-900;
     // TODO: Use libraries-override to override autocomplete styling
     // * Hide autocomplete loading module background
@@ -286,6 +286,10 @@
     mask-repeat: no-repeat;
     &:hover {
       background-color: $cloudy-color-neutral-0 !important;
+    }
+
+    .icon {
+      margin-right: $cloudy-space-2;
     }
   }
 
@@ -363,7 +367,7 @@
     a.ui-menu-item-wrapper {
       display: flex;
       flex-direction: column;
-      padding: $cloudy-space-2 $cloudy-space-2;
+      padding: $cloudy-space-2 $cloudy-space-4;
       color: $cloudy-color-neutral-900;
       .search-api-autocomplete-suggestion {
         padding: $cloudy-space-0;
