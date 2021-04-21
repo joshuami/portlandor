@@ -1,6 +1,6 @@
 layout_threecol:
   label: "Three column"
-  path: src/layouts/threecol
+  path: templates/layout
   template: layout--threecol
   default_region: main
   icon_map:

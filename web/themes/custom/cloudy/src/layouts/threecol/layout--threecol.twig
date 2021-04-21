@@ -15,18 +15,15 @@
 {% set main_classes = main_classes|default(['col']) %}
 {% set second_aside_classes = second_aside_classes|default(['col']) %}
 
-{% if content %}
-  <div{{ attributes.addClass(layout_classes) }}>
-      <section {{ region_attributes.first_aside.addClass('layout__region').addClass(first_aside_classes) }}>
-        {{ content.first_aside }}
-      </section>
 
-      <section {{ region_attributes.main.addClass('layout__region').addClass(main_classes) }}>
-        {{ content.main }}
-      </section>
-
-      <section {{ region_attributes.second_aside.addClass('layout__region').addClass(second_aside_classes) }}>
-        {{ content.second_aside }}
-      </section>
-  </div>
-{% endif %}
+<div class="{{ layout_classes|join(' ') }}">
+  <section class="{{ first_aside_classes|join(' ') }}">
+    {{ first_aside }}
+  </section>
+  <section class="{{ main_classes|join(' ') }}">
+    {{ main }}
+  </section>
+  <section class="{{ second_aside_classes|join(' ') }}">
+    {{ second_aside }}
+  </section>
+</div>

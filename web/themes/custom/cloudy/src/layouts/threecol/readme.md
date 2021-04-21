@@ -9,7 +9,9 @@
 ## Usage
 
 ```twig
-{% include "@layouts/threecol/layout--threecol.twig" with {
-  "text": "Hello World!",
+{% include '@layouts/threecol/layout--threecol.twig' with {
+  first_aside: first_aside,
+  main: main,
+  second_aside: second_aside
 } only %}
 ```

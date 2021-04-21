@@ -1,0 +1,33 @@
+{% set first_aside %}
+  <div class="pl-layout-placeholder pl-layout-placeholder--fllled"
+    style="height: 150px;">
+    First Aside
+  </div>
+{% endset %}
+{% set main %}
+  <div class="pl-layout-placeholder pl-layout-placeholder--fllled"
+    style="height: 150px;">
+    Main
+  </div>
+{% endset %}
+{% set second_aside %}
+  <div class="pl-layout-placeholder pl-layout-placeholder--fllled"
+    style="height: 150px;">
+    Second Aside
+  </div>
+{% endset %}
+
+<label for="pl-toggle-labels2">Toggle labels & demo spacing:</label> <input type="checkbox" name="pl-toggle-labels2" class="pl-toggle-labels" id="pl-toggle-labels2" />
+<div class="pl-demo-wrapper">
+  <div class="pl-demo-item">
+    <h6>Group homepage variation</h6>
+    {% include '@layouts/threecol/layout--threecol.twig' with {
+      first_aside_classes: ['col-md-3'],
+      main_classes: ['col-md-6'],
+      second_aside_classes: ['col-md-3'],
+      first_aside: first_aside,
+      main: main,
+      second_aside: second_aside
+    }  %}
+  </div>
+</div>
