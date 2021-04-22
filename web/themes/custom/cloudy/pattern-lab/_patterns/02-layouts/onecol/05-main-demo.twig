@@ -1,0 +1,9 @@
+{% set main %}
+  <div class="pl-layout-placeholder pl-layout-placeholder--fllled"
+    style="height: 150px;">
+    Main
+  </div>
+{% endset %}
+{% include "@layouts/onecol/layout--onecol.twig" with {
+  main: main,
+} only %}

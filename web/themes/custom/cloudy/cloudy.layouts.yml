@@ -13,6 +13,17 @@ layout_threecol:
     second_aside:
       label: Second aside
 
+layout_onecol:
+  label: "One column"
+  path: templates/layout
+  template: layout--onecol
+  default_region: main
+  icon_map:
+    - [square_one]
+  regions:
+    main:
+      label: Main
+
 cloudy_card--small:
   label: Card small
   category: Cloudy

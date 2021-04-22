@@ -1,0 +1,9 @@
+{% set layout_classes = layout_classes|default(['row']) %}
+{% set main_classes = main_classes|default(['col']) %}
+
+
+<div class="{{ layout_classes|join(' ') }}">
+  <section class="{{ main_classes|join(' ') }}">
+    {{ main }}
+  </section>
+</div>
