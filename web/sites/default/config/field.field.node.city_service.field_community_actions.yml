@@ -16,9 +16,9 @@ id: node.city_service.field_community_actions
 field_name: field_community_actions
 entity_type: node
 bundle: city_service
-label: 'Service Type (Community Action)'
+label: 'Community actions'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 id: editor
 label: Editor
-weight: -10
+weight: null
 menu: editor-toolbar
 rewrite_label: false

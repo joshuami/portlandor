@@ -3,11 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.council_agenda.field_city_coucil_agenda
+    - field.field.node.council_agenda.field_city_council_meeting_audio
+    - field.field.node.council_agenda.field_city_council_meeting_docum
     - field.field.node.council_agenda.field_council_agenda_date_range
     - field.field.node.council_agenda.field_council_agenda_notes
     - field.field.node.council_agenda.field_council_agenda_number
+    - field.field.node.council_agenda.field_ordianances
+    - field.field.node.council_agenda.field_resolutions
     - node.type.council_agenda
   module:
+    - link
     - text
     - user
 id: node.council_agenda.default
@@ -20,6 +26,42 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_city_coucil_agenda:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_city_council_meeting_audio:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_city_council_meeting_docum:
+    weight: 8
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_council_agenda_notes:
     weight: 2
     label: hidden
@@ -35,6 +77,30 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
+  field_ordianances:
+    weight: 6
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_resolutions:
+    weight: 7
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   toc_js:
     weight: 1

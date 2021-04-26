@@ -39,12 +39,12 @@ dependencies:
     - workflows.workflow.editorial
   module:
     - allowed_formats
+    - chosen_field
     - content_moderation
     - entity_browser
     - field_group
     - maxlength
     - path
-    - select2
     - text
 third_party_settings:
   field_group:
@@ -55,7 +55,7 @@ third_party_settings:
         - field_instagram
       parent_name: ''
       weight: 20
-      format_type: details_sidebar
+      format_type: details
       region: content
       format_settings:
         id: ''
@@ -63,7 +63,6 @@ third_party_settings:
         description: ''
         open: false
         required_fields: false
-        weight: 0
       label: 'Social Media'
     group_map_information:
       children:
@@ -73,7 +72,7 @@ third_party_settings:
         - field_portlandmaps_id
         - field_portlandmaps_layer
       parent_name: ''
-      weight: 14
+      weight: 19
       format_type: details
       region: content
       format_settings:
@@ -91,8 +90,8 @@ third_party_settings:
         - path
         - url_redirects
       parent_name: ''
-      weight: 26
-      format_type: details_sidebar
+      weight: 23
+      format_type: details
       region: content
       format_settings:
         id: ''
@@ -100,14 +99,13 @@ third_party_settings:
         description: ''
         open: false
         required_fields: false
-        weight: 0
       label: 'Administrative Fields (Site Admins Only)'
     group_paths_and_redirects:
       children:
         - field_redirects
       parent_name: ''
-      weight: 25
-      format_type: details_sidebar
+      weight: 22
+      format_type: details
       region: content
       format_settings:
         id: ''
@@ -115,29 +113,27 @@ third_party_settings:
         description: ''
         open: false
         required_fields: false
-        weight: 0
       label: 'Paths and Redirects'
     group_location_status:
       children:
         - field_location_status
         - field_alert_text
       parent_name: ''
-      weight: 21
-      format_type: details_sidebar
+      weight: 16
+      format_type: details
       region: content
       format_settings:
-        description: ''
-        weight: 0
         id: ''
         classes: ''
+        description: ''
         open: false
         required_fields: false
-      label: 'Location Status (not implemented yet)'
+      label: 'Location Status'
     group_accessibility_notes:
       children:
         - field_accessibility_notes
       parent_name: ''
-      weight: 12
+      weight: 15
       format_type: details
       region: content
       format_settings:
@@ -152,7 +148,7 @@ third_party_settings:
         - field_year_acquired
         - field_history
       parent_name: ''
-      weight: 13
+      weight: 21
       format_type: details
       region: content
       format_settings:
@@ -167,7 +163,7 @@ third_party_settings:
         - field_hours_of_operation
       parent_name: ''
       weight: 18
-      format_type: details_sidebar
+      format_type: details
       region: content
       format_settings:
         id: ''
@@ -175,46 +171,13 @@ third_party_settings:
         description: ''
         open: false
         required_fields: false
-        weight: 0
       label: 'Open Hours'
     group_contacts:
       children:
         - field_contact
       parent_name: ''
-      weight: 19
-      format_type: details_sidebar
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: false
-        weight: 0
-      label: Contacts
-    group_location_and_located_withi:
-      children:
-        - field_location
-        - field_located_within
-      parent_name: ''
       weight: 17
-      format_type: details_sidebar
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: true
-        weight: 0
-      label: 'Location and Located Within'
-    group_neighborhood:
-      children:
-        - field_city_section
-        - field_neighborhood
-      parent_name: ''
-      weight: 24
-      format_type: details_sidebar
+      format_type: details
       region: content
       format_settings:
         id: ''
@@ -222,38 +185,7 @@ third_party_settings:
         description: ''
         open: false
         required_fields: false
-        weight: 0
-      label: Neighborhood
-    group_amenities:
-      children:
-        - field_park_amenities_activities
-      parent_name: ''
-      weight: 22
-      format_type: details_sidebar
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: false
-        weight: 0
-      label: Amenities
-    group_documents:
-      children:
-        - field_documents
-      parent_name: ''
-      weight: 23
-      format_type: details_sidebar
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: false
-        weight: 0
-      label: Documents
+      label: Contacts
 id: node.park_facility.default
 targetEntityType: node
 bundle: park_facility
@@ -306,10 +238,10 @@ content:
     type: text_textarea
     region: content
   field_city_section:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+    type: chosen_select
     region: content
   field_contact:
     weight: 25
@@ -322,14 +254,19 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_documents:
-    type: entity_reference_autocomplete
-    weight: 18
-    region: content
+    type: entity_browser_entity_reference
+    weight: 13
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      entity_browser: document_browser_embed
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      field_widget_replace: false
+      open: false
+    region: content
     third_party_settings: {  }
   field_facebook:
     weight: 11
@@ -341,7 +278,7 @@ content:
     region: content
   field_featured_media:
     type: entity_browser_entity_reference
-    weight: 10
+    weight: 11
     settings:
       entity_browser: featured_image
       field_widget_display: rendered_entity
@@ -388,7 +325,7 @@ content:
     region: content
   field_images:
     type: entity_browser_entity_reference
-    weight: 11
+    weight: 12
     settings:
       entity_browser: featured_image
       field_widget_display: rendered_entity
@@ -410,14 +347,10 @@ content:
     type: string_textfield
     region: content
   field_located_within:
-    weight: 15
-    settings:
-      autocomplete: false
-      match_operator: CONTAINS
-      match_limit: 10
-      width: 100%
+    weight: 5
+    settings: {  }
     third_party_settings: {  }
-    type: select2_entity_reference
+    type: chosen_select
     region: content
   field_location:
     weight: 14
@@ -441,20 +374,16 @@ content:
     type: options_select
     region: content
   field_neighborhood:
-    type: options_buttons
-    weight: 8
+    type: chosen_select
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   field_park_amenities_activities:
-    weight: 5
-    settings:
-      autocomplete: false
-      match_operator: CONTAINS
-      match_limit: 10
-      width: 100%
+    weight: 6
+    settings: {  }
     third_party_settings: {  }
-    type: select2_entity_reference
+    type: chosen_select
     region: content
   field_park_location_type:
     weight: 1
@@ -470,7 +399,7 @@ content:
     type: number
     region: content
   field_popular_weight:
-    weight: 9
+    weight: 10
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -511,13 +440,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_reservations_available:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+    type: chosen_select
     region: content
   field_reviewer:
-    weight: 15
+    weight: 24
     settings:
       match_operator: CONTAINS
       size: 60
@@ -578,7 +507,7 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 16
+    weight: 25
     settings: {  }
     region: content
     third_party_settings: {  }

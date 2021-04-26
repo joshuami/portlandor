@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 id: council
 label: Council
-weight: -9
+weight: null
 menu: council-toolbar
 rewrite_label: false

@@ -1,0 +1,10 @@
+uuid: edc67f9b-9770-4dc7-b7af-f41b68720abe
+langcode: en
+status: true
+dependencies: {  }
+id: ppb_directives
+label: ppb_directives
+description: ''
+source_type: null
+module: null
+shared_configuration: null

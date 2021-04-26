@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.policy.field_reviewer
     - node.type.policy
   module:
-    - ds
     - file
     - text
     - user
@@ -58,17 +57,10 @@ content:
     type: entity_reference_label
     weight: 0
     region: content
-    label: visually_hidden
+    label: inline
     settings:
-      link: false
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+      link: true
+    third_party_settings: {  }
 hidden:
   content_moderation_control: true
   field_accessibility_review: true

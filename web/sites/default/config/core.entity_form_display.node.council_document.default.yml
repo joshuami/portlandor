@@ -36,6 +36,7 @@ dependencies:
     - node.type.council_document
     - workflows.workflow.council_document_workflow
   module:
+    - chosen_field
     - conditional_fields
     - content_moderation
     - datetime
@@ -43,7 +44,6 @@ dependencies:
     - link
     - path
     - portland_file_replace
-    - select2
     - text
     - time_field
 third_party_settings:
@@ -52,7 +52,7 @@ third_party_settings:
       children:
         - field_efiles_link
       parent_name: ''
-      weight: 21
+      weight: 22
       format_type: details
       region: content
       format_settings:
@@ -66,7 +66,7 @@ third_party_settings:
       children:
         - field_collaboration_storage_link
       parent_name: ''
-      weight: 20
+      weight: 21
       format_type: details
       region: content
       format_settings:
@@ -84,6 +84,7 @@ third_party_settings:
         - field_council_clerk
         - field_auditor
         - field_date_of_final_disposition
+        - field_disposition_notes
       parent_name: ''
       weight: 2
       format_type: details
@@ -99,7 +100,7 @@ third_party_settings:
       children:
         - field_finanicial_impact_analysis
       parent_name: ''
-      weight: 22
+      weight: 23
       format_type: details
       region: content
       format_settings:
@@ -116,7 +117,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 26
+    weight: 25
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -142,7 +143,7 @@ content:
     type: string_textfield
     region: content
   field_body_content:
-    weight: 15
+    weight: 16
     settings:
       rows: 5
       placeholder: ''
@@ -150,12 +151,8 @@ content:
     type: text_textarea
     region: content
   field_bureau:
-    weight: 14
-    settings:
-      autocomplete: false
-      match_operator: CONTAINS
-      match_limit: 10
-      width: 100%
+    weight: 15
+    settings: {  }
     third_party_settings:
       conditional_fields:
         49fd3d49-2ea2-4448-a3c7-f3be76ec77ce:
@@ -176,7 +173,7 @@ content:
             form_mode: default
           entity_type: node
           bundle: council_document
-    type: select2_entity_reference
+    type: chosen_select
     region: content
   field_collaboration_storage_link:
     weight: 17
@@ -241,7 +238,7 @@ content:
     type: datetime_default
     region: content
   field_date_prepared:
-    weight: 17
+    weight: 18
     settings: {  }
     third_party_settings:
       conditional_fields:
@@ -266,7 +263,7 @@ content:
     type: datetime_default
     region: content
   field_documents_and_exhibits:
-    weight: 18
+    weight: 19
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
@@ -281,7 +278,7 @@ content:
     type: link_default
     region: content
   field_file_impact_statement:
-    weight: 19
+    weight: 20
     settings:
       progress_indicator: throbber
     third_party_settings:
@@ -328,12 +325,8 @@ content:
     type: string_textarea
     region: content
   field_introduced_by:
-    weight: 13
-    settings:
-      width: 100%
-      match_operator: CONTAINS
-      match_limit: 10
-      autocomplete: false
+    weight: 14
+    settings: {  }
     third_party_settings:
       conditional_fields:
         d409d7a9-6843-4df7-a60e-b31676084464:
@@ -354,7 +347,7 @@ content:
             form_mode: default
           entity_type: node
           bundle: council_document
-    type: select2_entity_reference
+    type: chosen_select
     region: content
   field_is_amends_budget:
     weight: 5
@@ -481,7 +474,7 @@ content:
     type: boolean_checkbox
     region: content
   field_prepared_by:
-    weight: 16
+    weight: 17
     settings:
       size: 60
       placeholder: ''
@@ -542,7 +535,7 @@ content:
     type: time_widget
     region: content
   field_reviewer:
-    weight: 23
+    weight: 28
     settings:
       match_operator: CONTAINS
       size: 60
@@ -578,13 +571,13 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 24
+    weight: 29
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 28
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -598,7 +591,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 25
+    weight: 24
     settings:
       match_operator: CONTAINS
       size: 60

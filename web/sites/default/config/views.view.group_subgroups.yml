@@ -7,8 +7,8 @@ dependencies:
   module:
     - group
     - options
-id: manage_group_subgroups
-label: 'Manage: Group: Subgroups'
+id: group_subgroups
+label: 'Admin: Group: Subgroups'
 module: views
 description: 'Show all child groups of the current group.'
 tag: ''
@@ -933,16 +933,14 @@ display:
         - user.group_permissions
       tags:
         - 'config:field.storage.group.field_migration_status'
-  page_manage_group_subgroups:
+  page_1:
     display_plugin: page
-    id: page_manage_group_subgroups
+    id: page_1
     display_title: Page
     position: 1
     display_options:
-      display_extenders:
-        metatag_display_extender: {  }
+      display_extenders: {  }
       path: group/%group/subgroups
-      use_admin_theme: true
     cache_metadata:
       max-age: -1
       contexts:

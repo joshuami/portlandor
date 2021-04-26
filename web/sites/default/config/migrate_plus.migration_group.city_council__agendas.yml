@@ -1,0 +1,10 @@
+uuid: c455ee45-9c6c-412b-aa33-b4ba9482dd41
+langcode: en
+status: true
+dependencies: {  }
+id: city_council__agendas
+label: city_council__agendas
+description: ''
+source_type: null
+module: null
+shared_configuration: null

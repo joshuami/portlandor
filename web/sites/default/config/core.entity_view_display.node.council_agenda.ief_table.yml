@@ -4,9 +4,14 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.ief_table
+    - field.field.node.council_agenda.field_city_coucil_agenda
+    - field.field.node.council_agenda.field_city_council_meeting_audio
+    - field.field.node.council_agenda.field_city_council_meeting_docum
     - field.field.node.council_agenda.field_council_agenda_date_range
     - field.field.node.council_agenda.field_council_agenda_notes
     - field.field.node.council_agenda.field_council_agenda_number
+    - field.field.node.council_agenda.field_ordianances
+    - field.field.node.council_agenda.field_resolutions
     - node.type.council_agenda
   module:
     - layout_builder
@@ -35,8 +40,14 @@ content:
     region: content
 hidden:
   content_moderation_control: true
+  field_city_coucil_agenda: true
+  field_city_council_meeting_audio: true
+  field_city_council_meeting_docum: true
   field_council_agenda_date_range: true
   field_council_agenda_number: true
+  field_ordianances: true
+  field_resolutions: true
   langcode: true
   links: true
   search_api_excerpt: true
+  toc_js: true

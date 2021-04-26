@@ -775,7 +775,6 @@ display:
           hide_empty_map: 0
           disable_wheel: 1
           fullscreen_control: 1
-          gesture_handling: 0
           reset_map:
             control: 0
             position: topright
@@ -784,7 +783,7 @@ display:
             center:
               lat: '0'
               lon: '0'
-            zoom: '17'
+            zoom: '12'
             minZoom: '1'
             maxZoom: '18'
             zoomFiner: '0'
@@ -794,7 +793,6 @@ display:
             shadowUrl: ''
             html: '<div></div>'
             html_class: leaflet-map-divicon
-            circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
             iconSize:
               x: ''
               'y': ''

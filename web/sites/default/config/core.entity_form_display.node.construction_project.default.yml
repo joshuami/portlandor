@@ -40,6 +40,7 @@ dependencies:
     - node.type.construction_project
     - workflows.workflow.editorial
   module:
+    - chosen_field
     - conditional_fields
     - content_moderation
     - datetime
@@ -56,8 +57,8 @@ third_party_settings:
       children:
         - field_redirects
       parent_name: ''
-      weight: 24
-      format_type: details_sidebar
+      weight: 17
+      format_type: details
       region: content
       format_settings:
         id: ''
@@ -66,7 +67,6 @@ third_party_settings:
         open: false
         required_fields: false
         direction: vertical
-        weight: 0
       label: 'Paths and redirects'
     group_dates:
       children:
@@ -94,8 +94,8 @@ third_party_settings:
         - path
         - url_redirects
       parent_name: ''
-      weight: 25
-      format_type: details_sidebar
+      weight: 23
+      format_type: details
       region: content
       format_settings:
         id: ''
@@ -103,14 +103,13 @@ third_party_settings:
         description: ''
         open: false
         required_fields: false
-        weight: 0
       label: 'Administrative Fields  (Site Admins Only)'
-    group_contacts:
+    group_groups:
       children:
-        - field_contact
+        - field_display_groups
       parent_name: ''
-      weight: 20
-      format_type: details_sidebar
+      weight: 16
+      format_type: details
       region: content
       format_settings:
         id: ''
@@ -118,14 +117,27 @@ third_party_settings:
         description: ''
         open: false
         required_fields: false
-        weight: 0
+      label: Groups
+    group_contacts:
+      children:
+        - field_contact
+      parent_name: ''
+      weight: 14
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: false
       label: Contacts
     group_related:
       children:
         - field_related_content
       parent_name: ''
-      weight: 23
-      format_type: details_sidebar
+      weight: 15
+      format_type: details
       region: content
       format_settings:
         id: ''
@@ -133,69 +145,7 @@ third_party_settings:
         description: ''
         open: false
         required_fields: false
-        weight: 0
       label: Related
-    group_topics:
-      children:
-        - field_topics
-      parent_name: ''
-      weight: 21
-      format_type: details_sidebar
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: true
-        weight: 0
-      label: Topics
-    group_neighborhood:
-      children:
-        - field_neighborhood
-      parent_name: ''
-      weight: 22
-      format_type: details_sidebar
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: true
-        weight: 0
-      label: Neighborhood
-    group_draw_map:
-      children:
-        - field_hide_map
-        - field_geo_map
-      parent_name: ''
-      weight: 12
-      format_type: details
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: false
-      label: 'Draw Map'
-    group_portland_maps_integration:
-      children:
-        - field_load_map_from_portlandmaps
-        - field_portlandmaps_layer
-        - field_portlandmaps_id
-      parent_name: ''
-      weight: 13
-      format_type: details
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: false
-      label: 'Portland Maps Integration'
 id: node.construction_project.default
 targetEntityType: node
 bundle: construction_project
@@ -269,7 +219,7 @@ content:
     type: boolean_checkbox
     region: content
   field_display_groups:
-    weight: 17
+    weight: 11
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -311,7 +261,7 @@ content:
     region: content
   field_featured_media:
     type: entity_browser_entity_reference
-    weight: 9
+    weight: 11
     settings:
       entity_browser: image_browser_embed
       field_widget_display: rendered_entity
@@ -326,7 +276,7 @@ content:
     third_party_settings: {  }
   field_geo_map:
     type: leaflet_widget_default
-    weight: 13
+    weight: 19
     region: content
     settings:
       map:
@@ -467,21 +417,21 @@ content:
           entity_type: node
           bundle: construction_project
   field_hide_map:
-    weight: 12
+    weight: 18
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_load_map_from_portlandmaps:
-    weight: 14
+    weight: 20
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_location:
-    weight: 10
+    weight: 12
     settings:
       entity_browser: locations_browser
       field_widget_display: rendered_entity
@@ -496,7 +446,7 @@ content:
     type: entity_reference_browser_table_widget
     region: content
   field_location_description:
-    weight: 6
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -505,7 +455,7 @@ content:
     region: content
   field_map:
     type: entity_browser_entity_reference
-    weight: 11
+    weight: 13
     settings:
       entity_browser: map_browser_embed
       field_widget_display: label
@@ -521,24 +471,24 @@ content:
     weight: 7
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+    type: chosen_select
     region: content
   field_num_businesses:
-    weight: 7
+    weight: 9
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_num_residences:
-    weight: 8
+    weight: 10
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_portlandmaps_id:
-    weight: 16
+    weight: 22
     settings:
       size: 60
       placeholder: ''
@@ -563,7 +513,7 @@ content:
     type: string_textfield
     region: content
   field_portlandmaps_layer:
-    weight: 15
+    weight: 21
     settings:
       size: 60
       placeholder: ''
@@ -612,7 +562,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_reviewer:
-    weight: 18
+    weight: 24
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -669,11 +619,11 @@ content:
     weight: 6
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+    type: chosen_select
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 19
+    weight: 25
     region: content
     settings: {  }
     third_party_settings: {  }

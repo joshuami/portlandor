@@ -172,7 +172,7 @@ content:
             classes: {  }
   field_location:
     weight: 9
-    label: above
+    label: hidden
     settings:
       view_mode: related
       link: false

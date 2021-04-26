@@ -19,6 +19,7 @@ module:
   chosen_lib: 0
   ckeditor: 0
   ckeditor_config: 0
+  clamav: 0
   cleave: 0
   color: 0
   components: 0
@@ -141,12 +142,14 @@ module:
   page_manager: 0
   page_manager_ui: 0
   panels: 0
+  pantheon_advanced_page_cache: 0
   path: 0
   path_alias: 0
   path_alias_xt: 0
   portland: 0
   portland_address_complete: 0
   portland_content_completion: 0
+  portland_edit_forms: 0
   portland_file_replace: 0
   portland_groups: 0
   portland_leaflet_maps: 0
@@ -162,6 +165,7 @@ module:
   rdf: 0
   redirect: 0
   redirect_404: 0
+  redis: 0
   remove_http_headers: 0
   responsive_image: 0
   rest: 0
@@ -177,7 +181,6 @@ module:
   search_api_page: 0
   search_api_solr: 0
   seckit: 0
-  select2: 0
   sendgrid_integration: 0
   serialization: 0
   shortcut: 0
