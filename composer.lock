@@ -334,15 +334,11 @@
                 "diff",
                 "html"
             ],
-<<<<<<< HEAD
-            "time": "2021-02-02T11:07:36+00:00"
-=======
             "support": {
                 "issues": "https://github.com/caxy/php-htmldiff/issues",
                 "source": "https://github.com/caxy/php-htmldiff/tree/v0.1.12"
             },
             "time": "2021-04-05T21:19:33+00:00"
->>>>>>> origin/release
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -702,14 +698,11 @@
                 "dependency",
                 "package"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "source": "https://github.com/composer/composer/tree/1.10.21"
             },
->>>>>>> origin/release
             "funding": [
                 {
                     "url": "https://packagist.com",
@@ -1066,14 +1059,11 @@
                 "Xdebug",
                 "performance"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/xdebug-handler/issues",
                 "source": "https://github.com/composer/xdebug-handler/tree/1.4.6"
             },
->>>>>>> origin/release
             "funding": [
                 {
                     "url": "https://packagist.com",
@@ -1988,15 +1978,11 @@
                 "security",
                 "symmetric key cryptography"
             ],
-<<<<<<< HEAD
-            "time": "2018-07-24T23:27:56+00:00"
-=======
             "support": {
                 "issues": "https://github.com/defuse/php-encryption/issues",
                 "source": "https://github.com/defuse/php-encryption/tree/v2.3.1"
             },
             "time": "2021-04-09T23:57:26+00:00"
->>>>>>> origin/release
         },
         {
             "name": "dflydev/dot-access-data",
@@ -2466,13 +2452,10 @@
                 "uppercase",
                 "words"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/doctrine/inflector/issues",
                 "source": "https://github.com/doctrine/inflector/tree/1.4.4"
             },
->>>>>>> origin/release
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -4666,14 +4649,8 @@
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
-<<<<<<< HEAD
-                "patches_applied": {
-                    "2475595 - Views exposed filters missing autosubmit option https://www.drupal.org/node/2475595": "https://www.drupal.org/files/issues/2475595-ctools-autocomplete-fix-24.patch",
-                    "2785499 Entity Bundle Condition Plugin does not work in all situations": "https://www.drupal.org/files/issues/2019-03-01/ctools_fix_condition_plugin_entity_bundle-2785499-12.patch"
-=======
                 "branch-alias": {
                     "dev-8.x-3.x": "3.x-dev"
->>>>>>> origin/release
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4742,13 +4719,8 @@
             "name": "drupal/ctools_block",
             "version": "3.5.0",
             "require": {
-<<<<<<< HEAD
-                "drupal/core": "^8 || ^9",
-                "drupal/ctools": "self.version"
-=======
                 "drupal/core": "^8.8 || ^9",
                 "drupal/ctools": "*"
->>>>>>> origin/release
             },
             "type": "metapackage",
             "extra": {
@@ -18235,12 +18207,9 @@
             ],
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
-=======
             "support": {
                 "source": "https://github.com/symfony/filesystem/tree/v4.4.21"
             },
->>>>>>> origin/release
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",

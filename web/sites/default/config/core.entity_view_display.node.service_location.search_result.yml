@@ -121,4 +121,5 @@ hidden:
   links: true
   locations_eva_service_locaton_map: true
   scheduled_publication: true
+  search_api_excerpt: true
   service_location_directions_link_entity_view_1: true

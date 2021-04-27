@@ -1,35 +1,18 @@
-id: city_council__agendas
+id: city_council_agendas
 label: 'Migrate Legacy City Council Agendas with additional fields'
-migration_group: city_council__agendas
+langcode: en
+migration_group: city_council_agendas
 source:
   plugin: csv
-  path: modules/custom/portland_migrations/sources/city_council_agenda_docs.csv
+  path: modules/custom/portland_migrations/sources/council_agenda_docs.csv
   header_row_count: 1
   keys:
-    - CONTENT_ID
+    - ID
 process:
   uid:
     plugin: default_value
     default_value: 1
   title: AGENDA_TITLE
-  field_council_agenda_date_range/value:
-    plugin: format_date
-    from_timezone: America/Los_Angeles
-    from_format: 'm-d-Y H:i:s'
-    to_format: 'm-d-Y\TH:i:s'
-    source: START_DATE
-  field_council_agenda_date_range/end_value:
-    plugin: format_date
-    from_timezone: America/Los_Angeles
-    from_format: 'm-d-Y H:i:s'
-    to_format: 'm-d-Y\TH:i:s'
-    source: END_DATE
-  field_city_coucil_agenda:
-    plugin: iterator
-    source: AGENDA
-    process:
-      title: title
-      uri: uri
 destination:
   plugin: 'entity:node'
   default_bundle: council_agenda
