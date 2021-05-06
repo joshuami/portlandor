@@ -12,7 +12,29 @@ process:
   uid:
     plugin: default_value
     default_value: 1
-  title: AGENDA_TITLE
+  title: AGENDA_TITLE  
+  field_council_agenda_date_range/value:
+    plugin: format_date
+    from_timezone: America/Los_Angeles
+    from_format: 'Y-m-d'
+    to_format: 'm-d-Y'
+    source: START_DATE
+  field_council_agenda_date_range/end_value:
+    plugin: format_date
+    from_timezone: America/Los_Angeles
+    from_format: 'Y-m-d'
+    to_format: 'm-d-Y'
+    source: END_DATE
+  urls_temp:
+    source: AGENDA
+    plugin: explode
+    delimiter: "|"
+  field_city_council_agenda:
+    plugin: sub_process
+    source: "@urls_temp"
+    process:
+      title: "0"
+      uri: "1"
 destination:
   plugin: 'entity:node'
   default_bundle: council_agenda

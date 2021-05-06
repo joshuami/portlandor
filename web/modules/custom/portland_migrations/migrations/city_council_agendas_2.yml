@@ -1,0 +1,21 @@
+id: city_council_agendas_2
+label: 'Migrate Legacy City Council Agendas with additional fields'
+migration_group: city_council_agendas
+source:
+  plugin: csv
+  path: modules/custom/portland_migrations/sources/council_agenda_docs_2.csv
+  header_row_count: 1
+  keys:
+    - ID
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  title: AGENDA_TITLE
+  field_council_agenda_notes/value: AGENDA
+  field_council_agenda_notes/format:
+    plugin: default_value
+    default_value: simplified_editor_with_media_embed
+destination:
+  plugin: 'entity:node'
+  default_bundle: council_agenda
