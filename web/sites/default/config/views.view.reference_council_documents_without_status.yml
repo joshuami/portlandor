@@ -20,6 +20,7 @@ dependencies:
     - user.role.attorney
     - user.role.council_author
     - user.role.council_clerk
+    - workflows.workflow.council_document_workflow
   module:
     - content_moderation
     - datetime
@@ -2215,7 +2216,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-30 days'
+            value: '-5 days'
             type: offset
           group: 1
           exposed: false
@@ -2249,6 +2250,49 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: datetime
+        moderation_state:
+          id: moderation_state
+          table: node_field_data
+          field: moderation_state
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            council_document_workflow-ready_for_agenda: council_document_workflow-ready_for_agenda
+            council_document_workflow-published: council_document_workflow-published
+            council_document_workflow-unpublished: council_document_workflow-unpublished
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          plugin_id: moderation_state_filter
       filter_groups:
         operator: AND
         groups:
@@ -2355,3 +2399,4 @@ display:
         - 'config:field.storage.node.field_requested_start_time'
         - 'config:field.storage.node.field_time_requested'
         - 'config:field.storage.relation.field_agenda_item_number'
+        - 'config:workflow_list'
