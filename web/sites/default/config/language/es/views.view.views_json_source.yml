@@ -1,0 +1,42 @@
+display:
+  default:
+    display_title: Máster
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      title: 'Ejemplo 1'
+  example_1:
+    display_title: 'Ejemplo 1'
+  example_2:
+    display_title: 'Ejemplo 2'
+    display_options:
+      title: 'Ejemplo 2'
+      arguments:
+        parameter:
+          exception:
+            title: Todo(s)
+  example_3:
+    display_title: 'Ejemplo 3'
+    display_options:
+      title: 'Ejemplo 3'
+      fields:
+        value:
+          label: ID
+        value_1:
+          label: Autor

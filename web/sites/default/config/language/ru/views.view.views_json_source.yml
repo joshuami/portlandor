@@ -1,0 +1,42 @@
+display:
+  default:
+    display_title: Основной
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Применить
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сортировать по'
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
+      pager:
+        options:
+          tags:
+            previous: '‹ Предыдущий'
+            next: 'Следующий ›'
+            first: '« Первая'
+            last: 'Последняя »'
+          expose:
+            items_per_page_label: 'Элементов на страницу'
+            items_per_page_options_all_label: '- Все -'
+            offset_label: Пропустить
+      title: 'Пример 1'
+  example_1:
+    display_title: 'Пример 1'
+  example_2:
+    display_title: 'Пример 2'
+    display_options:
+      title: 'Пример 2'
+      arguments:
+        parameter:
+          exception:
+            title: Все
+  example_3:
+    display_title: 'Пример 3'
+    display_options:
+      title: 'Пример 3'
+      fields:
+        value:
+          label: ID
+        value_1:
+          label: Автор

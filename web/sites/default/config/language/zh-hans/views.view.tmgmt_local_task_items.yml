@@ -20,25 +20,7 @@ display:
             next: '下一个 ›'
             first: '« 首页'
             last: '末页 »'
-      fields:
-        status:
-          label: 状态
-          format_plural_string: !!binary MQNAY291bnQ=
-        progress:
-          label: 进度
-        label:
-          label: 标签
-        item_type:
-          label: 类型
-          separator: ', '
-        word_count:
-          label: 单词
-          separator: ', '
-        operations:
-          label: 操作
       arguments:
         tltid:
           exception:
             title: 全部
-  block_1:
-    display_title: 区块

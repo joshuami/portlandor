@@ -38,8 +38,6 @@ try {
         $points[] = ["company"=>$company, "issue"=>$issue, "latlon" => ["lat"=>$arr_latlon[0], "lon"=>$arr_latlon[1]]];
       }
 
-      $test = $points;
-
     }
 } catch (\Zendesk\API\Exceptions\ApiResponseException $e) {
     echo $e->getMessage().'</br>';
