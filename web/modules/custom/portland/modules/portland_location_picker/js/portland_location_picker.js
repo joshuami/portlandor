@@ -109,7 +109,7 @@
         }
 
         // Set up verify button //////////////////////////////////
-        $('.location-picker-address').after('<input class="btn location-verify button js-form-submit form-submit" type="submit" id="location_verify" name="op" value="Verify">');
+        $('.location-picker-address').after('<input class="btn location-verify button js-form-submit form-submit" type="button" id="location_verify" name="op" value="Verify">');
         $('.location-picker-address').after('<span class="verified-checkmark address invisible" title="Location is verified!">✓</span>');
         $(document).on('click', '#location_verify', function (e) {
           e.preventDefault();
@@ -270,8 +270,12 @@
         var url = "https://www.portlandmaps.com/api/suggest/?intersections=1&alt_coords=1&api_key=" + drupalSettings.portlandmaps_api_key + "&query=" + encodedAddress;
         $.ajax({
           url: url, success: function (response) {
-            if (response.length < 1 || response.candidates.length < 1) {
+            if (response.length < 1 || (response.candidates && response.candidates.length < 1)) {
               showStatusModal("No matching locations found. Please try a different address and try again.");
+              setUnverified();
+              return false;
+            } else if (response.error) {
+              showErrorModal(response.error.message);
               setUnverified();
               return false;
             }
@@ -394,6 +398,10 @@
               // set place name field and mark as verified
               $('.place-name').val(parkName);
               setVerified("park");
+
+              // clear address field. in some instances it might be visible, such as in
+              // the streamlined implementation of the widget.
+              $('.location-picker-address').val("");
 
               return true;
 
