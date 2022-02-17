@@ -1,0 +1,26 @@
+image: devwithlando/gitpod:1
+
+tasks:
+  - name: Start Drupal
+    command: |
+      lando start
+      lando composer install
+      lando yarn install
+      gp preview $(gp url $(lando info --format=json | jq -r ".[0].urls[1]" | sed -e 's#http://localhost:\(\)#\1#'))
+
+vscode:
+  extensions:
+    - eamodio.gitlens
+    - marcostazi.vs-code-drupal
+    - esbenp.prettier-vscode
+    - oderwat.indent-rainbow
+    - wmaurer.change-case
+    - ikappas.composer
+    - janisdd.vscode-edit-csv
+    - grapecity.gc-excelviewer
+    - xdebug.php-debug
+    - neilbrayfield.php-docblocker
+    - bmewburn.vscode-intelephense-client
+    - dakara.transformer
+    - mblode.twig-language-2
+    - redhat.vscode-yaml

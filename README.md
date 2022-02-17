@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/eGovPDX/portlandor.svg?style=svg)](https://circleci.com/gh/eGovPDX/portlandor)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/eGovPDX/portlandor/tree/gitpod)
 
 # Portland Oregon Drupal 8 Site
 
