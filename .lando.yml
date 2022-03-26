@@ -10,6 +10,7 @@ config:
   composer_version: 2
 services:
   appserver:
+    ssl: false
     build_as_root:
       - sed 's|mozilla\/AddTrust_External_Root.crt|#mozilla\/AddTrust_External_Root.crt|g' -i /etc/ca-certificates.conf
       - /bin/sh -c "cp /app/cop_ca_*.crt /usr/local/share/ca-certificates/"
@@ -42,7 +43,10 @@ services:
       - /bin/sh -c "adduser www-data dialout"
       - /bin/sh -c "adduser node dialout"
       - /bin/sh -c "chmod -R 777 /var/www"
-
+  phpmyadmin:
+    type: phpmyadmin
+    hosts:
+      - database
 tooling:
   drush:
     description: CUSTOM Run drush commands
